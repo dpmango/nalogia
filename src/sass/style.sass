@@ -1,5 +1,254 @@
-.testing
-  width: percentage(5/7)
-  color: white
-  background: red
-  display: block
+@import 'fonts'
+
+$blue: #008be8
+$yellow: #ffdd2d
+$fontColor: #333333
+$lighBlue: #74a3c7
+$grayBg: #eef2f7
+$borderColor: #dddfe0
+
+// General
+body, html
+  font-family: Pragmatica, Helvetica, Arial, sans-serif
+  color: $fontColor
+  font-size: 13px
+  overflow-x: hidden !important
+
+// Header styles
+.page-contents
+  padding-top: 40px
+
+.header
+  background: $blue
+  box-shadow: none
+  padding: 15px 0
+
+  .logo
+    color: white
+
+  .mainey
+    font-family: 'Pragmatica'
+    &.logged-in
+      color: white
+      text-transform: uppercase
+    .personal
+      padding-left: 30px
+      font-size: 13px
+      .username
+        font-size: 13px
+        margin-bottom: 5px
+        font-weight: 400
+        font-family: 'Pragmatica'
+
+  .call-at-times
+    color: white
+    font-size: 13px
+    line-height: 25px
+    padding-top: 0
+    text-transform: uppercase
+    font-family: 'Pragmatica'
+
+  .phone-section
+    .phone
+      padding-top: 0
+      padding-right: 0
+      span
+        color: white
+        font-family: 'PragmaticaExtraLight'
+        font-size: 24px
+        line-height: 1.2em
+        display: inline-block
+        padding-bottom: 3px
+
+
+// FORM
+.declaration-title
+  font-size: 48px
+  font-family: 'PFHighwaySansPro-Thin'
+  margin-bottom: 40px
+
+// STEPS
+.form-container
+  .main-form
+    ul.steps
+      margin-top: -68px
+      li
+        font-family: 'PragmaticaLight'
+        text-transform: uppercase
+        font-size: 13px
+        height: 48px
+        padding: 14px 20px 0
+        a
+          color: $lighBlue
+          text-decoration: none
+          border-bottom: none
+      li.active a
+        color: #033333
+    .percents
+      margin-top: -15px
+      span
+        text-align: left
+        font-size: 13px
+        margin-bottom: 5px
+      .bar
+        border: 0px solid transparent
+        height: 10px
+        background: $grayBg
+        width: 250px
+        .completed
+          height: 10px
+          background: $yellow
+          margin: 0
+          opacity: 1
+    ul.sub-steps
+      margin: -10px -20px 20px -20px
+      padding: 10px 20px 14px 20px
+
+      li
+        a
+          color: $lighBlue
+          text-transform: uppercase
+          font-family: 'PragmaticaLight'
+          font-size: 13px
+          position: relative
+        &:after
+          content: "\2192"
+          font-family: 'PragmaticaLight'
+          margin: 0 10px
+          color: $lighBlue
+          font-size: 10px
+        &.active
+          a
+            color: $fontColor
+            &::before
+              position: absolute
+              bottom: -15px
+              left: 0
+              width: 100%
+              content: ' '
+              display: block
+              background: $yellow
+              height: 4px
+
+  .intro-screen
+    margin-top: 40px
+    font-size: 17px
+    line-height: 24px
+    font-family: 'PragmaticaLight'
+    color: $fontColor
+    h4
+      font-size: 24px
+
+.hint-box
+  h3
+    margin-top: 45px
+    margin-bottom: 25px
+    font-size: 17px
+    color: $fontColor
+    font-family: 'PragmaticaLight'
+  p
+    font-family: 'PragmaticaLight'
+    font-size: 13px
+    line-height: 18px
+    color: #9299a2
+    margin-bottom: 15px
+
+.hint-text
+  font-family: 'PragmaticaLight'
+  font-size: 13px
+  line-height: 18px
+  color: #9299a2
+  margin-bottom: 15px
+
+
+// BUTTONS
+
+.btn-submit.small
+  padding: 21px 40px
+  font-size: 17px
+  font-weight: 400
+  line-height: 23px
+  background: #ffdd2d
+  border: none
+  color: $fontColor !important
+  box-shadow: none
+  transition: all .3s ease
+  &:hover
+    background: #ffcd33
+
+.btn-submit.gray
+  background: transparent
+  color: $lighBlue !important
+  border: 1px solid $lighBlue
+  text-shadow: none
+  &:hover
+    background: $lighBlue
+    color: white !important
+
+// INPUTS UI
+input[type=text].form-control
+  border: none
+  background: #eef2f7
+  box-sizing: border-box
+  position: relative
+  display: inline-block
+  padding-top: 30px
+  padding-left: 17px
+  padding-bottom: 9px
+  height: 66px
+  font-size: 17px
+  line-height: 24px
+  cursor: text
+input.form-control.mixed
+  max-width: 100% !important
+  padding: 25px 17px !important
+
+.form-container ul.questions li.question span.title
+  font-size: 17px
+  font-family: 'PragmaticaLight'
+  padding-left: 17px
+  margin-bottom: 5px
+  display: inline-block
+
+.hint-mark
+  background: none
+  border: 2px solid #aaafb6
+  color: #9299a2
+  padding: 0
+  font-size: 16px
+  font-family: 'PragmaticaLight'
+  width: 23px
+  height: 23px
+  font-weight: normal
+  vertical-align: -3px
+  margin-top: -1px
+
+.form-container .main-form label.radio
+  font-size: 17px
+  color: #9299a2
+  font-family: 'PragmaticaLight'
+  font-weight: 300
+  margin-bottom: 10px
+
+.form-container .main-form input[type=radio] + span
+  background: #eef2f7
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  border: none
+  top: -2px
+  margin-right: 20px
+
+.form-container .main-form input[type=radio]:checked + span
+  background: $yellow
+
+.form-container .main-form input[type=radio]:checked + span:after
+  background: #434a54
+  width: 10px
+  height: 10px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.buttons_nav
+  border-top: 1px solid $borderColor

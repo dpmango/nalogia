@@ -1,62 +1,264 @@
-/* 1. Layout */
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic');
-/* layout */
-/* variables */
-* {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box
-}
-a {
-    color: inherit
-}
-a:hover, a:focus, a:visited {
-    text-decoration: none
-}
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'PFHighwaySansPro-Light';
+  src: url("http://localhost:3006/fonts/PFHighwaySansPro-Light.eot?#iefix") format("embedded-opentype"), url("http://localhost:3006/fonts/PFHighwaySansPro-Light.woff") format("woff"), url("http://localhost:3006/fonts/PFHighwaySansPro-Light.ttf") format("truetype"), url("http://localhost:3006/fonts/PFHighwaySansPro-Light.svg#PFHighwaySansPro-Light") format("svg"); }
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'PFHighwaySansPro-Thin';
+  src: url("http://localhost:3006/fonts/PFHighwaySansPro-Thin.eot?#iefix") format("embedded-opentype"), url("http://localhost:3006/fonts/PFHighwaySansPro-Thin.woff") format("woff"), url("http://localhost:3006/fonts/PFHighwaySansPro-Thin.ttf") format("truetype"), url("http://localhost:3006/fonts/PFHighwaySansPro-Thin.svg#PFHighwaySansPro-Thin") format("svg"); }
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Pragmatica';
+  src: url("http://localhost:3006/fonts/Pragmatica.eot?#iefix") format("embedded-opentype"), url("http://localhost:3006/fonts/Pragmatica.woff") format("woff"), url("http://localhost:3006/fonts/Pragmatica.ttf") format("truetype"), url("http://localhost:3006/fonts/Pragmatica.svg#Pragmatica") format("svg"); }
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'PragmaticaLight';
+  src: url("http://localhost:3006/fonts/PragmaticaLight.eot?#iefix") format("embedded-opentype"), url("http://localhost:3006/fonts/PragmaticaLight.woff") format("woff"), url("http://localhost:3006/fonts/PragmaticaLight.ttf") format("truetype"), url("http://localhost:3006/fonts/PragmaticaLight.svg#PragmaticaLight") format("svg"); }
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'PragmaticaExtraLight';
+  src: url("http://localhost:3006/fonts/PragmaticaExtraLight.eot?#iefix") format("embedded-opentype"), url("http://localhost:3006/fonts/PragmaticaExtraLight.woff") format("woff"), url("http://localhost:3006/fonts/PragmaticaExtraLight.ttf") format("truetype"), url("http://localhost:3006/fonts/PragmaticaExtraLight.svg#PragmaticaExtraLight") format("svg"); }
+
 body, html {
-    overflow-x: hidden;
-    max-width: 100%;
-    background: white;
-    color: #333;
-    font-size: 14px;
-    font-family: Helvetica
-}
-/* Helpers */
-.mr1 {
-    margin-right: 1em
-}
+  overflow-x: hidden !important;
+  color: #333333;
+  font-size: 13px;
+  font-family: Pragmatica, Helvetica, Arial, sans-serif; }
 
-/* 2. Modules */
-@modules "modules/_header-mobile.sss";
+.page-contents {
+  padding-top: 40px; }
 
-/* 3. Elements */
-/* ICONS */
-.ico {
-    display: inline-block;
-    content: ' ';
-    font-style: normal
-}
-/* mixin */
-/* buttons */
-.btn {}
-.btn:focus, .btn:active {
-    outline: none
-}
-/* generic modifiers */
-.btn--rounded {
-    border-radius: 50%
-}
-.btn--outline {
-    border: 1px solid transparent
-}
-.btn--outline:hover {}
-.btn--abosulte-ico .ico {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    bottom: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%)
-}
+.header {
+  padding: 15px 0;
+  background: #008be8;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .header .logo {
+    color: white; }
+  .header .mainey {
+    font-family: 'Pragmatica'; }
+    .header .mainey.logged-in {
+      color: white;
+      text-transform: uppercase; }
+    .header .mainey .personal {
+      padding-left: 30px;
+      font-size: 13px; }
+      .header .mainey .personal .username {
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 13px;
+        font-family: 'Pragmatica'; }
+  .header .call-at-times {
+    padding-top: 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Pragmatica';
+    line-height: 25px; }
+  .header .phone-section .phone {
+    padding-top: 0;
+    padding-right: 0; }
+    .header .phone-section .phone span {
+      display: inline-block;
+      padding-bottom: 3px;
+      color: white;
+      font-size: 24px;
+      font-family: 'PragmaticaExtraLight';
+      line-height: 1.2em; }
+
+.declaration-title {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-family: 'PFHighwaySansPro-Thin'; }
+
+.form-container .main-form ul.steps {
+  margin-top: -68px; }
+  .form-container .main-form ul.steps li {
+    padding: 14px 20px 0;
+    height: 48px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'PragmaticaLight'; }
+    .form-container .main-form ul.steps li a {
+      border-bottom: none;
+      color: #74a3c7;
+      text-decoration: none; }
+  .form-container .main-form ul.steps li.active a {
+    color: #033333; }
+
+.form-container .main-form .percents {
+  margin-top: -15px; }
+  .form-container .main-form .percents span {
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 13px; }
+  .form-container .main-form .percents .bar {
+    width: 250px;
+    height: 10px;
+    border: 0px solid transparent;
+    background: #eef2f7; }
+    .form-container .main-form .percents .bar .completed {
+      margin: 0;
+      height: 10px;
+      background: #ffdd2d;
+      opacity: 1; }
+
+.form-container .main-form ul.sub-steps {
+  margin: -10px -20px 20px -20px;
+  padding: 10px 20px 14px 20px; }
+  .form-container .main-form ul.sub-steps li a {
+    position: relative;
+    color: #74a3c7;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'PragmaticaLight'; }
+  .form-container .main-form ul.sub-steps li:after {
+    margin: 0 10px;
+    color: #74a3c7;
+    content: "\2192";
+    font-size: 10px;
+    font-family: 'PragmaticaLight'; }
+  .form-container .main-form ul.sub-steps li.active a {
+    color: #333333; }
+    .form-container .main-form ul.sub-steps li.active a::before {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: #ffdd2d;
+      content: ' '; }
+
+.form-container .intro-screen {
+  margin-top: 40px;
+  color: #333333;
+  font-size: 17px;
+  font-family: 'PragmaticaLight';
+  line-height: 24px; }
+  .form-container .intro-screen h4 {
+    font-size: 24px; }
+
+.hint-box h3 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  color: #333333;
+  font-size: 17px;
+  font-family: 'PragmaticaLight'; }
+
+.hint-box p {
+  margin-bottom: 15px;
+  color: #9299a2;
+  font-size: 13px;
+  font-family: 'PragmaticaLight';
+  line-height: 18px; }
+
+.hint-text {
+  margin-bottom: 15px;
+  color: #9299a2;
+  font-size: 13px;
+  font-family: 'PragmaticaLight';
+  line-height: 18px; }
+
+.btn-submit.small {
+  padding: 21px 40px;
+  border: none;
+  background: #ffdd2d;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333333 !important;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  .btn-submit.small:hover {
+    background: #ffcd33; }
+
+.btn-submit.gray {
+  border: 1px solid #74a3c7;
+  background: transparent;
+  color: #74a3c7 !important;
+  text-shadow: none; }
+  .btn-submit.gray:hover {
+    background: #74a3c7;
+    color: white !important; }
+
+input[type=text].form-control {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 9px;
+  padding-left: 17px;
+  height: 66px;
+  border: none;
+  background: #eef2f7;
+  font-size: 17px;
+  line-height: 24px;
+  cursor: text; }
+
+input.form-control.mixed {
+  padding: 25px 17px !important;
+  max-width: 100% !important; }
+
+.form-container ul.questions li.question span.title {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding-left: 17px;
+  font-size: 17px;
+  font-family: 'PragmaticaLight'; }
+
+.hint-mark {
+  margin-top: -1px;
+  padding: 0;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #aaafb6;
+  background: none;
+  color: #9299a2;
+  vertical-align: -3px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'PragmaticaLight'; }
+
+.form-container .main-form label.radio {
+  margin-bottom: 10px;
+  color: #9299a2;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'PragmaticaLight'; }
+
+.form-container .main-form input[type=radio] + span {
+  top: -2px;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: #eef2f7; }
+
+.form-container .main-form input[type=radio]:checked + span {
+  background: #ffdd2d; }
+
+.form-container .main-form input[type=radio]:checked + span:after {
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #434a54;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Декларация 2016</title>
+    <base href="https://www.nalogia.ru/" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="/bitrix/templates/design_form_sber/css/bootstrap.css" rel="stylesheet">
+    <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
+    <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
+    <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
+    <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
+
+    <link href="http://localhost:3006/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/bitrix/templates/design_form_sber/js/sberbank.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/design_home_sberbank/js/recepient/libs.js"></script>
+
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        jQuery(function($) {
+            jQuery('[data-toggle=popover]').popover();
+            jQuery('[data-toggle=tooltip]').tooltip();
+
+
+            $(document).on("mouseup mouseover","ul.navbar-nav > li.dropdown", function(){
+                $(this).addClass("open");
+            }).on("mouseout","ul.navbar-nav > li.dropdown", function(){
+                $(this).removeClass("open");
+            });
+
+        });
+        /*]]>*/
+    </script>
+
+
+</head>
+<body>
+<!-- TEMP--><script async src='http://localhost:3006/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', "UA-10351713-1", 'auto', {"cookieDomain":"nalogia.ru","userId":"382148","clientId":"98492629.37106082"});
+ga('require', 'displayfeatures');
+ga('require', 'linkid', 'linkid.js');
+/* Openstat parser minimized */
+var OpenStatParser={_params:{},_parsed:false,_decode64:function(e){if(typeof window["atob"]==="function"){return atob(e)}var t="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";var n,r,i,s,o,u,a,f,l=0,c=0,h="",p=[];if(!e){return e}e+="";do{s=t.indexOf(e.charAt(l++));o=t.indexOf(e.charAt(l++));u=t.indexOf(e.charAt(l++));a=t.indexOf(e.charAt(l++));f=s<<18|o<<12|u<<6|a;n=f>>16&255;r=f>>8&255;i=f&255;if(u==64){p[c++]=String.fromCharCode(n)}else if(a==64){p[c++]=String.fromCharCode(n,r)}else{p[c++]=String.fromCharCode(n,r,i)}}while(l<e.length);h=p.join("");return h},_parse:function(){var e=window.location.search.substr(1);var t=e.split("&");this._params={};for(var n=0;n<t.length;n++){var r=t[n].split("=");this._params[r[0]]=r[1]}this._parsed=true},hasMarker:function(){if(!this._parsed){this._parse()}return typeof this._params["_openstat"]!=="undefined"?true:false},buildCampaignParams:function(){if(!this.hasMarker()){return false}var e=this._decode64(this._params["_openstat"]);var t=e.split(";");return{campaignName:t[1]+"("+t[3]+")",campaignSource:t[0],campaignMedium:"cpc",campaignContent:t[2]}}};var campaignParams=OpenStatParser.hasMarker()?OpenStatParser.buildCampaignParams():{}
+ga('send', 'pageview', campaignParams);
+/* Accurate bounce rate by time */
+if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostname) != 0)setTimeout(function(){ga('send', 'event', 'Посетители', 'Новай сеанс', location.pathname)},15000);
+</script>
+<!--/Google Analytics -->
+
+
+<div class="container-fluid header header-shadowed">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 logo">
+                <div>Налогия</div>
+            </div>
+
+            <div class="col-xs-8 col-sm-6 col-md-5 col-lg-5 logged-in mainey">
+                <div class="personal">
+                            <span class="username">dpmango</span>
+        <!--
+        <span class="glyphicon glyphicon-lock"></span><a class="link" href="/safe/personal/forms">личный кабинет</a>
+        <span class="glyphicon glyphicon-log-out"></span><a class="link" href="/?logout=yes">выход</a>
+                -->
+        <span class="someinfo">Актуально на 10 января 2017</span>
+                </div>
+            </div>
+
+            <div class="col-md-2 call-at-times hidden-sm hidden-xs col-lg-2">
+                Пн-Пт, с 09 до 21 по<br>
+                московскому времени
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-3 phone-section col-lg-2">
+                <div class="phone">
+                    <span>(495) 646 8905</span>
+                    <span>8 800 505 8905</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="hidden-sm hidden-xs hidden-md hidden-lg header-mobile container-fluid">
+    <div class="row logo-section">
+        <div class="left">
+            <a href="#" class="open-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+        </div>
+        <div class="right">
+            <a href="#" class="dropdown-toggle" id="mobile-loginWindowDropdown"><span class="glyphicon glyphicon-lock enter"></span></a><a href="#" id="mobile-buttonSearch"><span class="glyphicon glyphicon-search search"></span></a>
+        </div>
+        <a href="/" class="logo">Возврат налогов</a>
+    </div>
+    <div class="row mobile-site-menu">
+        <ul class="menu col-md-12">
+            <li><a href="/">Главная страница</a></li>
+            <li><a href="/useful/documents.php">Документы для вычета</a></li>
+            <li><a href="/useful/inspektsii/">Инспекции</a></li>
+        </ul>
+    </div>
+
+    <div class="row auth">
+                    <div class="dropdown-menu quick-login authorized" id="quick-personal-mobile">
+                <div class="col-xs-12">
+                    <p>Вы авторизованы на сайте как dpmango.</p>
+                    <a href="/safe/personal">Личный кабинет</a>
+                    <a href="/?logout=yes">Выход</a>
+                </div>
+            </div>
+            </div>
+
+    <div class="row search">
+        <div class="dropdown-menu quick-search" id="quick-search-mobile">
+            <form action="/search/index.php" id="formGoSearch" name="formGoSearch">
+                <div class="borealis">
+                    <span class="glyphicon glyphicon-search submit" id="buttonGoSearch"></span>
+                    <input name="q" placeholder="Что вы ищете?" class="form-control" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!--
+
+<div class="header-vno container-fluid">
+    <div class="container">
+        some header
+    </div>
+</div>
+-->
+
+<div class="container page-contents">
+    <div class="row">
+        <div class="col-sm-12">
+          <h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
+        </div>
+        <div class="col-md-9 form-container">
+
+
+
+
+
+
+<script>
+var arParent 		= eval([]);	//паренты из текущего блока
+var arOuterParent 	= eval(null);//паренты из прочих блоков
+var visibilityOptions = [];
+var curOuterAnswers	= eval([]);	//ответы прочих блоков
+var curAnswers		= new Array();							//ответы текущего блока
+var arLimitations	= eval({"005_010":20}); //Ограничение числа знакомест
+var multCount		= 0;
+var Indexes			= new Array();							//Индексы для обработки множественных ответов
+var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
+var arHidden;
+var curStage		= 0; //текущий этап
+var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435 \u0431\u0443\u0434\u0443\u0442 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0438 \u0434\u043b\u044f \u0442\u043e\u0433\u043e \u043f\u043e\u043b\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0412\u044b \u0437\u0430\u043f\u043e\u043b\u043d\u044f\u0435\u0442\u0435.\r\n\r\n\u041d\u0430\u0448\u0438 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0438 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u0412\u0430\u043c \u0441 \u0431\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e\u043c \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432.\r\n"
+</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
+
+
+
+
+
+
+
+
+	<script>
+
+			var category;
+			var infrmfrgn;
+			var el;
+			if(typeof(SpecialLogic) != "function"){
+				function statusBYCategory(answ, eto){
+					//alert(eto);
+					//alert(answ);
+					if(typeof(answ) == "string" && typeof(eto) == "string"){
+						if(answ == "207078"){ // Вариант ответа веб-формы: нет.
+
+							$("input[name=" + eto + "][value=159716]").attr("checked", true);
+							// Вариант ответа веб-формы: в России.
+							$("input[name=" + eto + "]").attr("disabled", true);
+							$("li#" + eto).css("display", "none");
+							var roundrobin 	= 0;
+							var errors		= 0;
+							while (roundrobin > -1){
+								if($("input[name=" + eto + "\\|" + roundrobin + "]").get(0) != null){
+									$("input[name=" + eto + "\\|" + roundrobin + "][value=159716]").attr("checked", true);
+									// Вариант ответа веб-формы: в России.
+									$("input[name=" + eto + "\\|" + roundrobin + "]").attr("disabled", true);
+									$("li#" + eto + "\\|" + roundrobin + ".question").css("display", "none");
+								}else{
+									errors++;
+								}
+								roundrobin++;
+								if(errors > 2){
+									break;
+								}
+							}
+						}
+					}
+				}
+				function SpecialLogic(skipVisibility){
+					//return false;
+					//***ЗДЕСЬ ДОБАВИТЬ ЧАЙЛДЫ ДЛЯ 020_025
+					var arFields	= ["110_005", "115_005", "120_005", "130_005", "135_005", "140_005", "145_005", "150_005", "155_005", "160_005", "165_005", "180_005"];
+					var arHidden	= arFields;
+					for(el = 0; el<=(arFields.length - 1); el++){
+						var arNames = new Array();
+						var inputs	= $("input").get();
+						var ind		= 0;
+						for (var inpt in inputs){
+						var str_	= String(inputs[inpt].name);
+							arNames[ind] = str_.substr(0, 7);
+							ind++;
+						}
+
+						for(var nm = 0; nm<=(arNames.length - 1); nm++){
+
+							if(arNames[nm] == arFields[el]){
+								//console.log(arNames);
+								//if($("input[name=" + arFields[el] + "]").get(0) != null){
+
+									if(typeof(category) == "string"){
+
+										//есть ответ
+										var answ	= category;
+										statusBYCategory(answ, arFields[el]);
+										/*
+										saveAnswers();
+										setVisibility();
+										*/
+									}else{
+									    if (typeof answer010_110 != "undefined" && el == 0) {
+										category = answer010_110;
+										num = 0;
+										statusBYCategory(category, arFields[num]);
+										console.log("100");
+										/*
+										saveAnswers();
+										setVisibility();
+										*/
+
+									    } else {
+										//примем аяксом
+										$.getJSON("/ajax/answer2016.php", {number:"010_110", el_:el}, function(json){
+											category 	= json["answer"];
+											num			= json["el_"];
+											statusBYCategory(category, arFields[num]);
+											saveAnswers();
+											setVisibility();
+										});
+									    }
+									}
+								//}
+							}
+						}
+					}
+
+					if (!skipVisibility) {
+						saveAnswers();
+						setVisibility();
+					}
+				//
+				}
+			}
+				</script>
+
+
+
+
+<script>
+
+	if (typeof $.fn.prop == 'undefined') {
+		$.fn.prop = $.fn.attr;
+	}
+
+    var promoCodes = [];
+	var completedLevel = {"total":10,"current":1};
+	// Инициализация переменной, содержащей текущий этап
+	var CurrentStage = 0;
+	var answer010_110 = false;
+
+
+    var newValidation = true;
+
+	//Показать подсказку
+	function showHint(event) {
+		if (event.srcElement){
+			var parent	= $(event.srcElement).parents('li.question');
+		}else{
+			var parent	= $(event.target).parents('li.question');
+		}
+		if ($('div.q_hint', parent).get(0) != null){
+            $('div.scroll p:eq(0)').html($('div.q_hint', parent).html());
+			// Сергей (04 апреля 2015): строка ниже каждый раз при отображении новой подскажки прокручивает полосу прокрутки наверх
+			$('div.scroll').scrollTop('0');
+		}
+	}
+
+
+
+
+		function showFirstHint() {
+		if ($('div.q_hint_visible:first').get(0) != null ) {
+            $('div.scroll p:eq(0)').html($('div.q_hint_visible:first').html());
+		}
+	}
+
+
+
+
+
+    var fields
+
+
+	function GetEvaluationAnswer(questionNumber, questionMultiple) {
+		var suffix = questionMultiple > 0 ? '|' + questionMultiple : '';
+
+		if (typeof curAnswers[questionNumber + suffix] != 'undefined') return curAnswers[questionNumber + suffix];
+		if (typeof curOuterAnswers[questionNumber + suffix] != 'undefined') return curOuterAnswers[questionNumber + suffix];
+
+        console.log('missed ' + questionNumber + suffix);
+        return false;
+
+		var $field = $('input[name=' + questionNumber + suffix.replace('|', '\\|') + ']');
+        // var $field = $('#' + questionNumber + suffix.replace('|', '_'));
+		if ($field.length) {
+			if ($field.prop('type') == 'radio') {
+				return $('input[name=' + questionNumber + suffix.replace('|', '\\|') + ']:checked').val();
+			}
+
+			return $field.val();
+		}
+
+		return false;
+	}
+
+	function EvaluateCondition(condition, questionNumber, questionMultiple) {
+		var isVisible = true;
+
+		for (var blockId in condition) {
+			var block = condition[blockId];
+			var	isBlockTrue = false;
+
+			for (var elementId in block.elements) {
+				var element = block.elements[elementId];
+				var isElementTrue = false;
+
+				var fieldValue = GetEvaluationAnswer(element.field, questionMultiple);
+
+
+				switch (element.condition) {
+					case 'equal':
+						// gay logic
+						if (answer010_110 == '207078' && element.value == '207059') {
+							isElementTrue = true;
+
+						} else if (answer010_110 == '207078' && element.value == '207060') {
+							isElementTrue = false;
+
+						} else {
+							isElementTrue = element.value == fieldValue
+						}
+						break;
+
+					case 'not-equal':
+						if (answer010_110 == '207078' && element.value == '207059') {
+							isElementTrue = false;
+
+						} else {
+							isElementTrue = element.value != fieldValue
+						}
+						break;
+
+					default:
+						isElementTrue = false;
+						break;
+				}
+
+				if (elementId > 0) {
+					if (element.logic == 'or') {
+						isBlockTrue = isBlockTrue || isElementTrue;
+
+					} else {
+						isBlockTrue = isBlockTrue && isElementTrue;
+					}
+
+				} else {
+					isBlockTrue = isElementTrue;
+				}
+			}
+
+			if (blockId > 0) {
+				if (block.logic == 'or') {
+					isVisible = isVisible || isBlockTrue;
+
+				} else {
+					isVisible = isVisible && isBlockTrue;
+				}
+
+			} else {
+				isVisible = isBlockTrue;
+			}
+		}
+
+		return isVisible;
+	}
+
+
+	//Обработка видимости согласно парентам ОБЩИЕ (н)
+	function setVisibility($el){
+        var $list = false;
+        var performance = (new Date).getTime();
+
+        if (typeof $el != 'undefined') {
+            console.log('element passed');
+
+            $list = $el.closest('.multiple');
+            if ($list.length == 0) {
+                $list = false;
+            } else {
+                console.log('found list');
+            }
+        }
+
+        if ($list) {
+            $list = $list.find('li');
+
+        } else {
+            $list = $('ul.questions li');
+        }
+
+		$list.each(function(){
+            var $this = $(this);
+			var q_number	= $this.prop('id');
+
+			var visible		= true;
+			var arNumber	= q_number.split('|');
+
+
+            if (typeof visibilityOptions[arNumber[0]] != 'undefined') {
+                var isVisible = EvaluateCondition(visibilityOptions[arNumber[0]], arNumber[0], arNumber[1]);
+
+				if (!isVisible){
+                    if ($this.is(':visible')) {
+                        $this.css('display', 'none').not('input:radio').val('');
+                    }
+
+				} else {
+                    if (!$this.is(':visible')) {
+                        $this.css('display', 'list-item');
+                    }
+				}
+
+				return;
+			}
+            /*
+			if (arParent[arNumber[0]]){
+				if (!arNumber[1]){
+					var grp	= '';
+				}else{
+					var grp	= '|' + arNumber[1];
+				}
+
+				//по парентам с текущей страницы
+				for (i=0; i<arParent[arNumber[0]].length; i++){
+				    //в arParent ответы для проверки, в arAnswers ответы из текущей формы
+                    visible	= visible && (arParent[arNumber[0]][i]['VALUE'] == curAnswers[(arParent[arNumber[0]][i]['PARENT'] + grp)]);
+				}
+
+				//по внешним парентам
+				if (arOuterParent){
+					for (i=0; i<arOuterParent[arNumber[0]].length; i++){
+						visible	= visible && (arOuterParent[arNumber[0]][i]['VALUE'] == window.curOuterAnswers[(arParent[arNumber[0]][i]['PARENT'])]);
+					}
+				}
+				//однозначно скрытые
+				if (arHidden){
+					for (i=0; i<arHidden.length; i++){
+						if (arHidden[i]==q_number){
+							visible = false;
+						}
+					}
+				}
+
+				if (!visible){
+					$(this).css('display', 'none').not('input:radio').val('');
+				}else{
+					$(this).css('display', 'list-item');
+				}
+			}
+			*/
+		});
+
+        console.log('in ' + ((new Date).getTime() - performance));
+	}
+
+
+
+
+
+	//сохранить ответы с формы
+	function saveAnswers(){
+		curAnswers	= new Array();
+
+		/*
+		$('select option:selected').each(function(){
+			curAnswers[$(this).parent().prop('name')] = $(this).val();
+			// 19.12.2016, Гиви: Поправил ошибку, из-за которой неправильно сохранялось имя селекта
+		});
+		*/
+
+		$('select').each(function() {
+			var $this = $(this);
+			curAnswers[$this.prop('name')] = $this.val();
+		});
+
+		$('input:checkbox').each(function(){
+			if ($(this).prop('checked')){
+				var value		= 'Y';
+			}else{
+				var value		= 'N';
+			}
+			curAnswers[$(this).prop('name')] = value;
+		});
+
+        $('input:radio').each(function(){
+            curAnswers[$(this).prop('name')] = false;
+        });
+
+		$('input:radio:checked').each(function(){
+			curAnswers[$(this).prop('name')] = $(this).val();
+		});
+	}
+
+
+
+	//сохранить индексы для обработки множественных ответов
+	function saveIndexes(){
+		window.Indexes = new Array();
+		$('div.multiple').each(function(){
+			var arInd	= $(this).prop('id').split('_');
+			if (arInd[1]){
+				window.Indexes[window.Indexes.length]	= arInd[1];
+			}else{
+				window.Indexes[window.Indexes.length]	= '';
+			}
+		});
+		$('input#indexes').val(window.Indexes.join(','));
+	}
+
+	//Функции записи ответов текущего блока
+	function inputFocus(event){
+		if (event.srcElement){
+            var $el = $(event.srcElement);
+			var fullname	= $el.prop('name');
+			var arName		= fullname.split('|');
+			if (!arName[1]){
+				var grp	= '';
+			}else{
+				var grp	= '|' + arName[1];
+			}
+			var name = fullname.substr(0,7) + grp;
+
+			if ($el.is('input:checkbox')){
+				if ($el.prop('checked')){
+					var value		= 'Y';
+				}else{
+					var value		= 'N';
+				}
+			}else{
+				var value		= $(event.srcElement).val();
+			}
+			curAnswers[name] = value;
+			setVisibility($el);
+
+		}else{
+            $el = $(event.target);
+			var fullname	= $el.prop('name');
+			var arName		= fullname.split('|');
+			if (!arName[1]){
+				var grp	= '';
+			}else{
+				var grp	= '|' + arName[1];
+			}
+			var name		= fullname.substr(0,7) + grp;
+			if ($el.is('input:checkbox')){
+				if ($el.prop('checked')){
+					var value		= 'Y';
+				}else{
+					var value		= 'N';
+				}
+			}else{
+				var value		= $el.val();
+			}
+			curAnswers[name] = value;
+			setVisibility($el);
+		}
+	}
+
+
+
+	function wrapUpFiveMultiple() {
+		//Оборачивает множественные по 5 элементов в аккордеон
+		//Вызывается при удалении и добавлении множественного
+		var count	= 0;
+		var ar 		= $('div.multiple').not('div#m_-1');
+		var label	= '';
+		switch(CurrentStage){
+			case(1):
+				label = 'Доход';
+			break;
+			case(2):
+				label = 'Вычет';
+			break;
+		}
+
+		$('div.line_id').remove();
+		ar.each(function(){
+			//посчитаем
+			count++;
+		});
+		//Если больше 1, добавим каждому полоску и номер
+		if (count > 1){
+			var ind = 0;
+			ar.each(function(){
+				ind++;
+				$(this).prepend($('<div class="line_id">' + label + ' №' + ind + '<hr></div>'));
+			});
+		}
+
+		//Очищаем обертки
+		$('div.wrapper').each(function(){
+			$(this).children().unwrap();//
+		});
+		$('div.ref').remove();
+
+		return true; //в аккордеон не оборачивать, не доделал
+
+		//Счетчик групп
+		var group	= 0;
+
+		//Проверяем, если больше 5-ти
+		if (count >= 5){
+
+			//В цикле оборачиваем множественные, кроме последних неполных 5ти
+			//Если последних уже 5, тогда оборачиваем, но не скрываем
+			var stripCount	= 0;
+			var stripWr		= $();
+			var oldGr		= -1;
+			ind = 0;
+			for (ind = 0; ind <= count; ind++){
+
+				stripCount++;
+				stripWr	= stripWr.add($($('div.multiple').get(ind)));
+
+				if(stripCount==5){
+					group++;
+					var wrapper	= $('<div class="wrapper n_' + group + '"></div>');
+					//wrapper.css('display', 'none');
+					stripWr.wrapAll(wrapper);
+
+
+					if (oldGr != group) {
+						oldGr = group;
+						$('<div name="'+ group +'" class="ref m_' + group + '" href="javascript: void(0);">Доходы с ' + ((group - 1)*5 + 1) + ' по ' + (group)*5 + '</div>').insertBefore($('div.wrapper.n_' + group));
+						$('div.ref').click(function(event){toggleGroup(event);});
+					}
+					stripCount 	= 0;
+					stripWr		= $();
+				}
+			}
+		}
+	}
+
+
+
+
+
+	$(document).ready(function(){
+
+		//Оборачиваем элементы формы (инициализация, ниже будет еще раз. для множественных)
+		if (typeof $.fn.selectpicker == 'function') {
+			$('select:not(.no-ss)').selectpicker({
+				noneSelectedText: 'Ничего не выбрано',
+				width: '100%'
+			});
+
+		} else {
+			$('select:not(.no-ss)').sSelect({
+				ddMaxHeight: '300px',
+				ddMaxWidth: '200px',
+				defaultText: 'Выберите вариант'
+			});
+		}
+
+
+
+        if (newValidation) {
+            $('input.datepick').mask('00.00.0000', {
+                placeholder: 'дд.мм.гггг'
+
+            }).datepicker({
+                format: "dd.mm.yyyy",
+                keyboardNavigation: false,
+                autoclose: true,
+                language: 'ru',
+                txtNoDate: 'Выберите дату'
+            });
+
+            $('div.flmoney').iFlMoney({
+                skipValidation: true
+            });
+
+        } else {
+            $('input.inn').iInn();
+            $('input.numonly').iNumonly();
+            $('input.datepick').datepicker($.datepicker.regional['ru'])
+            $('input.datepick').datepicker('option', 'defaultDate', '01.07.2016');
+            $('div.flmoney').iFlMoney();
+        }
+
+		$('div.currency').iCurrency({skipValidation: true});
+		$('div.part').iPart();
+        $('input.textonly').iTextOnly();
+        $('input.ceilmoney').iCeilMoney();
+        $('input.mixed').iMixed();
+        $('div.okved').iOkved();
+
+
+		$('input.float_table').iFloatTable();
+		showFirstHint();
+		//Формируем arAnswers
+		saveAnswers();
+		//Формируем arIndexes и пишем его в хидден инпут
+		saveIndexes();
+		//Устанавливаем видимость согласно ответам из базы
+		// Сергей (09 февраля 2015): убрана строка ниже с функцией setVisibility из-за проблемы с родителем-селектом
+		// setVisibility();
+		//Обработка видимости согласно парентам (н)
+		// Сергей (11 февраля 2015): ограничена область действия функции радиокнопкой из-за проблемы с пропаданием зависимых вопросов в ОКАТО.
+		// Проблема заключалась в том, что иногда пропадали зависимые вопросы варианта "Нет города". Проблема ушла.
+		$('input:radio').change(function(event){inputFocus(event);});
+		// Сергей (13 февраля 2015): добален к области действия функции чекбокс.
+		$('input:checkbox').change(function(event){inputFocus(event);});
+		//$('input').change(function(event){inputFocus(event);});
+		// Сергей (09 февраля 2015): ограничено действие вопросом 030_025. Это вопрос-селект выбора города.
+		// До введения ограничения видимость вопросов, зависящих от 030_025, ошибочно зависела от других вопросов-селектов (не родителям).
+		// Теперь другие селекты не будут выступать родителями и не будут влиять на видимость вопросов.
+		$('select[name=030_025]').change(function(event){
+            if (event.srcElement){
+				var name	= $(event.srcElement).get(0).name.substr(0,7);
+				var value	= $(event.srcElement).val();
+			}else{
+				var name	= $(event.target).get(0).name.substr(0,7);
+				var value	= $(event.target).val();
+			}
+			curAnswers[name] = value;
+			setVisibility();
+			saveIndexes();
+		});
+		//Обработка видимости согласно парентам (к)
+
+		$('select').change(function() {
+		    curAnswers[this.name] = this.value;
+			setVisibility($(this));
+		});
+
+
+		//привяжем обработчики подсказок
+		$('a.hint').click(function(event){showHint(event);});
+		$('input').focus(function(event){showHint(event);});
+
+		//Полоски, номера, группы множественных
+		wrapUpFiveMultiple();
+
+		//фокус на первый вопрос
+		// $("a","div.l:first").focus();
+		setVisibility();
+	});
+
+
+//Обработка множественных вопросов.(н)
+	function inArQtc(numb){
+		for(var qtc in arQtc){
+			if (numb != null){
+				if(numb.substr(0,7) == arQtc[qtc]){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	//Действия кнопок(н)
+
+	function serviceMultiple(newDiv, copymul, curParent, skipVisibility) {
+		multCount++;//инкремент номера группы вопросов
+
+		if (!copymul){
+			$('input:text', newDiv).not('input:radio').val(''); //Чистим потроха
+			$('input:radio', newDiv).prop('checked', ''); //Чистим потроха
+			$('input:checkbox:checked', newDiv).prop('checked', ''); //Чистим потроха
+			//  $('select option:selected', newDiv).prop('selected', '');
+			//  $('div.selectedTxt', newDiv).text('');
+		}else{
+			$('input:text', newDiv).not('input:radio').each(function(){
+				var name	= $(this).prop('name');
+				if(!inArQtc(name)){
+					$(this).val('');
+				}
+			}); //Чистим потроха
+			$('input:radio', newDiv).each(function(){
+				var name	= $(this).prop('name');
+				if(!inArQtc(name)){
+					$(this).prop('checked', ''); //Чистим потроха
+				}
+			});
+			$('input:checkbox:checked', newDiv).each(function(){
+				var name	= $(this).prop('name');
+				if(!inArQtc(name)){
+					$(this).prop('checked', ''); //Чистим потроха
+				}
+			});
+
+			/*
+			$('select option:selected', newDiv).each(function(){
+				var name	= $(this).parent('select').prop('name');
+				if(!inArQtc(name)){
+					$(this).prop('selected', '');
+				}
+			});
+			$('div.selectedTxt', newDiv).each(function(){
+				var name	= $(this).prop('name');
+				if(!inArQtc(name)){
+					$(this).text('');
+				}
+			});
+			*/
+		}
+
+		//устанавливаем новые имена для потрохов
+		$('input, select', newDiv).each(function(){
+			var re	= new RegExp('(\\|[\-0-9]+)');
+			if (re.test($(this).prop('name'))){
+				old_name	= $(this).prop('name');
+				$(this).prop('name',old_name.replace(re, '|'+multCount));
+			}else{
+				$(this).prop('name', $(this).prop('name')+'|'+multCount);
+			}
+		});
+
+		//устанавливаем новое имя для парента.li
+		$('li', newDiv).each(function(){
+			var re	= new RegExp('(\\|[\-0-9]+)');
+			if (re.test($(this).prop('id'))){
+				old_id	= $(this).prop('id');
+				$(this).prop('id',old_id.replace(re, '|'+multCount));
+			}else{
+				$(this).prop('id', $(this).prop('id')+'|'+multCount);
+			}
+		});
+
+		newDiv.prop('id','m_' + multCount);//ноый ид для новой обертки
+
+		//if (curParent){
+			newDiv.insertAfter(curParent);//втыкаем после последнего существующего парента
+		//}
+
+		//Для обернутых селектов особая обработка
+		// $('div.newListSelected', newDiv).remove();//Вычищаем обертки селектов
+
+		if (typeof $.fn.selectpicker == 'function') {
+			newDiv.find('select').each(function() {
+				var $select = $(this);
+				var $newSelect = $select.clone(false);
+				$select.closest('.cb_wrapper').empty().append($newSelect);
+
+				$newSelect.selectpicker({
+					noneSelectedText: 'Ничего не выбрано',
+					width: '100%'
+				});
+			});
+
+		} else {
+			$('select:not(.no-ss)', newDiv).sSelect({ddMaxHeight: '300px', ddMaxWidth: '200px'}); //Оборачиваем селекты
+		}
+		/*
+		$('div.newListSelected', newDiv).each(function(){//Устанавливаем текст из выбранной опции
+			$('div.selectedTxt', this).text($('select option:selected',$(this).parent()).text());
+		});
+		*/
+
+		//Оборачиваем простые элементы формы
+        if (newValidation) {
+            $('div.part', newDiv).iPart();
+            $('div.okved', newDiv).iOkved();
+            $('input.numonly', newDiv).iNumonly();
+            $('div.flmoney', newDiv).iFlMoney({skipValidation: true});
+
+			$('input.datepick').mask('00.00.0000', {
+				placeholder: 'дд.мм.гггг'
+
+			}).datepicker({
+				format: "dd.mm.yyyy",
+				keyboardNavigation: false,
+				autoclose: true,
+				language: 'ru',
+				txtNoDate: 'Выберите дату'
+			});
+
+        } else {
+            $('input.inn', newDiv).iInn();
+            $('div.part', newDiv).iPart();
+            $('div.okved', newDiv).iOkved();
+            $('input.numonly', newDiv).iNumonly();
+            $('div.flmoney', newDiv).iFlMoney();
+            //Поле с датой
+            //чистим
+            $('input.datepick', newDiv).removeClass('hasDatepicker').prop('id', '');
+            //оборачиваем
+            $('input.datepick', newDiv).datepicker($.datepicker.regional['ru'])
+            $('input.datepick', newDiv).datepicker('option', 'defaultDate', '01.07.2016'); // НД2014-11: 2014
+        }
+
+        if (typeof window.InitializeValidators == 'function') {
+            $(newDiv).find('.processed').removeClass('processed');
+            window.InitializeValidators();
+        }
+
+        if (!skipVisibility) {
+			saveAnswers();
+
+			if (!copymul) {
+				setVisibility();
+			}
+		}
+		saveIndexes();
+		wrapUpFiveMultiple();//Оформление множественных
+
+		//Аттач функций обработки парентов (н)
+		$('input', newDiv).unbind('change');
+		// $('select', newDiv).unbind('change');
+		$('input', newDiv).change(function(event){inputFocus(event);});
+		$('select', newDiv).change(function(event){
+			var name	= $(event.target).get(0).name.substr(0,7);
+			var value	= $(event.target).val();
+//			curAnswers[name] = value;
+			curAnswers[this.name] = this.value;
+			setVisibility($(this));
+		});
+		//Аттач функций обработки парентов (к)
+
+		//привяжем обработчики подсказок
+		$('a.hint').click(function(event){showHint(event);});
+		$('input').focus(function(event){showHint(event);});
+
+		return true;
+	}
+
+	function addMultiple(event, copymul, times){//ДОБАВЛЕНИЕ МНОЖЕСТВЕННОГО
+
+		// ПХ, ноябрь 14 (начало)
+		// “Добавить доход” выводится, но не действует. Вместо действия alert с текстом. (Таким образом будет невозможно создать более 5 доходов в обном блоке).
+
+		var maxCount = 100;
+
+		if ($('div.multiple').length >= maxCount) {
+			if (curStage == 2) {
+				alert('К сожалению, нельзя внести более ' + maxCount + '-ти вычетов.');
+
+			} else {
+				alert('К сожалению, нельзя внести более ' + maxCount + '-ти доходов.');
+			}
+
+			return false;
+		}
+
+		// ПХ, ноябрь 14 (конец)
+
+
+	    if (event.srcElement){
+			var curParent	= $(event.srcElement).parents('div.multiple');//текущий по порядку парент
+
+			var newDiv	= $(event.srcElement).parents('div.multiple').clone(); //новая обертка
+		}else{
+			var curParent	= $(event.target).parents('div.multiple');//текущий по порядку парент
+
+			var newDiv	= $(event.target).parents('div.multiple').clone(); //новая обертка
+		}
+
+		if (typeof times == 'undefined') {
+			times = 1;
+		}
+
+		for (var i=0; i < times; ++i) {
+			serviceMultiple(newDiv, copymul, curParent, true);
+			curParent = newDiv;
+			newDiv = curParent.clone();
+		}
+
+		SpecialLogic(true); //обработаем особую логику
+        saveAnswers();
+        setVisibility();
+
+        // ПХ, ноябрь 14 (начало)
+		ButtonsLogic(); // Логика отображения и работы кнопок в множественных блоках Доходы или Вычеты
+		// ПХ, ноябрь 14 (конец)
+
+		return false;
+	}
+
+
+	function debugParents(){
+		for (i in arParent){
+			for(j in arParent[i]){
+				//console.log(i + '   PARENT:' + arParent[i][j]['PARENT'] + ' VALUE:' + arParent[i][j]['VALUE']);
+			}
+		}
+	}
+
+	function debugAnswers(){
+		for (i in curAnswers){
+			//for(j in arParent[i]){
+				//console.log(i);
+			//}
+		}
+	}
+
+	function addFirstMultiple() {
+		var curParent	= $('div#m_-1.multiple');
+		var newDiv	= $('div#m_-1.multiple').clone();
+		serviceMultiple(newDiv,false,curParent);
+		$(newDiv).css('display', 'block');
+		$('div#wo_items').css('display', 'none');
+		setVisibility();
+		$('div#m_-1').remove();
+
+		SpecialLogic(); //обработаем особую логику
+
+		return false;
+	}
+
+	function deleteMultiple(event){//УДАЛЕНИЕ МНОЖЕСТВЕННОГО
+
+		// ПХ, ноябрь 14 (начало)
+
+		var i = 0;
+		$('div.multiple').each(function(){
+			i++;
+		});
+		if( i == 1 )
+		{
+			if (curStage == 2)
+			{
+				alert( 'Нельзя удалить единственный вычет в блоке этой кнопкой. Если Вы хотите удалить этот вычет, просто снимите, пожалуйста, галочку с вопроса на одном из предыдущих экранов, в котором был выбран этот блок.' );
+			}
+			else
+			{
+				alert( 'Нельзя удалить единственный доход в блоке этой кнопкой. Если Вы хотите удалить этот доход, просто снимите, пожалуйста, галочку с вопроса на одном из предыдущих экранов, в котором был выбран этот блок.' );
+			}
+			return false;
+		}
+
+		// ПХ, ноябрь 14 (конец)
+
+
+		if (curStage == 2){
+			if (!confirm("Вы действительно хотите удалить данный вычет?")) return false;
+		}else{
+			if (!confirm("Вы действительно хотите удалить данный доход?")) return false;
+		}
+		multCount--;
+		if(event.srcElement){
+			var curParent	= $(event.srcElement).parents('div.multiple');//текущий по порядку парент
+		}else{
+			var curParent	= $(event.target).parents('div.multiple');//текущий по порядку парент
+		}
+		if (multCount ==-1){
+			$('div#wo_items').css('display', 'block');
+
+			// Сергей (03 февраля 2015): убираем исключение радиокнопок из удаления, то есть делаем так, чтобы
+			// радиокнопки удалялись так же как и другие доходы
+
+			$('input, select', curParent).val('').prop('checked', '').prop('selected', '');
+			$(curParent).prop('id','m_-1').css('display', 'none');
+			$('input, select', curParent).each(function(){
+				var re	= new RegExp('(\\|[0-9]+)');
+				if (re.test($(this).prop('name'))){//устанавливаем новые имена для потрохов
+					old_name	= $(this).prop('name');
+					$(this).prop('name',old_name.replace(re, '|'+multCount));
+				}else{
+					$(this).prop('name', $(this).prop('name')+'|'+multCount);
+				}
+			});
+		}else{
+			curParent.remove();
+		}
+
+		saveIndexes();
+		wrapUpFiveMultiple();//Оформление множественных
+
+		// ПХ, ноябрь 2016 (начало)
+		ButtonsLogic(); // Логика отображения и работы кнопок в множественных блоках Доходы или Вычеты
+		// ПХ, ноябрь 2016 (конец)
+
+		return false;
+	}
+
+	function toggleGroup(event) {
+		if(event.srcElement){
+			var num	= $(event.srcElement).prop('name');
+		}else{
+			var num	= $(event.target).prop('name');
+		}
+		$(".wrapper").hide(200);
+		$(".n_"+num).show(200);
+	}
+
+	function changeBlock(val, dir) {
+		$('input#block').val(val);
+		$('input#direction').val(dir);
+		return false;
+	}
+
+	// ПХ, ноябрь 14 года (начало)
+	function ButtonsLogic()
+	{
+		// Если блоков с доходами больше 1, то во всех блоках кроме последнего убираем кнопку Удалить -->
+
+		// считаем сколько всего блоков
+		var multCount = 0;
+		$('div.multiple').each(function(){
+			multCount++;
+		});
+
+		// проходим по всем блокам и ...
+		var i = 0;
+		$('div.multiple').each(function(){
+
+			$('div', this).each(function(){
+
+				if( $(this).prop('class') == 'mult_buttons' )
+				{
+					i++;
+					if( Number( i ) < Number( multCount ) ) // ... если не последний, то убираем блок с кнопками
+					{
+						$(this).css('display', 'none');
+					}
+					else // ... а если последний, то показываем
+					{
+						$(this).css('display', 'block');
+					}
+				}
+
+			});
+
+		});
+
+		// <-- Если блоков с доходами больше 1, то во всех блоках кроме последнего убираем кнопку Удалить
+	}
+	// ПХ, ноябрь 14 года (конец)
+
+
+	function showdebug() {
+		var deb	= $('div#debug_info');
+		deb.css('display', 'block');
+	}
+
+	function hidedebug() {
+		var deb	= $('div#debug_info');
+		deb.css('display', 'none');
+	}
+
+
+
+
+
+	;
+
+
+
+
+
+	// Примечание: Этот код вызывается в режиме заполнения декларации, в блоке, где доступно скачивание. В личном
+	//             кабинете работает аналогичный код, но не этот.
+
+	// Эта функция убирает индикацию "подождите" и (снова) делает активной кнопку скачивания
+	function back_button_view()
+	{
+		$('#input_3NDFL_2016').prop('disabled', ''); // id="input_3NDFL_2016" у кнопки скачивания из режима заполнения (но не из ЛК)
+		$('#loader_3ndfl_2016').addClass('display_none'); // id="loader_3ndfl_2016" у div с картинкой индикации загрузки
+		// Оба ID задаются в анансе инфоблока где доступно скачивание.
+	}
+
+	$(document).ready(function(){
+		var timeoutId;
+		$('#input_3NDFL_2016').click(function(){  // при клике на кнопку
+            $('#loader_3ndfl_2016').removeClass('display_none'); // показываем "подождите"
+			$(this).prop('disabled', 'disabled'); // делаем кнопку неактивной
+			$('#form_3NDFL_2016').submit(); // отправляем форму
+			timeoutId = setTimeout ( back_button_view, 5000 ); // время запрета в милисекундах
+			return false;
+		});
+	});
+
+    $(function() {
+        $('#buttonDownloadDeclaration').click(function() {
+            var $this = $(this);
+
+            $this.prop('disabled', 'disabled');
+            $('#loaderDownload').show();
+            document.location.href = $this.prop('href');
+
+            setTimeout(function() {
+                $this.prop('disabled', false);
+                $('#loaderDownload').hide();
+            }, 4000);
+        });
+
+        return false;
+    });
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main-form form-2016 block005">
+	<div class="percents" id="divCompletedLevel">
+		<span></span>
+		<div class="bar"><div class="completed"></div></div>
+	</div>
+
+	<div class="percents2">
+		<div class="bar">
+			Пройдено 73% анкеты
+			<div class="completed" style="width: 73%">Пройдено 73% анкеты</div>
+		</div>
+	</div>
+	<ul class="steps clear">
+		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
+
+	<ul class="sub-steps"><li class="active"><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="last"><a href="?block=207037">Адрес</a></li></ul>
+
+
+
+
+	<div id="block_info"><div class="intro-screen">
+    <h4>Просто отвечайте на вопросы по порядку</h4>
+    <p>Не пропускайте, пожалуйста, вопросы. Каждый вопрос может изменить следующие за ним вопросы.
+        Сохранение Ваших ответов происходит автоматически при нажатии кнопки "Далее", "Назад" или "Выйти с сохранением" под вопросами.</p>
+
+    <h4>Результаты программа рассчитает сама</h4>
+    <p>Она занесет Вашу информацию в нужные поля декларации и проставит нужные коды. Добиваясь результатов, как можно более выгодных для Вас.
+        До каждой копейки. В соответствии с самыми последними изменениями законов.</p><h4>Пробуйте бесплатно</h4>
+<p style="text-decoration: none;">
+    Даже в платной версии Вы платите только по желанию. Пользуясь услугой, Вы принимаете условия <u><a id="opup402" href="/legal/offer_main.php" class="open-popup" style="text-decoration: none;">оферты</a></u>. "Налогия.Декларация" подходит для подавляющего большинства ситуаций (подробнее ниже).
+</p></div></div>
+
+
+
+
+	<form method="POST" action="/safe/personal/forms/form2016.php" id="nalogia_form" name="nalogia_form">
+
+	<input type="hidden" class="system" value="true" name="form_submit">
+	<input type="hidden" class="system" value="1779" name="order_id">
+	<input type="hidden" class="system" value="0" name="stage">
+	<input type="hidden" class="system" id="indexes" value="" name="indexes">
+    <input type="hidden" name="block_real_id" value="207013" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<ul class="questions">
+
+
+		</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="buttons_nav" >
+
+		<input id="block" type="hidden" name="block" value="0" />
+		<input id="direction" type="hidden" name="direction" value="0" />
+
+
+
+
+
+
+
+
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('1', '1');">Далее</button>
+
+
+
+
+
+
+                            <button type="submit" name="iblock_submit" class="btn-submit gray save-and-quit small" value="QUIT">Выйти с сохранением</button>
+
+
+
+		</div>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+        SpecialLogic(true);
+    </script>
+
+
+
+
+<script>ButtonsLogic();</script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=005');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="form-additional-info">
+
+    <p>Все вопросы обязательные, если в самом вопросе или заголовке (комментарии) к группе вопросов (над вопросом) не указано иное. Необходимо отвечать на вопросы последовательно, то есть в том порядке, в котором они появляются.</p>
+
+<p>Не забывайте, если у Вас что-то не получается, звонить нам по телефонам (495) 646 8905 (Москва), (812) 643 4225 (Санкт-Петербург), 8 800 505 8905 (последний телефон бесплатен по всей России).</p><p>Сохранение Ваших ответов происходит автоматически при нажатии кнопки "Далее", "Назад" или "Выйти с сохранением".</p>
+              <p>"Налогия" является зарегистрированным охраняемым законом товарным знаком. Пользуясь веб-приложением, Вы принимаете условия <a class="open-popup" href="/legal/offer_main.php">оферты</a>.</p>
+<p>Программа подходит для абсолютного большинства ситуаций, за исключением таких редких: Вы не являетесь
+    резидентом, более 100 схожих доходов, вычет по более чем одному объекту жилья и некоторых других ситуаций.</p>
+
+
+<p>&copy;&nbsp;Налогия. Все права защищены.</p>
+</div>
+                </div>
+
+                        <div class="hint-box col-md-3" id="divHintBox">
+                            <h3>Подсказка</h3>
+
+                            <div class="hint-text"></div>
+                        </div>
+
+
+
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade landing-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-submit" data-dismiss="modal">Закрыть окно</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    		<!-- BEGIN JIVOSITE CODE {literal} -->
+		<script type='text/javascript'>
+			(function(){ var widget_id = 'UHESysYJiz';
+				var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();
+		</script>
+		<!-- {/literal} END JIVOSITE CODE -->
+
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter7259122 = new Ya.Metrika({
+                    id:7259122,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/7259122" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+    </body>
+</html>

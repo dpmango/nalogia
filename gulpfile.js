@@ -34,8 +34,8 @@ gulp.task('default', function (callback) {
 
 // watch
 gulp.task('watch', function(){
-  //gulp.watch('./src/sass/*.+(scss|sass)', ['sass']);
-  gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
+  gulp.watch('./src/sass/*.+(scss|sass)', ['sass']);
+  //gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug']);
   gulp.watch('./src/*.html', browserSync.reload);
   gulp.watch('./src/js/**/*.js', browserSync.reload);
@@ -46,7 +46,7 @@ gulp.task('build', function (callback) {
   runSequence(
     'clean:dist',
     'pug',
-    'postcss',
+    'sass',
     ['useref', 'images', 'fonts'],
     callback
   )
