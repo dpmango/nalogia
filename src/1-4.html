@@ -8,6 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Декларация 2016</title>
     <base href="https://www.nalogia.ru/" />
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -15,7 +16,6 @@
     <link href="/bitrix/templates/design_form_sber/css/bootstrap.css" rel="stylesheet">
     <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
     <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
-    <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
     <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
 
     <link href="https://dpmango.github.io/nalogia/src//css/style.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 
 </head>
 <body>
-<!-- TEMP--><script async src='https://dpmango.github.io/nalogia/src//browser-sync/browser-sync-client.js?v=2.18.6'></script>
+  <!-- TEMP--><script async src='https://dpmango.github.io/nalogia/src//browser-sync/browser-sync-client.js?v=2.18.6'></script>
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -84,7 +84,7 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
         <span class="glyphicon glyphicon-lock"></span><a class="link" href="/safe/personal/forms">личный кабинет</a>
         <span class="glyphicon glyphicon-log-out"></span><a class="link" href="/?logout=yes">выход</a>
                 -->
-        <span class="someinfo">Актуально на 10 января 2017</span>
+        <span class="someinfo">Актуально на 11 января 2017</span>
                 </div>
             </div>
 
@@ -166,18 +166,18 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 
 <script>
-var arParent 		= eval([]);	//паренты из текущего блока
+var arParent 		= eval({"025_035":[{"PARENT":"025_030","VALUE":"207078"}]});	//паренты из текущего блока
 var arOuterParent 	= eval(null);//паренты из прочих блоков
-var visibilityOptions = [];
+var visibilityOptions = {"025_015":[{"elements":[{"field":"010_105","condition":"equal","value":"207078"}]}],"025_020":[{"elements":[{"field":"010_105","condition":"equal","value":"207078"}]}],"025_035":[{"elements":[{"field":"025_030","condition":"equal","value":"207078"}]}]};
 var curOuterAnswers	= eval([]);	//ответы прочих блоков
 var curAnswers		= new Array();							//ответы текущего блока
-var arLimitations	= eval({"005_010":20}); //Ограничение числа знакомест
+var arLimitations	= eval({"025_005":"2","025_010":"57","025_015":"1","025_020":"3","025_030":20,"025_035":"2","025_040":"20","025_045":"35","025_050":20}); //Ограничение числа знакомест
 var multCount		= 0;
 var Indexes			= new Array();							//Индексы для обработки множественных ответов
 var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
 var arHidden;
 var curStage		= 0; //текущий этап
-var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435 \u0431\u0443\u0434\u0443\u0442 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0438 \u0434\u043b\u044f \u0442\u043e\u0433\u043e \u043f\u043e\u043b\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0412\u044b \u0437\u0430\u043f\u043e\u043b\u043d\u044f\u0435\u0442\u0435.\r\n\r\n\u041d\u0430\u0448\u0438 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0438 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u0412\u0430\u043c \u0441 \u0431\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e\u043c \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432.\r\n"
+var currentBlockHint = false
 </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
 
 
@@ -298,7 +298,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 	}
 
     var promoCodes = [];
-	var completedLevel = {"total":10,"current":1};
+	var completedLevel = {"total":10,"current":4};
 	// Инициализация переменной, содержащей текущий этап
 	var CurrentStage = 0;
 	var answer010_110 = false;
@@ -1257,11 +1257,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 
 
-
-
-
-
-<div class="main-form form-2016 block005">
+<div class="main-form form-2016 block025">
 	<div class="percents" id="divCompletedLevel">
 		<span></span>
 		<div class="bar"><div class="completed"></div></div>
@@ -1276,22 +1272,12 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 	<ul class="steps clear">
 		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
 
-	<ul class="sub-steps"><li class="active"><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="last"><a href="?block=207037">Адрес</a></li></ul>
+	<ul class="sub-steps"><li><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li class="active"><a href="?block=207016">Паспортные данные</a></li><li class="last"><a href="?block=207037">Адрес</a></li></ul>
 
 
 
 
-	<div id="block_info"><div class="intro-screen">
-    <h4>Просто отвечайте на вопросы по порядку</h4>
-    <p>Не пропускайте, пожалуйста, вопросы. Каждый вопрос может изменить следующие за ним вопросы.
-        Сохранение Ваших ответов происходит автоматически при нажатии кнопки "Далее", "Назад" или "Выйти с сохранением" под вопросами.</p>
 
-    <h4>Результаты программа рассчитает сама</h4>
-    <p>Она занесет Вашу информацию в нужные поля декларации и проставит нужные коды. Добиваясь результатов, как можно более выгодных для Вас.
-        До каждой копейки. В соответствии с самыми последними изменениями законов.</p><h4>Пробуйте бесплатно</h4>
-<p style="text-decoration: none;">
-    Даже в платной версии Вы платите только по желанию. Пользуясь услугой, Вы принимаете условия <u><a id="opup402" href="/legal/offer_main.php" class="open-popup" style="text-decoration: none;">оферты</a></u>. "Налогия.Декларация" подходит для подавляющего большинства ситуаций (подробнее ниже).
-</p></div></div>
 
 
 
@@ -1302,7 +1288,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 	<input type="hidden" class="system" value="1779" name="order_id">
 	<input type="hidden" class="system" value="0" name="stage">
 	<input type="hidden" class="system" id="indexes" value="" name="indexes">
-    <input type="hidden" name="block_real_id" value="207013" />
+    <input type="hidden" name="block_real_id" value="207016" />
 
 
 
@@ -1318,6 +1304,269 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 
 		<ul class="questions">
+
+
+
+
+
+				<li style="" id="025_005" class="question q025_005">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 025_005 cmn_cnt question025_005"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Дата рождения в формате ДД.ММ.ГГГГ</div></div><div class="r 025_005 cmn_cnt question025_005"><input class="datepick form-control"  name="025_005" type="text" value=""/> </div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="025_010" class="question q025_010">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												    <div class="l 025_010 diff_rows question025_010">
+        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Место рождения. Укажите его так, как оно написано в Вашем документе, удостоверяющем личность. Например, если город, где Вы родились, переименован после Вашего рождения, но в документе, удостоверяющем личность, старое название, напишите старое название.</div>
+    </div>
+    <div class="r 025_010 diff_rows question025_010">
+        <input class="form-control mixed" maxlength="57"  style="max-width: 458px;"  name="025_010" type="text" value=""  />
+    </div>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="025_015" class="question q025_015">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div style="" class="l 025_015 cmn_cnt question025_015"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Наличие гражданства</div></div><div style="" class="r 025_015 cmn_cnt question025_015 radio"><label class="radio"><input name="025_015"  type="radio" value="207079" ><span></span> гражданин (какой-либо) страны</label><label class="radio"><input name="025_015"  type="radio" value="207080" ><span></span> лицо без гражданства</label></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="025_020" class="question q025_020">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 025_020 diff_rows question025_020"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Страна, гражданином которой Вы являетесь (при отсутствии гражданства укажите страну, выдавшую Вам документ, удостоверяющий личность)</div></div><div class="r 025_020 diff_rows question025_020"><div class="cb_wrapper"><select name="025_020" value="" class="form-control"><option value=" 36">Австралия, 36</option><br><option value=" 40">Австрия, 40</option><br><option value=" 31">Азербайджан, 31</option><br><option value="  8">Албания, 8</option><br><option value=" 12">Алжир, 12</option><br><option value=" 16">Американское Самоа, 16</option><br><option value="660">Ангилья, 660</option><br><option value=" 24">Ангола, 24</option><br><option value=" 20">Андорра, 20</option><br><option value=" 28">Антигуа и Барбуда, 28</option><br><option value=" 32">Аргентина, 32</option><br><option value=" 51">Армения,  51</option><br><option value="533">Аруба, 533</option><br><option value="  4">Афганистан, 4</option><br><option value=" 44">Багамы, 44</option><br><option value=" 50">Бангладеш, 50</option><br><option value=" 52">Барбадос, 52</option><br><option value=" 48">Бахрейн, 48</option><br><option value="112">Беларусь, 112</option><br><option value=" 84">Белиз, 84</option><br><option value=" 56">Бельгия, 56</option><br><option value="204">Бенин, 204</option><br><option value=" 60">Бермуды, 60</option><br><option value="100">Болгария, 100</option><br><option value=" 68">Боливия, 68</option><br><option value=" 70">Босния и Герцеговина, 70</option><br><option value=" 72">Ботсвана, 72</option><br><option value=" 76">Бразилия, 76</option><br><option value=" 86">Британская территория в Индийском океане, 86</option><br><option value=" 96">Бруней-Даруссалам, 96</option><br><option value="854">Буркина-Фасо, 854</option><br><option value="108">Бурунди, 108</option><br><option value=" 64">Бутан, 64</option><br><option value="548">Вануату, 548</option><br><option value="826">Великобритания (Соединенное королевство), 826</option><br><option value="348">Венгрия, 348</option><br><option value="862">Венесуэла, 862</option><br><option value=" 92">Виргинские острова, Британские, 92</option><br><option value="850">Виргинские острова, США, 850</option><br><option value="704">Вьетнам, 704</option><br><option value="266">Габон, 266</option><br><option value="332">Гаити, 332</option><br><option value="328">Гайана, 328</option><br><option value="270">Гамбия, 270</option><br><option value="288">Гана, 288</option><br><option value="312">Гваделупа, 312</option><br><option value="320">Гватемала, 320</option><br><option value="324">Гвинея, 324</option><br><option value="624">Гвинея-Бисау, 624</option><br><option value="276">Германия, 276</option><br><option value="292">Гибралтар, 292</option><br><option value="340">Гондурас, 340</option><br><option value="344">Гонконг, 344</option><br><option value="308">Гренада, 308</option><br><option value="304">Гренландия, 304</option><br><option value="300">Греция, 300</option><br><option value="268">Грузия, 268</option><br><option value="316">Гуам, 316</option><br><option value="208">Дания, 208</option><br><option value="262">Джибути, 262</option><br><option value="212">Доминика, 212</option><br><option value="214">Доминиканская республика, 214</option><br><option value="818">Египет, 818</option><br><option value="894">Замбия, 894</option><br><option value="732">Западная Сахара, 732</option><br><option value="716">Зимбабве, 716</option><br><option value="376">Израиль, 376</option><br><option value="356">Индия, 356</option><br><option value="360">Индонезия, 360</option><br><option value="400">Иордания, 400</option><br><option value="368">Ирак, 368</option><br><option value="364">Иран, Исламская республика, 364</option><br><option value="372">Ирландия, 372</option><br><option value="352">Исландия, 352</option><br><option value="724">Испания, 724</option><br><option value="380">Италия, 380</option><br><option value="887">Йемен, 887</option><br><option value="132">Кабо-Верде, 132</option><br><option value="398">Казахстан, 398</option><br><option value="116">Камбоджа, 116</option><br><option value="120">Камерун, 120</option><br><option value="124">Канада, 124</option><br><option value="634">Катар, 634</option><br><option value="404">Кения, 404</option><br><option value="196">Кипр, 196</option><br><option value="417">Киргизия, 417</option><br><option value="296">Кирибати, 296</option><br><option value="156">Китай, 156</option><br><option value="166">Кокосовые (Килинг) острова, 166</option><br><option value="170">Колумбия, 170</option><br><option value="174">Коморы, 174</option><br><option value="178">Конго, 178</option><br><option value="180">Конго, Демократическая республика, 180</option><br><option value="408">Корея, Народно-Демократическая республика, 408</option><br><option value="410">Корея, Республика, 410</option><br><option value="188">Коста-Рика, 188</option><br><option value="384">Кот Д`ивуар, 384</option><br><option value="192">Куба, 192</option><br><option value="414">Кувейт, 414</option><br><option value="418">Лаос, 418</option><br><option value="428">Латвия, 428</option><br><option value="426">Лесото, 426</option><br><option value="430">Либерия, 430</option><br><option value="422">Ливан, 422</option><br><option value="434">Ливийская Арабская Джамахирия, 434</option><br><option value="440">Литва, 440</option><br><option value="438">Лихтенштейн, 438</option><br><option value="442">Люксембург, 442</option><br><option value="480">Маврикий, 480</option><br><option value="478">Мавритания, 478</option><br><option value="450">Мадагаскар, 450</option><br><option value="175">Майотта, 175</option><br><option value="446">Макао, 446</option><br><option value="807">Македония, 807</option><br><option value="454">Малави, 454</option><br><option value="458">Малайзия, 458</option><br><option value="466">Мали, 466</option><br><option value="581">Малые Тихоокеанские отд. острова США, 581</option><br><option value="462">Мальдивы, 462</option><br><option value="470">Мальта, 470</option><br><option value="504">Марокко, 504</option><br><option value="474">Мартиника, 474</option><br><option value="584">Маршалловы острова, 584</option><br><option value="484">Мексика, 484</option><br><option value="583">Микронезия, Федеративные штаты, 583</option><br><option value="508">Мозамбик, 508</option><br><option value="498">Молдова, 498</option><br><option value="492">Монако, 492</option><br><option value="496">Монголия, 496</option><br><option value="500">Монтсеррат, 500</option><br><option value="104">Мьянма, 104</option><br><option value="516">Намибия, 516</option><br><option value="520">Науру, 520</option><br><option value="524">Непал, 524</option><br><option value="562">Нигер, 562</option><br><option value="566">Нигерия, 566</option><br><option value="530">Нидерландские антилы, 530</option><br><option value="528">Нидерланды, 528</option><br><option value="558">Никарагуа, 558</option><br><option value="570">Ниуэ, 570</option><br><option value="554">Новая Зеландия, 554</option><br><option value="540">Новая Каледония, 540</option><br><option value="578">Норвегия, 578</option><br><option value="784">Объединенные Арабские Эмираты, 784</option><br><option value="512">Оман, 512</option><br><option value=" 74">Остров Буве,  74</option><br><option value="901">Остров Джерси, 901</option><br><option value="833">Остров Мэн, 833</option><br><option value="574">Остров Норфолк, 574</option><br><option value="162">Остров Рождества, 162</option><br><option value="334">Остров Херд и Острова Макдональд, 334</option><br><option value="136">Острова Кайман, 136</option><br><option value="184">Острова Кука, 184</option><br><option value="796">Острова Теркс и Кайкос, 796</option><br><option value="586">Пакистан, 586</option><br><option value="585">Палау, 585</option><br><option value="275">Палестинская территория, оккупированная, 275</option><br><option value="591">Панама, 591</option><br><option value="336">Папский престол (Ватикан), 336</option><br><option value="598">Папуа-Новая Гвинея, 598</option><br><option value="600">Парагвай, 600</option><br><option value="604">Перу, 604</option><br><option value="612">Питкерн, 612</option><br><option value="616">Польша, 616</option><br><option value="620">Португалия, 620</option><br><option value="630">Пуэрто-Рико, 630</option><br><option value="638">Реюньон, 638</option><br><option value="643">Россия, 643</option><br><option value="646">Руанда, 646</option><br><option value="642">Румыния, 642</option><br><option value="882">Самоа, 882</option><br><option value="674">Сан-Марино, 674</option><br><option value="678">Сан-Томе и Принсипи, 678</option><br><option value="682">Саудовская Аравия, 682</option><br><option value="748">Свазиленд, 748</option><br><option value="654">Святая Елена, 654</option><br><option value="580">Северные Марианские Острова, 580</option><br><option value="690">Сейшелы, 690</option><br><option value="686">Сенегал, 686</option><br><option value="670">Сент-Винсент и Гренадины, 670</option><br><option value="659">Сент-Китс и Невис, 659</option><br><option value="662">Сент-Люсия, 662</option><br><option value="666">Сент-Пьер и Микелон, 666</option><br><option value="688">Сербия, 688</option><br><option value="702">Сингапур, 702</option><br><option value="760">Сирийская Арабская Республика, 760</option><br><option value="703">Словакия, 703</option><br><option value="705">Словения, 705</option><br><option value="840">Соединенные штаты (США), 840</option><br><option value=" 90">Соломоновы острова,  90</option><br><option value="706">Сомали, 706</option><br><option value="736">Судан, 736</option><br><option value="740">Суринам, 740</option><br><option value="694">Сьерра-Леоне, 694</option><br><option value="762">Таджикистан, 762</option><br><option value="764">Таиланд, 764</option><br><option value="158">Тайвань (Китай), 158</option><br><option value="834">Танзания, 834</option><br><option value="626">Тимор-Лесте, 626</option><br><option value="768">Того, 768</option><br><option value="772">Токелау, 772</option><br><option value="776">Тонга, 776</option><br><option value="780">Тринидад и Тобаго, 780</option><br><option value="798">Тувалу, 798</option><br><option value="788">Тунис, 788</option><br><option value="795">Туркмения, 795</option><br><option value="792">Турция, 792</option><br><option value="800">Уганда, 800</option><br><option value="860">Узбекистан, 860</option><br><option value="804">Украина, 804</option><br><option value="876">Уоллис и Футуна, 876</option><br><option value="858">Уругвай, 858</option><br><option value="234">Фарерские острова, 234</option><br><option value="242">Фиджи, 242</option><br><option value="608">Филиппины, 608</option><br><option value="246">Финляндия, 246</option><br><option value="238">Фолклендские острова, 238</option><br><option value="250">Франция, 250</option><br><option value="254">Французская Гвиана, 254</option><br><option value="258">Французская Полинезия, 258</option><br><option value="260">Французские Южные Территории, 260</option><br><option value="191">Хорватия, 191</option><br><option value="140">Центрально-Африканская Республика, 140</option><br><option value="148">Чад, 148</option><br><option value="499">Черногория, 499</option><br><option value="203">Чешская Республика, 203</option><br><option value="152">Чили, 152</option><br><option value="756">Швейцария, 756</option><br><option value="752">Швеция, 752</option><br><option value="744">Шпицберген и Ян Майен, 744</option><br><option value="144">Шри-Ланка, 144</option><br><option value="218">Эквадор, 218</option><br><option value="226">Экваториальная Гвинея, 226</option><br><option value="248">Эландские Острова, 248</option><br><option value="222">Эль-Сальвадор, 222</option><br><option value="232">Эритрея, 232</option><br><option value="233">Эстония, 233</option><br><option value="231">Эфиопия, 231</option><br><option value="710">Южная Африка, 710</option><br><option value="239">Южная Джорждия и Южные Сандвичевы Острова, 239</option><br><option value="388">Ямайка, 388</option><br><option value="392">Япония, 392</option><br></select><br></div></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="025_030" class="question q025_030">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div style="" class="l 025_030 cmn_cnt question025_030"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Документом, удостоверяющим личность, является паспорт гражданина России</div></div><div style="" class="r 025_030 cmn_cnt question025_030 radio"><label class="radio"><input name="025_030"  type="radio" value="207077" ><span></span> да</label><label class="radio"><input name="025_030"  type="radio" value="207078" ><span></span> нет</label></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="025_035" class="question q025_035">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 025_035 diff_rows question025_035"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Название документа</div></div><div class="r 025_035 diff_rows question025_035"><div class="cb_wrapper"><select name="025_035" value="" class="form-control"><option value="12">Вид на жительство в России, 12</option><br><option value="07">Военный билет, 07</option><br><option value="14">Временное удостоверение личности гражданина России, 14</option><br><option value="08">Временное удостоверение, выданное взамен военного билета, 08</option><br><option value="10">Паспорт иностранного гражданина, 10</option><br><option value="15">Разрешение на временное проживание в России, 15</option><br><option value="18">Свидетельство о предоставлении временного убежища на территории России, 18</option><br><option value="11">Свидетельство о рассмотрении ходатайства о признании лица беженцем на территории России по существу, 11</option><br><option value="03">Свидетельство о рождении, 03</option><br><option value="23">Свидетельство о рождении, выданное уполномоченным органом иностранного государства, 23</option><br><option value="13">Удостоверение беженца, 13</option><br><option value="24">Удостоверение личности военнослужащего России, 24</option><br></select><br></div></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="025_040" class="question q025_040">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												    <div class="l 025_040 cmn_cnt question025_040">
+        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Серия и номер Вашего документа, удостоверяющего личность. Для паспорта гражданина России формат 00 00 000000 (пробел после второй цифры и пробел после четвертой цифры).</div>
+    </div>
+    <div class="r 025_040 cmn_cnt question025_040">
+        <input class="form-control mixed" maxlength="20"  style="max-width: 162px;"  name="025_040" type="text" value=""  />
+    </div>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="025_045" class="question q025_045">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Никаких особых правил сокращения нет. Сократите, пожалуйста, ответ сами, стараясь сокращать такие слова, как &quot;район&quot;, &quot;отдел&quot; и так далее. Например, лучше написать не &quot;Отделом УФМС Октябрьского р-на Крас&quot;, а &quot;О-м УФМС Октябрьского р. Красноярска&quot;. Или не &quot;Отделением УФМС России по гор. Моск&quot;, а &quot;ОУФМС по Москве, Вост. Дегунино&quot;.<br />
+<br />
+Для паспорта гражданина России желательно указать, в том числе, код подразделения, выдавшего Вам паспорт, если он указан в Вашем паспорте.<br />
+<br />
+Обозначение органа, выдавшего паспорт, должно позволять не спутать его ни с каким другим органом. Вот - еще примеры, как лучше сокращать. Не &quot;МРО УФМС России по Владимирской обл&quot;, а &quot;МРО УФМСР Владим. обл. г. Александров&quot;. Не &quot;Отд. УФМС России по Москве по р-ну Г&quot;, а &quot;ОУФМС по Москве, р-н Гагаринский&quot;.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												    <div class="l 025_045 diff_rows question025_045">
+        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Кем выдан документ? К сожалению, ответ ограничен по длине и часто не вмещает полной информации. Нужно сократить Ваши данные таким образом, чтобы они поместились.</div>
+    </div>
+    <div class="r 025_045 diff_rows question025_045">
+        <input class="form-control mixed" maxlength="35"  style="max-width: 282px;"  name="025_045" type="text" value=""  />
+    </div>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="025_050" class="question q025_050">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 025_050 cmn_cnt question025_050"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Дата выдачи документа в формате ДД.ММ.ГГГГ</div></div><div class="r 025_050 cmn_cnt question025_050"><input class="datepick form-control"  name="025_050" type="text" value=""/> </div>
+
+
+
+
+
+
+				</li>
 
 
 		</ul>
@@ -1349,12 +1598,13 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 
 
+		            <button class="btn-submit small" onclick="javascript: changeBlock('3', '-1');">Назад</button>
 
 
 
 
 
-		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('1', '1');">Далее</button>
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('5', '1');">Далее</button>
 
 
 
@@ -1403,7 +1653,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 <script type="text/javascript">
 
-	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=005');
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=025');
 
 </script>
 

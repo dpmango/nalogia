@@ -8,6 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Декларация 2016</title>
     <base href="https://www.nalogia.ru/" />
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -15,7 +16,6 @@
     <link href="/bitrix/templates/design_form_sber/css/bootstrap.css" rel="stylesheet">
     <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
     <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
-    <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
     <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
 
     <link href="https://dpmango.github.io/nalogia/src//css/style.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 
 </head>
 <body>
-<!-- TEMP--><script async src='https://dpmango.github.io/nalogia/src//browser-sync/browser-sync-client.js?v=2.18.6'></script>
+  <!-- TEMP--><script async src='https://dpmango.github.io/nalogia/src//browser-sync/browser-sync-client.js?v=2.18.6'></script>
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -84,7 +84,7 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
         <span class="glyphicon glyphicon-lock"></span><a class="link" href="/safe/personal/forms">личный кабинет</a>
         <span class="glyphicon glyphicon-log-out"></span><a class="link" href="/?logout=yes">выход</a>
                 -->
-        <span class="someinfo">Актуально на 10 января 2017</span>
+        <span class="someinfo">Актуально на 11 января 2017</span>
                 </div>
             </div>
 
@@ -166,18 +166,18 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 
 <script>
-var arParent 		= eval([]);	//паренты из текущего блока
+var arParent 		= eval({"020_005":[{"PARENT":"020_003","VALUE":"207077"}],"020_015":[{"PARENT":"020_010","VALUE":"207071"}]});	//паренты из текущего блока
 var arOuterParent 	= eval(null);//паренты из прочих блоков
-var visibilityOptions = [];
+var visibilityOptions = {"020_005":[{"elements":[{"field":"020_003","condition":"equal","value":"207077"}]}],"020_015":[{"elements":[{"field":"020_010","condition":"equal","value":"207071"}]}]};
 var curOuterAnswers	= eval([]);	//ответы прочих блоков
 var curAnswers		= new Array();							//ответы текущего блока
-var arLimitations	= eval({"005_010":20}); //Ограничение числа знакомест
+var arLimitations	= eval({"020_003":20,"020_005":"3","020_010":"1","020_015":20,"020_020":"12","020_023":"12","020_205":"1","020_210":"2"}); //Ограничение числа знакомест
 var multCount		= 0;
 var Indexes			= new Array();							//Индексы для обработки множественных ответов
 var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
 var arHidden;
 var curStage		= 0; //текущий этап
-var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435 \u0431\u0443\u0434\u0443\u0442 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0438 \u0434\u043b\u044f \u0442\u043e\u0433\u043e \u043f\u043e\u043b\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0412\u044b \u0437\u0430\u043f\u043e\u043b\u043d\u044f\u0435\u0442\u0435.\r\n\r\n\u041d\u0430\u0448\u0438 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0438 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u0412\u0430\u043c \u0441 \u0431\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e\u043c \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432.\r\n"
+var currentBlockHint = false
 </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
 
 
@@ -298,7 +298,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 	}
 
     var promoCodes = [];
-	var completedLevel = {"total":10,"current":1};
+	var completedLevel = {"total":10,"current":3};
 	// Инициализация переменной, содержащей текущий этап
 	var CurrentStage = 0;
 	var answer010_110 = false;
@@ -1254,14 +1254,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 
 
-
-
-
-
-
-
-
-<div class="main-form form-2016 block005">
+<div class="main-form form-2016 block020">
 	<div class="percents" id="divCompletedLevel">
 		<span></span>
 		<div class="bar"><div class="completed"></div></div>
@@ -1276,22 +1269,12 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 	<ul class="steps clear">
 		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
 
-	<ul class="sub-steps"><li class="active"><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="last"><a href="?block=207037">Адрес</a></li></ul>
+	<ul class="sub-steps"><li><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li class="active"><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="last"><a href="?block=207037">Адрес</a></li></ul>
 
 
 
 
-	<div id="block_info"><div class="intro-screen">
-    <h4>Просто отвечайте на вопросы по порядку</h4>
-    <p>Не пропускайте, пожалуйста, вопросы. Каждый вопрос может изменить следующие за ним вопросы.
-        Сохранение Ваших ответов происходит автоматически при нажатии кнопки "Далее", "Назад" или "Выйти с сохранением" под вопросами.</p>
 
-    <h4>Результаты программа рассчитает сама</h4>
-    <p>Она занесет Вашу информацию в нужные поля декларации и проставит нужные коды. Добиваясь результатов, как можно более выгодных для Вас.
-        До каждой копейки. В соответствии с самыми последними изменениями законов.</p><h4>Пробуйте бесплатно</h4>
-<p style="text-decoration: none;">
-    Даже в платной версии Вы платите только по желанию. Пользуясь услугой, Вы принимаете условия <u><a id="opup402" href="/legal/offer_main.php" class="open-popup" style="text-decoration: none;">оферты</a></u>. "Налогия.Декларация" подходит для подавляющего большинства ситуаций (подробнее ниже).
-</p></div></div>
 
 
 
@@ -1302,7 +1285,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 	<input type="hidden" class="system" value="1779" name="order_id">
 	<input type="hidden" class="system" value="0" name="stage">
 	<input type="hidden" class="system" id="indexes" value="" name="indexes">
-    <input type="hidden" name="block_real_id" value="207013" />
+    <input type="hidden" name="block_real_id" value="207026" />
 
 
 
@@ -1318,6 +1301,176 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 
 		<ul class="questions">
+
+
+
+
+
+				<li style="" id="020_003" class="question q020_003">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Даже если Вы заполняете декларацию с целью указать доход, который не связан с предпринимательской &#40;адвокатской и прочей&#41; деятельностью, но при этом являетесь на момент подачи декларации ИП, то есть индивидуальным предпринимателем &#40;или адвокатом и так далее&#41;, Вам надо ответить &quot;да&quot;.<br />
+<br />
+Даже если Вы зарегистрировались как ИП всего лишь за день до подачи декларации.<br />
+<br />
+Например, Вы являетесь ИП и продали машину. При этом продажа машины не связана с предпринимательской деятельностью. Надо ответить &quot;да&quot; и в следующем вопросе выбрать &quot;индивидуальный предприниматель&quot;.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div style="" class="l 020_003 cmn_right question020_003"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Являетесь ли Вы индивидуальным предпринимателем, адвокатом, учредившим адвокатский кабинет, арбитражным управляющим или нотариусом, занимающимся частной практикой?</div></div><div style="" class="r 020_003 cmn_right question020_003 radio"><label class="radio"><input name="020_003"  type="radio" value="207077" ><span></span> да</label><label class="radio"><input name="020_003"  type="radio" value="207078" ><span></span> нет</label></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="020_005" class="question q020_005">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div style="" class="l 020_005 cmn_left question020_005"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Вашу категорию налогоплательщика. Обратите также внимание, что для Вашей ситуации доступен только вариант &quot;являюсь налоговым резидентом&quot; &#40;следующий вопрос&#41;.</div></div><div style="" class="r 020_005 cmn_left question020_005 radio"><label class="radio"><input name="020_005"  type="radio" value="207076" ><span></span> адвокат, учредивший адвокатский кабинет</label><label class="radio"><input name="020_005"  type="radio" value="207075" ><span></span> нотариус, занимающийся частной практикой, или другое лицо, занимающееся частной практикой</label><label class="radio"><input name="020_005"  type="radio" value="207074" ><span></span> индивидуальный предприниматель и глава фермерского хозяйства</label><label class="radio"><input name="020_005"  type="radio" value="207073" ><span></span> индивидуальный предприниматель, не глава фермерского хозяйства</label><label class="radio"><input name="020_005"  type="radio" value="207130" ><span></span> арбитражный управляющий</label></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="020_010" class="question q020_010">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Как правило, налоговым резидентом по итогам 2016 года являлся тот, кто провел в России в 2016 году более полугода. Если точнее - не менее 183 дней &#40;не обязательно подряд&#41;. Есть некоторые исключения.<br />
+<br />
+То, являлись ли Вы налоговым резидентом, не зависит от Вашего гражданства.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div style="" class="l 020_010 cmn_right question020_010"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Являлись ли Вы налоговым резидентом России по итогам 2016 года? Это несложный вопрос: как правило, налоговым резидентом по итогам 2016 года являлся тот, кто провел в России в 2016 году более полугода.</div></div><div style="" class="r 020_010 cmn_right question020_010 radio"><label class="radio"><input name="020_010"  type="radio" value="207070" ><span></span> да</label><label class="radio"><input name="020_010"  type="radio" value="207071" ><span></span> нет</label></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="020_015" class="question q020_015">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Как правило, налоговыми резидентами являются те, кто провел в России в 2016 году более 183 дней. Есть некоторые исключения.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="a comment 020_015 cmn_right question020_015"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Извините, к сожалению, версия программы для лиц, не являющихся налоговыми резидентами России, пока не доступна. Воспользуйтесь, пожалуйста, другим способом подготовки декларации.</div></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="020_020" class="question q020_020">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Если Вы не индивидуальный предприниматель, Вы можете не давать ИНН, но в этом случае Вы должны будете ответить на несколько дополнительных вопросов на следующем экране: дата и место рождения, паспортные данные, и так далее.<br />
+<br />
+Если у Вас нет ИНН &#40;индивидуального номера налогоплательщика&#41;, оставьте, пожалуйста, это поле пустым.<br />
+<br />
+При изменении Вашего адреса, как правило, Ваш ИНН не меняется.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 020_020 cmn_right question020_020"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Ваш ИНН &#40;индивидуальный номер налогоплательщика&#41;.</div></div><div class="r 020_020 cmn_right question020_020"><input style="max-width: 98px;"  maxlength="12"  class="inn form-control" name="020_020" type="text" value="" data-validate="inn" /> </div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="020_205" class="question q020_205">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Выберите, какой адрес в России Вы будете указывать: место жительства, то есть так называемая постоянная прописка &#40;или регистрация&#41;, или, в случае отсутствия места жительства, адрес места пребывания, то есть так называемая временная прописка &#40;или регистрация&#41;. Как правило, декларация подается по месту жительства на момент подачи декларации, и указывается адрес места жительства на момент подачи декларации.<br />
+<br />
+На этом экране и далее на этапе Данные нужно указать именно адрес на момент подачи декларации. А не, например, адрес на конец 2016 года, если адрес на конец 2016 года был иным.<br />
+<br />
+Если Вы подаете декларацию для вычета по покупке или строительству жилья, на этом экране и далее на этапе Данные нужно указать именно Ваш адрес, а не адрес купленного или построенного жилья.<br />
+<br />
+Место временного проживания - это, например, гостиница, санаторий, и тому подобное.<br />
+<br />
+Если Вы не проживаете в России, выберите последний вариант &quot;другой адрес&quot;.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div style="" class="l 020_205 cmn_right question020_205"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите, какой адрес в России Вы будете указывать. Как правило, это - место жительства &#40;постоянная регистрация, иначе называемая &quot;прописка&quot;&#41; на момент подачи декларации.</div></div><div style="" class="r 020_205 cmn_right question020_205 radio"><label class="radio"><input name="020_205"  type="radio" value="207081" ><span></span> место жительства</label><label class="radio"><input name="020_205"  type="radio" value="207082" ><span></span> место пребывания</label><label class="radio"><input name="020_205"  type="radio" value="207129" ><span></span> другой адрес</label></div>
+
+
+
+
+
+
+				</li>
 
 
 		</ul>
@@ -1349,12 +1502,13 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 
 
+		            <button class="btn-submit small" onclick="javascript: changeBlock('2', '-1');">Назад</button>
 
 
 
 
 
-		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('1', '1');">Далее</button>
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('4', '1');">Далее</button>
 
 
 
@@ -1403,7 +1557,7 @@ var currentBlockHint = "\u0412 \u044d\u0442\u043e\u043c \u043e\u043a\u043d\u0435
 
 <script type="text/javascript">
 
-	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=005');
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=020');
 
 </script>
 
