@@ -1,0 +1,673 @@
+@import "fonts";
+
+$blue: #008be8;
+$yellow: #ffdd2d;
+$fontColor: #333333;
+$lighBlue: #74a3c7;
+$grayBg: #eef2f7;
+$borderColor: #dddfe0;
+$textMuted: #9299a2;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media screen and (min-width: 0px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "sm" {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "md" {
+    @media screen and (min-width: 991px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "lg" {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin responsive-custom($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin responsive-max($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "sm" {
+    @media screen and (max-width: 991px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "md" {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// General
+body, html {
+  font-family: Pragmatica, Helvetica, Arial, sans-serif;
+  color: $fontColor;
+  font-size: 13px;
+  overflow-x: hidden !important;
+}
+
+// Header styles
+.page-contents {
+  padding-top: 40px;
+}
+
+.header {
+  background: $blue;
+  box-shadow: none;
+  padding: 15px 0;
+
+  .logo {
+    color: white;
+  }
+
+  .mainey {
+    font-family: "Pragmatica";
+
+    &.logged-in {
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .personal {
+      padding-left: 30px;
+      font-size: 13px;
+
+      .username {
+        font-size: 13px;
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-family: "Pragmatica";
+      }
+    }
+  }
+
+  .call-at-times {
+    color: white;
+    font-size: 13px;
+    line-height: 25px;
+    padding-top: 0;
+    text-transform: uppercase;
+    font-family: "Pragmatica";
+  }
+
+  .phone-section {
+    .phone {
+      padding-top: 0;
+      padding-right: 0;
+
+      span {
+        color: white;
+        font-family: "PragmaticaExtraLight";
+        font-size: 24px;
+        line-height: 1.2em;
+        display: inline-block;
+        padding-bottom: 3px;
+      }
+    }
+  }
+}
+
+// FORM
+.declaration-title {
+  font-size: 48px;
+  font-family: "PFHighwaySansPro-Thin";
+  margin-bottom: 40px;
+
+  @include responsive-max(sm) {
+    font-size: 36px;
+  }
+
+
+  @include responsive-max(xs) {
+    font-size: 32px;
+  }
+}
+
+// STEPS
+.form-container {
+  .main-form {
+    ul.steps {
+      margin-top: -68px;
+
+      li {
+        font-family: "PragmaticaLight";
+        text-transform: uppercase;
+        font-size: 13px;
+        height: 48px;
+        padding: 14px 20px 0;
+
+        a {
+          color: $lighBlue;
+          text-decoration: none;
+          border-bottom: none;
+        }
+      }
+
+      li.active a {
+        color: #033333;
+      }
+    }
+
+    .percents {
+      margin-top: -15px;
+
+      span {
+        text-align: left;
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+
+      .bar {
+        border: 0px solid transparent;
+        height: 10px;
+        background: $grayBg;
+        width: 250px;
+
+        .completed {
+          height: 10px;
+          background: $yellow;
+          margin: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+    ul.sub-steps {
+      margin: -10px -20px 20px -20px;
+      padding: 10px 20px 14px 20px;
+
+      li {
+        a {
+          color: $lighBlue;
+          text-transform: uppercase;
+          font-family: "PragmaticaLight";
+          font-size: 13px;
+          position: relative;
+        }
+
+        &:after {
+          content: "→";
+          font-family: "PragmaticaLight";
+          margin: 0 10px;
+          color: $lighBlue;
+          font-size: 10px;
+        }
+
+        &.active {
+          a {
+            color: $fontColor;
+
+            &::before {
+              position: absolute;
+              bottom: -15px;
+              left: 0;
+              width: 100%;
+              content: " ";
+              display: block;
+              background: $yellow;
+              height: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    ul.questions {
+      li.question {
+        margin-bottom: 35px;
+
+        input.datepick {
+          max-width: 130px;
+          padding: 25px 17px;
+        }
+      }
+
+      div.l.for_checkbox span.title {
+        color: $textMuted;
+
+        b {
+          color: $fontColor;
+        }
+      }
+    }
+  }
+
+  .intro-screen {
+    margin-top: 40px;
+    font-size: 17px;
+    line-height: 24px;
+    font-family: "PragmaticaLight";
+    color: $fontColor;
+
+    h4 {
+      font-size: 24px;
+    }
+  }
+}
+
+.hint-box {
+  h3 {
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    color: $fontColor;
+    font-family: "PragmaticaLight";
+  }
+
+  p {
+    font-family: "PragmaticaLight";
+    font-size: 13px;
+    line-height: 18px;
+    color: $textMuted;
+    margin-bottom: 15px;
+  }
+}
+
+.hint-text {
+  font-family: "PragmaticaLight";
+  font-size: 13px;
+  line-height: 18px;
+  color: $textMuted;
+  margin-bottom: 15px;
+}
+
+// BUTTONS
+
+.btn-submit.small, .download-option .btn-submit, #buttonAddFiles {
+  padding: 21px 40px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 23px;
+  background: #ffdd2d;
+  border: none;
+  color: $fontColor !important;
+  box-shadow: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #ffcd33;
+  }
+}
+
+.btn-submit.gray {
+  background: transparent;
+  color: $lighBlue !important;
+  border: 1px solid $lighBlue;
+  text-shadow: none;
+
+  &:hover {
+    background: $lighBlue;
+    color: white !important;
+  }
+}
+
+.add-multiple {
+  .btn-submit.small {
+    padding: 15px 30px;
+  }
+}
+
+.back-to-start {
+  .btn-submit {
+    padding: 15px 30px;
+    background: transparent;
+    color: $lighBlue !important;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border: 1px solid $lighBlue !important;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $lighBlue;
+      color: white !important;
+    }
+  }
+}
+
+// INPUTS UI
+input[type=text].form-control {
+  border: none;
+  background: $grayBg;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding-top: 30px;
+  padding-left: 17px;
+  padding-bottom: 9px;
+  height: 66px;
+  font-size: 17px;
+  line-height: 24px;
+  cursor: text;
+
+  &:focus {
+    border: 1px solid $borderColor;
+    background: white;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(black, 0.2);
+  }
+}
+
+input.form-control.mixed {
+  max-width: 100% !important;
+  padding: 20px 17px !important;
+}
+
+.form-container ul.questions li.question span.title {
+  font-size: 17px;
+  font-family: "PragmaticaLight";
+
+  // margin-left: 17px
+  margin-bottom: 5px;
+
+  // display: inline-block
+  // hint mark gets broken
+}
+
+.hint-mark {
+  background: none;
+  border: 2px solid #aaafb6;
+  color: $textMuted;
+  padding: 0;
+  font-size: 16px;
+  font-family: "PragmaticaLight";
+  width: 23px;
+  height: 23px;
+  font-weight: normal;
+  vertical-align: -3px;
+  margin-top: -1px;
+}
+
+.form-container .main-form label.radio {
+  font-size: 17px;
+  color: $textMuted;
+  font-family: "PragmaticaLight";
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.form-container .main-form input[type=radio] + span {
+  background: $grayBg;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  top: -2px;
+  margin-right: 20px;
+}
+
+.form-container .main-form input[type=radio]:checked + span {
+  background: $yellow;
+}
+
+.form-container .main-form input[type=radio]:checked + span:after {
+  background: #434a54;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#buttons_nav {
+  border-top: 1px solid $borderColor;
+  padding-top: 30px;
+}
+
+// SELECT MENU
+.cb_wrapper {
+  height: 65px;
+
+  button.dropdown-toggle {
+    border: none;
+    background: $grayBg;
+    padding: 22px 17px 25px 17px;
+    height: 66px;
+    font-size: 17px;
+    line-height: 24px;
+    cursor: pointer;
+    color: $textMuted;
+    text-shadow: none;
+  }
+
+  .open > .dropdown-toggle.btn-default:focus {
+    outline: none !important;
+    box-shadow: none;
+    background: white;
+    border: 1px solid $borderColor;
+  }
+
+  .form-control:focus {
+    outline: none !important;
+    box-shadow: none;
+    border-color: $borderColor;
+  }
+}
+
+.bootstrap-select.btn-group {
+  .dropdown-toggle .caret {
+    font-size: 0;
+    background-image: url("https://dpmango.github.io/nalogia/src/images/bs-caret.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 13px;
+    height: 7px;
+    right: 15px;
+    border: none;
+  }
+
+  &.open {
+    .dropdown-toggle .caret {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown-menu li {
+    border-bottom: 1px solid $borderColor;
+    font-size: 17px;
+    color: $fontColor;
+  }
+
+  .dropdown-menu > li > a {
+    padding: 5px 15px;
+
+    &:hover {
+      background: #f8fafc;
+    }
+  }
+}
+
+// CHECKBOX
+.form-container .main-form {
+  .checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  input[type=checkbox] + span {
+    background: $grayBg;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+  }
+
+  input[type=checkbox]:checked + span {
+    background: yellow;
+  }
+
+  input[type=checkbox]:checked + span:after {
+    background: url("https://dpmango.github.io/nalogia/src/images/tick.svg") no-repeat center;
+    border-radius: 0;
+    width: 18px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//ICONS
+.main-form {
+  div.l {
+    // padding-left: 84px !important
+    &:before {
+      border: 1px solid #74a3c7;
+      border-radius: 50%;
+      width: 65px !important;
+      height: 65px !important;
+      background-position: center center !important;
+      margin-left: -79px !important;
+    }
+  }
+
+  div.l.question102_110:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_work-muted.svg");
+    background-size: 60% !important;
+  }
+
+  div.l.question102_115:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_sale-muted.svg");
+    background-size: 75% !important;
+  }
+
+  div.l.question102_120:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_services-muted.svg");
+    background-size: 60% !important;
+  }
+
+  div.l.question102_125:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_business-muted.svg");
+    background-size: 60% !important;
+  }
+
+  div.l.question102_130:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_iis-muted.svg");
+    background-size: 60% !important;
+  }
+
+  div.l.question102_135:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_dividends-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question105_140:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/13-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question105_145:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/14-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question105_150:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/15-muted.svg");
+    background-size: 65% !important;
+  }
+
+  div.l.question105_155:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/16-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question105_160:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/17-muted.svg");
+    background-size: 75% !important;
+  }
+
+  div.l.question105_165:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/18-muted.svg");
+    background-size: 65% !important;
+  }
+
+  div.l.question105_180:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/19-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question310_315:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/20-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question310_317:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/21-muted.svg");
+    background-size: 65% !important;
+  }
+
+  div.l.question310_320:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/22-muted.svg");
+    background-size: 80% !important;
+  }
+
+  div.l.question310_325:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/23-muted.svg");
+    background-size: 70% !important;
+  }
+
+  div.l.question310_328:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/24-muted.svg");
+    background-size: 65% !important;
+  }
+
+  div.l.question310_330:before {
+    background-image: url("https://dpmango.github.io/nalogia/src/images/icons/25-muted.svg");
+    background-size: 60% !important;
+  }
+}
+
+.form-container ul.questions li.question div.a.comment span.title {
+  color: $textMuted;
+  font-size: 13px;
+  font-family: "PragmaticaLight";
+}
+
+.input-group-addon {
+  background: white;
+  border-top: none;
+  border-bottom: none;
+}
+
+.form-container ul.questions li.question .flmoney .cel {
+  padding-top: 11px;
+  padding-right: 15px;
+}
+
+.form-container ul.questions li.question input.drob {
+  padding-top: 11px;
+  padding-top: 15px;
+}
+
+input.ceilmoney.form-control.processed.masked {
+  padding-right: 15px !important;
+  padding-top: 11px;
+}
+
+input.form-control.inn, input.form-control.numonly {
+  padding-top: 11px;
+}
+
+.form-container ul.questions li.question .l.diff_rows {
+  margin-bottom: 30px;
+}
