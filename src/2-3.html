@@ -17,9 +17,7 @@
     <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
     <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
     <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
-
     <link href="https://dpmango.github.io/nalogia/src/css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -156,9 +154,6 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 <div class="container page-contents">
     <div class="row">
-        <div class="col-sm-12">
-          <h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
-        </div>
         <div class="col-md-9 form-container">
 
 
@@ -169,16 +164,16 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 <script>
 var arParent 		= eval([]);	//паренты из текущего блока
 var arOuterParent 	= eval(null);//паренты из прочих блоков
-var visibilityOptions = {"040_905":[{"elements":[{"field":"010_105","condition":"equal","value":"207078"}]}]};
+var visibilityOptions = [];
 var curOuterAnswers	= eval([]);	//ответы прочих блоков
 var curAnswers		= new Array();							//ответы текущего блока
-var arLimitations	= eval({"040_030":"82","040_033":"8","040_035":"82","040_005":"2","040_020":20,"040_040":"82","040_045":"8","040_050":"8","040_055":"8","040_010":"6","040_300":"8","040_805":"4","040_030_fias":"82","040_045_fias":20,"040_040_fias":"82","040_auto":20,"040_905":"60"}); //Ограничение числа знакомест
+var arLimitations	= eval({"105_140":20,"105_145":20,"105_150":20,"105_155":20,"105_160":20,"105_165":20,"105_180":20,"105_210":20,"105_300":20}); //Ограничение числа знакомест
 var multCount		= 0;
 var Indexes			= new Array();							//Индексы для обработки множественных ответов
 var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
 var arHidden;
-var curStage		= 0; //текущий этап
-var currentBlockHint = false
+var curStage		= 1; //текущий этап
+var currentBlockHint = "\u0418\u0437 \u044d\u0442\u0438\u0445 \u0432\u0438\u0434\u043e\u0432 \u0434\u043e\u0445\u043e\u0434\u043e\u0432 \u043d\u0443\u0436\u043d\u043e \u0432\u044b\u0431\u0440\u0430\u0442\u044c \u0412\u0430\u0448 \u0434\u043e\u0445\u043e\u0434. \u0418\u043b\u0438 \u0434\u043e\u0445\u043e\u0434\u044b, \u0435\u0441\u043b\u0438 \u0443 \u0412\u0430\u0441 \u0434\u043e\u0445\u043e\u0434\u044b \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0432\u0438\u0434\u043e\u0432.\r\n\r\n\u041d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0434\u0440\u0443\u0433\u0438\u0435 \u0432\u0438\u0434\u044b \u0434\u043e\u0445\u043e\u0434\u043e\u0432 - \u043d\u0430 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0435\u043c \u044d\u043a\u0440\u0430\u043d\u0435. \u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 \u0026quot;\u041d\u0430\u0437\u0430\u0434\u0026quot; \u043d\u0438\u0436\u0435, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0438\u0445."
 </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
 
 
@@ -299,10 +294,10 @@ var currentBlockHint = false
 	}
 
     var promoCodes = [];
-	var completedLevel = {"total":10,"current":5};
+	var completedLevel = {"total":14,"current":8};
 	// Инициализация переменной, содержащей текущий этап
-	var CurrentStage = 0;
-	var answer010_110 = false;
+	var CurrentStage = 1;
+	var answer010_110 = "207078";
 
 
     var newValidation = true;
@@ -1253,6 +1248,7 @@ var currentBlockHint = false
 
 
 
+	<h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
 
 
 
@@ -1261,7 +1257,7 @@ var currentBlockHint = false
 
 
 
-<div class="main-form form-2016 block040">
+<div class="main-form form-2016 block105">
 	<div class="percents" id="divCompletedLevel">
 		<span></span>
 		<div class="bar"><div class="completed"></div></div>
@@ -1274,14 +1270,14 @@ var currentBlockHint = false
 		</div>
 	</div>
 	<ul class="steps clear">
-		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
+		<li><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li class="active"><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
 
-	<ul class="sub-steps"><li><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="active last"><a href="?block=207037">Адрес</a></li></ul>
-
-
+	<ul class="sub-steps"><li><a href="?block=207011">Вступление</a></li><li><a href="?block=207019">Выбор доходов, часть 1</a></li><li class="active"><a href="?block=207018">Выбор доходов, часть 2</a></li><li class="last"><a href="?block=207023">Предпринимательство</a></li></ul>
 
 
-	<div id="block_info">Внесите Ваш адрес, и программа сама по Вашему адресу определит Ваш индекс, код по ОКТМО &#40;этот код будет нужен, только если Ваша декларация не для возврата налога&#41; и инспекцию, в которую нужно подавать декларацию. Чтобы программа могла определить это, обязательно выберите Ваш город &#40;или другой населенный пункт&#41;, улицу и дом в меню. И только если что-то не находится в меню, вносите самостоятельно.&nbsp;&nbsp;</div>
+
+
+	<div id="block_info"><p>Выберите, пожалуйста, все виды доходов, которые вы хотите занести в декларацию. Некоторые другие виды доходов представлены на предыдущем экране.  Чтобы выбрать вид дохода, надо поставить &quot;галочку&quot; в поле справа от его описания.<p></div>
 
 
 
@@ -1290,9 +1286,9 @@ var currentBlockHint = false
 
 	<input type="hidden" class="system" value="true" name="form_submit">
 	<input type="hidden" class="system" value="1779" name="order_id">
-	<input type="hidden" class="system" value="0" name="stage">
+	<input type="hidden" class="system" value="1" name="stage">
 	<input type="hidden" class="system" id="indexes" value="" name="indexes">
-    <input type="hidden" name="block_real_id" value="207037" />
+    <input type="hidden" name="block_real_id" value="207018" />
 
 
 
@@ -1313,13 +1309,13 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_030" class="question q040_030">
+				<li style="" id="105_140" class="question q105_140">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Налог 13&#37;. Коды в справке 2-НДФЛ: с 2201 по 2209.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Чаще всего при заполнении этого блока Вам нужна будет информация о том, сколько составили Ваши доходы и расходы, и о том, от кого получены доходы. Эту информацию чаще всего можно взять в Вашем договоре, по которому Вы получили вознаграждение.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1327,13 +1323,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_030 diff_rows question040_030">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Ваш город, поселок или другой населенный пункт в меню. Начните набирать первые символы названия, и Вы увидите меню ниже.</div>
-    </div>
-    <div class="r 040_030 diff_rows question040_030">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_030" type="text" value=""  />
-    </div>
-
+												<div class="l 105_140 for_checkbox question105_140"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Авторы"</b>. Доходы по авторским вознаграждениям, вознаграждениям за создание, исполнение или иное использование произведений науки, литературы и искусства, и так далее.</div></div><div class="r 105_140 for_checkbox question105_140"><label class="checkbox"><input  name="105_140" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1346,13 +1336,15 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_033" class="question q040_033">
+				<li style="" id="105_145" class="question q105_145">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Налог 13&#37;. Коды в справке 2-НДФЛ: 1540, 1542, 1550. Не входят сюда: доходы от продажи ценных бумаг.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+В этом блоке также доходы, полученные при выходе из состава участников общества, доходы по получению участником общества средств &#40;имущества&#41; при ликвидации общества и доходы по уменьшению номинальной стоимости доли<br />
+<br />
+Чаще всего, при заполнении этого блока Вам нужна будет информация о том, сколько составил доход, который Вы получили, и о том, от кого Вы получили доход. Эту информацию чаще всего можно взять в Вашем договоре &#40;например, договоре купли-продажи доли или договоре уступки прав требования по договору участия в долевом строительстве&#41;.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1360,13 +1352,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_033 cmn_cnt question040_033">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Это город или другой населенный пункт (поселок, деревня и так далее)?</div>
-    </div>
-    <div class="r 040_033 cmn_cnt question040_033">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_033" type="text" value="city"  />
-    </div>
-
+												<div class="l 105_145 for_checkbox question105_145"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Доля"</b>. Доходы от продажи доли в уставном капитале организации, т.е. доли в ООО. Доходы от уступки прав требования по договору участия в долевом строительстве.</div></div><div class="r 105_145 for_checkbox question105_145"><label class="checkbox"><input  name="105_145" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1379,13 +1365,13 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_035" class="question q040_035">
+				<li style="" id="105_150" class="question q105_150">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Налог 13&#37;, 35&#37;. Коды в справке 2-НДФЛ: 2730, 2740, 2750, 3010.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Чаще всего при заполнении этого блока Вам нужна будет информация о том, сколько составила стоимость выигрыша или приза, который Вы получили, и о том, от кого Вы получили выигрыш или приз.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1393,13 +1379,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_035 diff_rows question040_035">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Название города, в составе которого находится населенный пункт</div>
-    </div>
-    <div class="r 040_035 diff_rows question040_035">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_035" type="text" value=""  />
-    </div>
-
+												<div class="l 105_150 for_checkbox question105_150"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Призы"</b>. Выигрыши и призы, в том числе связанные с рекламой и полученные на конкурсах и соревнованиях, проводимых в соответствии с решениями органов власти.</div></div><div class="r 105_150 for_checkbox question105_150"><label class="checkbox"><input  name="105_150" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1412,13 +1392,16 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_005" class="question q040_005">
+				<li style="" id="105_155" class="question q105_155">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Ставка 13&#37;, 35&#37;. Коды в справке 2-НДФЛ: 1011, 3020, 4800. Не входят сюда &#40;и не облагаются&#41;: проценты по вкладам в российских банках, в случае если проценты не превышали определенное значение.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+<br />
+Не облагаются налогом проценты по вкладам в российских банках, в случае если проценты &#40;на дату подписания договора вклада&#41; не превышали ставку рефинансирования ЦБ России, увеличенную на 10 процентных пунктов.<br />
+<br />
+Если Вы отчитываетесь по процентам, полученным от российского банка, как правило, Ваш банк может выдать Вам так называемую справку &#40;она же форма&#41; 2-НДФЛ. В ней будут необходимые Вам для ответов данные.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1426,13 +1409,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_005 cmn_cnt question040_005">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Регион</div>
-    </div>
-    <div class="r 040_005 cmn_cnt question040_005">
-        <input class="form-control mixed" maxlength="2"  style="max-width: 18px;"  name="040_005" type="text" value=""  />
-    </div>
-
+												<div class="l 105_155 for_checkbox question105_155"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Проценты"</b>. Проценты, полученные от вкладов в банках, займов физическим лицам, например, проценты, заработанные на выдаче займа другому человеку.</div></div><div class="r 105_155 for_checkbox question105_155"><label class="checkbox"><input  name="105_155" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1445,13 +1422,13 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_020" class="question q040_020">
+				<li style="" id="105_160" class="question q105_160">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Материальная выгода от получения кредита или займа, в случае если ставка займа или кредита была &#40;1&#41; по российским рублям менее чем две трети ставки рефинансирования ЦБ на дату получения дохода &#40;2&#41; по иностранной валюте менее чем 9&#37; годовых. Налог 35&#37;. Коды в справке 2-НДФЛ: 2610.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Если Вы отчитываетесь по материальной выгоде от получения кредита в российском банке, как правило, Ваш банк может выдать Вам так называемую справку &#40;она же форма&#41; 2-НДФЛ. В ней будут необходимые Вам для ответов этого блока данные.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1459,13 +1436,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_020 cmn_cnt question040_020">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Район</div>
-    </div>
-    <div class="r 040_020 cmn_cnt question040_020">
-        <input class="form-control mixed" maxlength="20"  style="max-width: 162px;"  name="040_020" type="text" value=""  />
-    </div>
-
+												<div class="l 105_160 for_checkbox question105_160"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Экономия"</b>. Материальная выгода от получения кредита или займа, в случае если ставка займа или кредита была меньше определенной величины.</div></div><div class="r 105_160 for_checkbox question105_160"><label class="checkbox"><input  name="105_160" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1478,13 +1449,15 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_040" class="question q040_040">
+				<li style="" id="105_165" class="question q105_165">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Налог 13&#37;. Код в справке 2-НДФЛ: 2720.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Такие подарки от физических лиц, как правило, облагаются налогом и их нужно занести в декларацию, если даритель - не член семьи и не близкий родственник: недвижимость, транспортные средства, акции, доли, паи.<br />
+<br />
+Чаще всего, при заполнении этого блока Вам нужна будет информация о том, сколько составила стоимость подарка, который Вы получили, и о том, от кого Вы получили подарок. Если дарение было оформлено договором, такая информация чаще всего есть в договоре дарения.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1492,13 +1465,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_040 diff_rows question040_040">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Вашу улицу &#40;проспект, переулок и тому подобное&#41;. Начните набирать первые символы названия и Вы увидите появившееся меню &#40;список&#41; ниже.</div>
-    </div>
-    <div class="r 040_040 diff_rows question040_040">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_040" type="text" value=""  />
-    </div>
-
+												<div class="l 105_165 for_checkbox question105_165"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Подарки"</b>. Стоимость подарков, полученных от организаций, предпринимателей, физических лиц, не являющихся предпринимателями.</div></div><div class="r 105_165 for_checkbox question105_165"><label class="checkbox"><input  name="105_165" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1511,13 +1478,13 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_045" class="question q040_045">
+				<li style="" id="105_180" class="question q105_180">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Прочие облагаемые налогом по ставке 13&#37; доходы, не относящиеся ни к одному из других блоков. Например, сдача недвижимости в аренду или внаем и страховое возмещение при наступлении страхового случая. Налог 13&#37;. Коды в справке 2-НДФЛ: 1201, 1240, 1400, 2300, 2400, 4800, 2761, 2790.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Если Вы отчитываетесь по сдаче жилья, чаще всего при заполнении этого блока Вам нужна будет информация о сумме дохода, который Вы получили, и о том, кому Вы сдавали жилье. Как правило, такая информация есть в договоре найма, который поможет Вам при заполнении этого блока.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1525,13 +1492,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_045 cmn_right question040_045">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер дома &#40;владения&#41;. Выберите Ваш номер дом &#40;владения&#41; вместе с корпусом &#40;или строением&#41; в меню ниже. Если в меню ниже много номеров, начните набирать первую &#40;или первые&#41; цифры номера дома и в меню ниже останутся только нужные Вам номера домов. Только если Вашего номера дома в меню ниже нет, внесите номер справа &#40;а корпус или строение ниже в отдельном вопросе&#41;.</div>
-    </div>
-    <div class="r 040_045 cmn_right question040_045">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_045" type="text" value=""  />
-    </div>
-
+												<div class="l 105_180 for_checkbox question105_180"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1"><b>Блок "Прочее", включая сдачу жилья</b>. Прочие облагаемые налогом по ставке 13% доходы, не относящиеся ни к одному из других блоков.</div></div><div class="r 105_180 for_checkbox question105_180"><label class="checkbox"><input  name="105_180" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1544,7 +1505,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_050" class="question q040_050">
+				<li style="" id="105_300" class="question q105_300">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1558,268 +1519,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_050 cmn_right question040_050">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер корпуса (строения)</div>
-    </div>
-    <div class="r 040_050 cmn_right question040_050">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_050" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_055" class="question q040_055">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_055 cmn_right question040_055">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер квартиры</div>
-    </div>
-    <div class="r 040_055 cmn_right question040_055">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_055" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_010" class="question q040_010">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_010 cmn_cnt question040_010"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Почтовый индекс</div></div><div class="r 040_010 cmn_cnt question040_010"><input style="max-width: 50px;" class="numonly form-control"  name="040_010"  maxlength="6"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_300" class="question q040_300">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_300 cmn_cnt question040_300"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Код по ОКТМО Вашего муниципального образования</div></div><div class="r 040_300 cmn_cnt question040_300"><input style="max-width: 66px;" class="numonly form-control"  name="040_300"  maxlength="8"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_805" class="question q040_805">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_805 cmn_cnt question040_805"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Налоговая инспекция, в которую Вы подаете декларацию</div></div><div class="r 040_805 cmn_cnt question040_805"><input style="max-width: 34px;" class="numonly form-control"  name="040_805"  maxlength="4"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_030_fias" class="question q040_030_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_030_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_045_fias" class="question q040_045_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_045_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_040_fias" class="question q040_040_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_040_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_auto" class="question q040_auto">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_auto" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="display: none;" id="040_905" class="question q040_905">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_905 diff_rows question040_905">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Адрес места жительства за пределами России при его наличии. Этот адрес нужно указать &#40;при его наличии&#41;, только если Вы иностранный гражданин или у Вас нет гражданства и у Вас отсутствует адрес места жительства &#40;то есть постоянный адрес&#41; в России.</div>
-    </div>
-    <div class="r 040_905 diff_rows question040_905">
-        <input class="form-control mixed" maxlength="60"  style="max-width: 482px;"  name="040_905" type="text" value=""  />
-    </div>
-
+												<div class="a comment 105_300 cmn_left question105_300"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Некоторые другие виды доходов представлены на предыдущем экране. Нажмите кнопку "Назад" ниже, если хотите посмотреть их.</div></div>
 
 
 
@@ -1858,13 +1558,13 @@ var currentBlockHint = false
 
 
 
-		            <button class="btn-submit small" onclick="javascript: changeBlock('4', '-1');">Назад</button>
+		            <button class="btn-submit small" onclick="javascript: changeBlock('1', '-1');">Назад</button>
 
 
 
 
 
-		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('6', '1');">Далее</button>
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('3', '1');">Далее</button>
 
 
 
@@ -1892,7 +1592,6 @@ var currentBlockHint = false
 
 
 
-<script src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/fias_040.js"></script>
 
 	<script>
         SpecialLogic(true);
@@ -1914,7 +1613,7 @@ var currentBlockHint = false
 
 <script type="text/javascript">
 
-	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=040');
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=105');
 
 </script>
 

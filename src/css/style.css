@@ -2,31 +2,31 @@
   font-weight: 400;
   font-style: normal;
   font-family: 'PFHighwaySansPro-Light';
-  src: url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Light.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Light.woff") format("woff"), url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Light.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Light.svg#PFHighwaySansPro-Light") format("svg"); }
+  src: url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Light.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Light.woff") format("woff"), url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Light.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Light.svg#PFHighwaySansPro-Light") format("svg"); }
 
 @font-face {
   font-weight: 400;
   font-style: normal;
   font-family: 'PFHighwaySansPro-Thin';
-  src: url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Thin.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Thin.woff") format("woff"), url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Thin.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src//fonts/PFHighwaySansPro-Thin.svg#PFHighwaySansPro-Thin") format("svg"); }
+  src: url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Thin.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Thin.woff") format("woff"), url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Thin.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src/fonts/PFHighwaySansPro-Thin.svg#PFHighwaySansPro-Thin") format("svg"); }
 
 @font-face {
   font-weight: 400;
   font-style: normal;
   font-family: 'Pragmatica';
-  src: url("https://dpmango.github.io/nalogia/src//fonts/Pragmatica.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src//fonts/Pragmatica.woff") format("woff"), url("https://dpmango.github.io/nalogia/src//fonts/Pragmatica.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src//fonts/Pragmatica.svg#Pragmatica") format("svg"); }
+  src: url("https://dpmango.github.io/nalogia/src/fonts/Pragmatica.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src/fonts/Pragmatica.woff") format("woff"), url("https://dpmango.github.io/nalogia/src/fonts/Pragmatica.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src/fonts/Pragmatica.svg#Pragmatica") format("svg"); }
 
 @font-face {
   font-weight: 400;
   font-style: normal;
   font-family: 'PragmaticaLight';
-  src: url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaLight.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaLight.woff") format("woff"), url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaLight.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaLight.svg#PragmaticaLight") format("svg"); }
+  src: url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaLight.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaLight.woff") format("woff"), url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaLight.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaLight.svg#PragmaticaLight") format("svg"); }
 
 @font-face {
   font-weight: 400;
   font-style: normal;
   font-family: 'PragmaticaExtraLight';
-  src: url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaExtraLight.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaExtraLight.woff") format("woff"), url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaExtraLight.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src//fonts/PragmaticaExtraLight.svg#PragmaticaExtraLight") format("svg"); }
+  src: url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaExtraLight.eot?#iefix") format("embedded-opentype"), url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaExtraLight.woff") format("woff"), url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaExtraLight.ttf") format("truetype"), url("https://dpmango.github.io/nalogia/src/fonts/PragmaticaExtraLight.svg#PragmaticaExtraLight") format("svg"); }
 
 body, html {
   overflow-x: hidden !important;
@@ -79,6 +79,12 @@ body, html {
   margin-bottom: 40px;
   font-size: 48px;
   font-family: 'PFHighwaySansPro-Thin'; }
+  @media screen and (max-width: 991px) {
+    .declaration-title {
+      font-size: 36px; } }
+  @media screen and (max-width: 768px) {
+    .declaration-title {
+      font-size: 32px; } }
 
 .form-container .main-form ul.steps {
   margin-top: -68px; }
@@ -141,6 +147,14 @@ body, html {
 
 .form-container .main-form ul.questions li.question {
   margin-bottom: 35px; }
+  .form-container .main-form ul.questions li.question input.datepick {
+    padding: 25px 17px;
+    max-width: 130px; }
+
+.form-container .main-form ul.questions div.l.for_checkbox span.title {
+  color: #9299a2; }
+  .form-container .main-form ul.questions div.l.for_checkbox span.title b {
+    color: #333333; }
 
 .form-container .intro-screen {
   margin-top: 40px;
@@ -172,7 +186,7 @@ body, html {
   font-family: 'PragmaticaLight';
   line-height: 18px; }
 
-.btn-submit.small {
+.btn-submit.small, .download-option .btn-submit, #buttonAddFiles {
   padding: 21px 40px;
   border: none;
   background: #ffdd2d;
@@ -184,7 +198,7 @@ body, html {
   line-height: 23px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
-  .btn-submit.small:hover {
+  .btn-submit.small:hover, .download-option .btn-submit:hover, #buttonAddFiles:hover {
     background: #ffcd33; }
 
 .btn-submit.gray {
@@ -193,6 +207,27 @@ body, html {
   color: #74a3c7 !important;
   text-shadow: none; }
   .btn-submit.gray:hover {
+    background: #74a3c7;
+    color: white !important; }
+
+.add-multiple .btn-submit.small {
+  padding: 15px 30px; }
+
+.back-to-start .btn-submit {
+  padding: 15px 30px;
+  border: 1px solid #74a3c7 !important;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #74a3c7 !important;
+  text-shadow: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  .back-to-start .btn-submit:hover {
     background: #74a3c7;
     color: white !important; }
 
@@ -210,15 +245,19 @@ input[type=text].form-control {
   font-size: 17px;
   line-height: 24px;
   cursor: text; }
+  input[type=text].form-control:focus {
+    outline: none;
+    border: 1px solid #dddfe0;
+    background: white;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
 
 input.form-control.mixed {
-  padding: 25px 17px !important;
+  padding: 20px 17px !important;
   max-width: 100% !important; }
 
 .form-container ul.questions li.question span.title {
-  display: inline-block;
   margin-bottom: 5px;
-  padding-left: 17px;
   font-size: 17px;
   font-family: 'PragmaticaLight'; }
 
@@ -267,5 +306,191 @@ input.form-control.mixed {
 div#buttons_nav {
   padding-top: 30px;
   border-top: 1px solid #dddfe0; }
+
+.cb_wrapper {
+  height: 65px; }
+  .cb_wrapper button.dropdown-toggle {
+    padding: 22px 17px 25px 17px;
+    height: 66px;
+    border: none;
+    background: #eef2f7;
+    color: #9299a2;
+    text-shadow: none;
+    font-size: 17px;
+    line-height: 24px;
+    cursor: pointer; }
+  .cb_wrapper .open > .dropdown-toggle.btn-default:focus {
+    outline: none !important;
+    border: 1px solid #dddfe0;
+    background: white;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .cb_wrapper .form-control:focus {
+    outline: none !important;
+    border-color: #dddfe0;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+  right: 15px;
+  width: 13px;
+  height: 7px;
+  border: none;
+  background-image: url("https://dpmango.github.io/nalogia/src/images/bs-caret.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0; }
+
+.bootstrap-select.btn-group.open .dropdown-toggle .caret {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.bootstrap-select.btn-group .dropdown-menu li {
+  border-bottom: 1px solid #dddfe0;
+  color: #333333;
+  font-size: 17px; }
+
+.bootstrap-select.btn-group .dropdown-menu > li > a {
+  padding: 5px 15px; }
+  .bootstrap-select.btn-group .dropdown-menu > li > a:hover {
+    background: #f8fafc; }
+
+.form-container .main-form .checkbox {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.form-container .main-form input[type=checkbox] + span {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: #eef2f7; }
+
+.form-container .main-form input[type=checkbox]:checked + span {
+  background: yellow; }
+
+.form-container .main-form input[type=checkbox]:checked + span:after {
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 15px;
+  border-radius: 0;
+  background: url("https://dpmango.github.io/nalogia/src/images/tick.svg") no-repeat center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.main-form div.l:before {
+  margin-left: -79px !important;
+  width: 65px !important;
+  height: 65px !important;
+  border: 1px solid #74a3c7;
+  border-radius: 50%;
+  background-position: center center !important; }
+
+.main-form div.l.question102_110:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_work-muted.svg");
+  background-size: 60% !important; }
+
+.main-form div.l.question102_115:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_sale-muted.svg");
+  background-size: 75% !important; }
+
+.main-form div.l.question102_120:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_services-muted.svg");
+  background-size: 60% !important; }
+
+.main-form div.l.question102_125:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_business-muted.svg");
+  background-size: 60% !important; }
+
+.main-form div.l.question102_130:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_iis-muted.svg");
+  background-size: 60% !important; }
+
+.main-form div.l.question102_135:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_dividends-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question105_140:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/13-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question105_145:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/14-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question105_150:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/15-muted.svg");
+  background-size: 65% !important; }
+
+.main-form div.l.question105_155:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/16-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question105_160:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/17-muted.svg");
+  background-size: 75% !important; }
+
+.main-form div.l.question105_165:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/18-muted.svg");
+  background-size: 65% !important; }
+
+.main-form div.l.question105_180:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/19-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question310_315:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/20-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question310_317:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/21-muted.svg");
+  background-size: 65% !important; }
+
+.main-form div.l.question310_320:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/22-muted.svg");
+  background-size: 80% !important; }
+
+.main-form div.l.question310_325:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/23-muted.svg");
+  background-size: 70% !important; }
+
+.main-form div.l.question310_328:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/24-muted.svg");
+  background-size: 65% !important; }
+
+.main-form div.l.question310_330:before {
+  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/25-muted.svg");
+  background-size: 60% !important; }
+
+.form-container ul.questions li.question div.a.comment span.title {
+  color: #9299a2;
+  font-size: 13px;
+  font-family: 'PragmaticaLight'; }
+
+.input-group-addon {
+  border-top: none;
+  border-bottom: none;
+  background: white; }
+
+.form-container ul.questions li.question .flmoney .cel {
+  padding-top: 11px;
+  padding-right: 15px; }
+
+.form-container ul.questions li.question input.drob {
+  padding-top: 11px;
+  padding-top: 15px; }
+
+input.ceilmoney.form-control.processed.masked {
+  padding-top: 11px;
+  padding-right: 15px !important; }
+
+input.form-control.inn, input.form-control.numonly {
+  padding-top: 11px; }
+
+.form-container ul.questions li.question .l.diff_rows {
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */

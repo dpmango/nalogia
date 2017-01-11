@@ -17,9 +17,7 @@
     <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
     <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
     <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
-
     <link href="https://dpmango.github.io/nalogia/src/css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -156,9 +154,6 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 <div class="container page-contents">
     <div class="row">
-        <div class="col-sm-12">
-          <h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
-        </div>
         <div class="col-md-9 form-container">
 
 
@@ -167,17 +162,17 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 
 <script>
-var arParent 		= eval([]);	//паренты из текущего блока
+var arParent 		= eval({"125_110":[{"PARENT":"125_105","VALUE":"207083"}],"125_112":[{"PARENT":"125_105","VALUE":"207135"}],"125_125":[{"PARENT":"125_123","VALUE":"207099"}],"125_127":[{"PARENT":"125_123","VALUE":"207099"}],"125_130":[{"PARENT":"125_123","VALUE":"207099"}],"125_135":[{"PARENT":"125_123","VALUE":"207099"}],"125_140":[{"PARENT":"125_123","VALUE":"207099"}],"125_145":[{"PARENT":"125_123","VALUE":"207099"}],"125_147":[{"PARENT":"125_123","VALUE":"207099"}]});	//паренты из текущего блока
 var arOuterParent 	= eval(null);//паренты из прочих блоков
-var visibilityOptions = {"040_905":[{"elements":[{"field":"010_105","condition":"equal","value":"207078"}]}]};
+var visibilityOptions = {"125_110":[{"elements":[{"field":"125_105","condition":"equal","value":"207083"}]}],"125_112":[{"elements":[{"field":"125_105","condition":"equal","value":"207135"}]}],"125_125":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}],"125_127":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}],"125_130":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}],"125_135":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}],"125_140":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}],"125_145":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}],"125_147":[{"elements":[{"field":"125_123","condition":"equal","value":"207099"}]}]};
 var curOuterAnswers	= eval([]);	//ответы прочих блоков
 var curAnswers		= new Array();							//ответы текущего блока
-var arLimitations	= eval({"040_030":"82","040_033":"8","040_035":"82","040_005":"2","040_020":20,"040_040":"82","040_045":"8","040_050":"8","040_055":"8","040_010":"6","040_300":"8","040_805":"4","040_030_fias":"82","040_045_fias":20,"040_040_fias":"82","040_auto":20,"040_905":"60"}); //Ограничение числа знакомест
+var arLimitations	= eval({"125_105":20,"125_110":"8","125_112":"8","125_115":"12","125_123":20,"125_125":20,"125_127":20,"125_130":20,"125_135":20,"125_140":20,"125_145":20,"125_147":20,"125_149":20,"125_150":20,"125_151":"12","125_155":"12","125_160":"12","125_162":"12","125_163":"12","125_165":"4","125_170":20}); //Ограничение числа знакомест
 var multCount		= 0;
 var Indexes			= new Array();							//Индексы для обработки множественных ответов
-var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
+var arQtc			= eval(["125_105"]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
 var arHidden;
-var curStage		= 0; //текущий этап
+var curStage		= 1; //текущий этап
 var currentBlockHint = false
 </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
 
@@ -299,10 +294,10 @@ var currentBlockHint = false
 	}
 
     var promoCodes = [];
-	var completedLevel = {"total":10,"current":5};
+	var completedLevel = {"total":14,"current":9};
 	// Инициализация переменной, содержащей текущий этап
-	var CurrentStage = 0;
-	var answer010_110 = false;
+	var CurrentStage = 1;
+	var answer010_110 = "207078";
 
 
     var newValidation = true;
@@ -1253,6 +1248,7 @@ var currentBlockHint = false
 
 
 
+	<h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
 
 
 
@@ -1261,7 +1257,7 @@ var currentBlockHint = false
 
 
 
-<div class="main-form form-2016 block040">
+<div class="main-form form-2016 block125">
 	<div class="percents" id="divCompletedLevel">
 		<span></span>
 		<div class="bar"><div class="completed"></div></div>
@@ -1274,14 +1270,15 @@ var currentBlockHint = false
 		</div>
 	</div>
 	<ul class="steps clear">
-		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
+		<li><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li class="active"><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
 
-	<ul class="sub-steps"><li><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="active last"><a href="?block=207037">Адрес</a></li></ul>
-
-
+	<ul class="sub-steps"><li><a href="?block=207011">Вступление</a></li><li><a href="?block=207019">Выбор доходов, часть 1</a></li><li><a href="?block=207018">Выбор доходов, часть 2</a></li><li class="active last"><a href="?block=207023">Предпринимательство</a></li></ul>
 
 
-	<div id="block_info">Внесите Ваш адрес, и программа сама по Вашему адресу определит Ваш индекс, код по ОКТМО &#40;этот код будет нужен, только если Ваша декларация не для возврата налога&#41; и инспекцию, в которую нужно подавать декларацию. Чтобы программа могла определить это, обязательно выберите Ваш город &#40;или другой населенный пункт&#41;, улицу и дом в меню. И только если что-то не находится в меню, вносите самостоятельно.&nbsp;&nbsp;</div>
+
+
+	<div id="block_info"><b>Блок &quot;Предпринимательство&quot;. </b>Доходы, полученные от предпринимательской деятельности (то есть доходы физических лиц, зарегистрированных в качестве индивидуальных предпринимателей), адвокатской деятельности и частной практики. Ставка налога 13&#37;. Этот блок подходит только предпринимателям на общей системе налогообложения. Если Вы предприниматель на "упрощенке" (то есть упрощенной системе налогообложения или УСН), к сожалению, программа "Налогия.Декларация" не для Вас.
+<br /><br />Информация в данном блоке заполняется отдельно по каждому виду предпринимательской деятельности. Разные виды деятельности имеют разные коды (&quot;ОКВЭДы&quot;). Но если у Вас несколько видов деятельности, ответы на некоторые вопросы нужно занести только один раз: в <u>последнем</u> из доходов данного блока. Ниже эти вопросы отделены специальным комментарием.</div>
 
 
 
@@ -1290,9 +1287,9 @@ var currentBlockHint = false
 
 	<input type="hidden" class="system" value="true" name="form_submit">
 	<input type="hidden" class="system" value="1779" name="order_id">
-	<input type="hidden" class="system" value="0" name="stage">
+	<input type="hidden" class="system" value="1" name="stage">
 	<input type="hidden" class="system" id="indexes" value="" name="indexes">
-    <input type="hidden" name="block_real_id" value="207037" />
+    <input type="hidden" name="block_real_id" value="207023" />
 
 
 
@@ -1303,6 +1300,8 @@ var currentBlockHint = false
 
 
 
+
+			<div id="m_0" class="multiple">
 
 
 
@@ -1313,7 +1312,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_030" class="question q040_030">
+				<li style="" id="125_105" class="question q125_105">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1327,11 +1326,36 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_030 diff_rows question040_030">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Ваш город, поселок или другой населенный пункт в меню. Начните набирать первые символы названия, и Вы увидите меню ниже.</div>
+												<div style="" class="l 125_105 cmn_left question125_105"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Вид деятельности:</div></div><div style="" class="r 125_105 cmn_left question125_105 radio"><label class="radio"><input name="125_105"  type="radio" value="207083" ><span></span> предпринимательская деятельность</label><label class="radio"><input name="125_105"  type="radio" value="207084" ><span></span> нотариальная деятельность</label><label class="radio"><input name="125_105"  type="radio" value="207085" ><span></span> адвокатская деятельность</label><label class="radio"><input name="125_105"  type="radio" value="207134" ><span></span> деятельность арбитражного управляющего</label><label class="radio"><input name="125_105"  type="radio" value="207135" ><span></span> деятельность главы крестьянского (фермерского) хозяйства</label><label class="radio"><input name="125_105"  type="radio" value="207086" ><span></span> иная деятельность</label></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="125_110" class="question q125_110">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Ваш код может указываться с точностью менее, чем 6 цифр, в таком случае его тоже нужно занести, разделяя каждые следующие две цифры точкой, например так: 74.1.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												    <div class="l 125_110 cmn_right question125_110">
+        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Код вида предпринимательской деятельности (ОКВЭД), в формате 00.00.00 (цифры разделены точкой):</div>
     </div>
-    <div class="r 040_030 diff_rows question040_030">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_030" type="text" value=""  />
+    <div class="r 125_110 cmn_right question125_110">
+        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="125_110" type="text" value=""  />
     </div>
 
 
@@ -1346,13 +1370,11 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_033" class="question q040_033">
+				<li style="display: none;" id="125_112" class="question q125_112">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					Ваш код может указываться с точностью менее, чем 6 цифр, в таком случае его тоже нужно занести, разделяя каждые следующие две цифры точкой, например так: 74.1.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1360,11 +1382,11 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_033 cmn_cnt question040_033">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Это город или другой населенный пункт (поселок, деревня и так далее)?</div>
+												    <div class="l 125_112 cmn_right question125_112">
+        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Код вида предпринимательской деятельности (ОКВЭД), в формате 00.00.00 (цифры разделены точкой):</div>
     </div>
-    <div class="r 040_033 cmn_cnt question040_033">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_033" type="text" value="city"  />
+    <div class="r 125_112 cmn_right question125_112">
+        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="125_112" type="text" value=""  />
     </div>
 
 
@@ -1379,7 +1401,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_035" class="question q040_035">
+				<li style="" id="125_115" class="question q125_115">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1393,13 +1415,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_035 diff_rows question040_035">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Название города, в составе которого находится населенный пункт</div>
-    </div>
-    <div class="r 040_035 diff_rows question040_035">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_035" type="text" value=""  />
-    </div>
-
+												<div class="l 125_115 cmn_right question125_115"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма дохода по данному виду деятельности, руб., коп.</div></div>
+				<div class="r 125_115 cmn_right question125_115 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 98px;"  name="125_115_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="12" class="cel form-control" style="max-width: 98px;"  name="125_115_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_115_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1412,7 +1434,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_005" class="question q040_005">
+				<li style="" id="125_123" class="question q125_123">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1426,13 +1448,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_005 cmn_cnt question040_005">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Регион</div>
-    </div>
-    <div class="r 040_005 cmn_cnt question040_005">
-        <input class="form-control mixed" maxlength="2"  style="max-width: 18px;"  name="040_005" type="text" value=""  />
-    </div>
-
+												<div style="" class="l 125_123 cmn_left question125_123"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Уменьшить доход, облагаемый налогом на</div></div><div style="" class="r 125_123 cmn_left question125_123 radio"><label class="radio"><input name="125_123"  type="radio" value="207099" ><span></span> сумму документально подтвержденных фактических расходов, которые Вы понесли для получения вознаграждения.</label><label class="radio"><input name="125_123"  type="radio" value="207100" ><span></span> норматив расходов, то есть профессиональный вычет в размере 20% от дохода (если Вы не ИП, Вы не можете выбрать этот вариант)</label></div>
 
 
 
@@ -1445,7 +1461,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_020" class="question q040_020">
+				<li style="display: none;" id="125_125" class="question q125_125">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1459,13 +1475,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_020 cmn_cnt question040_020">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Район</div>
-    </div>
-    <div class="r 040_020 cmn_cnt question040_020">
-        <input class="form-control mixed" maxlength="20"  style="max-width: 162px;"  name="040_020" type="text" value=""  />
-    </div>
-
+												<div class="l 125_125 cmn_right question125_125"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма фактически произведенных расходов, учитываемых в составе налогового вычета, руб., коп.</div></div>
+				<div class="r 125_125 cmn_right question125_125 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_125_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_125_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_125_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1478,7 +1494,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_040" class="question q040_040">
+				<li style="display: none;" id="125_127" class="question q125_127">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1492,13 +1508,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_040 diff_rows question040_040">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Вашу улицу &#40;проспект, переулок и тому подобное&#41;. Начните набирать первые символы названия и Вы увидите появившееся меню &#40;список&#41; ниже.</div>
-    </div>
-    <div class="r 040_040 diff_rows question040_040">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_040" type="text" value=""  />
-    </div>
-
+												<div class="a comment 125_127 diff_rows question125_127"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">В том числе:</div></div>
 
 
 
@@ -1511,7 +1521,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_045" class="question q040_045">
+				<li style="display: none;" id="125_130" class="question q125_130">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1525,13 +1535,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_045 cmn_right question040_045">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер дома &#40;владения&#41;. Выберите Ваш номер дом &#40;владения&#41; вместе с корпусом &#40;или строением&#41; в меню ниже. Если в меню ниже много номеров, начните набирать первую &#40;или первые&#41; цифры номера дома и в меню ниже останутся только нужные Вам номера домов. Только если Вашего номера дома в меню ниже нет, внесите номер справа &#40;а корпус или строение ниже в отдельном вопросе&#41;.</div>
-    </div>
-    <div class="r 040_045 cmn_right question040_045">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_045" type="text" value=""  />
-    </div>
-
+												<div class="l 125_130 cmn_right cyclestart question125_130"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма материальных расходов, руб., коп.</div></div>
+				<div class="r 125_130 cmn_right cyclestart question125_130 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_130_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_130_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_130_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1544,7 +1554,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_050" class="question q040_050">
+				<li style="display: none;" id="125_135" class="question q125_135">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1558,13 +1568,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_050 cmn_right question040_050">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер корпуса (строения)</div>
-    </div>
-    <div class="r 040_050 cmn_right question040_050">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_050" type="text" value=""  />
-    </div>
-
+												<div class="l 125_135 cmn_right cyclestart question125_135"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма амортизационных начислений, руб., коп.</div></div>
+				<div class="r 125_135 cmn_right cyclestart question125_135 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_135_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_135_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_135_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1577,7 +1587,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_055" class="question q040_055">
+				<li style="display: none;" id="125_140" class="question q125_140">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1591,13 +1601,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_055 cmn_right question040_055">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер квартиры</div>
-    </div>
-    <div class="r 040_055 cmn_right question040_055">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_055" type="text" value=""  />
-    </div>
-
+												<div class="l 125_140 cmn_right cyclestart question125_140"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма расходов на выплаты и вознаграждения в пользу физических лиц, руб., коп.</div></div>
+				<div class="r 125_140 cmn_right cyclestart question125_140 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_140_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_140_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_140_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1610,7 +1620,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_010" class="question q040_010">
+				<li style="display: none;" id="125_145" class="question q125_145">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1624,7 +1634,13 @@ var currentBlockHint = false
 
 
 
-												<div class="l 040_010 cmn_cnt question040_010"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Почтовый индекс</div></div><div class="r 040_010 cmn_cnt question040_010"><input style="max-width: 50px;" class="numonly form-control"  name="040_010"  maxlength="6"  type="text" value="" data-validate="numbers"  /></div>
+												<div class="l 125_145 cmn_right cyclestart question125_145"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">в том числе сумма выплат по трудовым договорам, руб., коп.</div></div>
+				<div class="r 125_145 cmn_right cyclestart question125_145 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_145_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_145_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_145_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1637,7 +1653,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_300" class="question q040_300">
+				<li style="display: none;" id="125_147" class="question q125_147">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1651,7 +1667,13 @@ var currentBlockHint = false
 
 
 
-												<div class="l 040_300 cmn_cnt question040_300"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Код по ОКТМО Вашего муниципального образования</div></div><div class="r 040_300 cmn_cnt question040_300"><input style="max-width: 66px;" class="numonly form-control"  name="040_300"  maxlength="8"  type="text" value="" data-validate="numbers"  /></div>
+												<div class="l 125_147 cmn_right cyclestart question125_147"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма прочих расходов, руб., коп.</div></div>
+				<div class="r 125_147 cmn_right cyclestart question125_147 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_147_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_147_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_147_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1664,7 +1686,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_805" class="question q040_805">
+				<li style="" id="125_149" class="question q125_149">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1678,7 +1700,7 @@ var currentBlockHint = false
 
 
 
-												<div class="l 040_805 cmn_cnt question040_805"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Налоговая инспекция, в которую Вы подаете декларацию</div></div><div class="r 040_805 cmn_cnt question040_805"><input style="max-width: 34px;" class="numonly form-control"  name="040_805"  maxlength="4"  type="text" value="" data-validate="numbers"  /></div>
+												<div class="a comment 125_149 diff_rows question125_149"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Если у Вас несколько видов деятельности, и, следовательно, несколько доходов в данном Блоке, ответы на следующие четыре вопроса нужно занести только один раз, в <u>последнем</u> из доходов данного Блока. Если у Вас только один вид деятельности, ответы нужно занести в этом, одном доходе.</div></div>
 
 
 
@@ -1691,7 +1713,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_030_fias" class="question q040_030_fias">
+				<li style="" id="125_150" class="question q125_150">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1705,7 +1727,13 @@ var currentBlockHint = false
 
 
 
-												<input class="textonly" name="040_030_fias" type="hidden" value=""/>
+												<div class="l 125_150 cmn_right cyclestart question125_150"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Корректировка налоговой базы в случае сделки между взаимозависимыми лицами по ценам, не соответствующим рыночным. Если у Вас нет такой корректировки, просто оставьте поле для ответа пустым.</div></div>
+				<div class="r 125_150 cmn_right cyclestart question125_150 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_150_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_150_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_150_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1718,7 +1746,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_045_fias" class="question q040_045_fias">
+				<li style="" id="125_151" class="question q125_151">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1732,7 +1760,7 @@ var currentBlockHint = false
 
 
 
-												<input class="textonly" name="040_045_fias" type="hidden" value=""/>
+												<div class="l 125_151 cmn_right cyclestart question125_151"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Корректировка налога в случае сделки между взаимозависимыми лицами по ценам, не соответствующим рыночным. Если у Вас нет такой корректировки, просто оставьте поле для ответа пустым.</div></div><div class="r 125_151 cmn_right cyclestart question125_151"><input style="max-width: 98px;"  class="ceilmoney form-control"  maxlength="12"  name="125_151" type="text" value="" data-validate="sum" /> </div>
 
 
 
@@ -1745,7 +1773,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_040_fias" class="question q040_040_fias">
+				<li style="" id="125_155" class="question q125_155">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1759,7 +1787,7 @@ var currentBlockHint = false
 
 
 
-												<input class="textonly" name="040_040_fias" type="hidden" value=""/>
+												<div class="l 125_155 cmn_right cyclestart question125_155"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Сумма начисленных авансовых платежей, в рублях (без копеек)</div></div><div class="r 125_155 cmn_right cyclestart question125_155"><input style="max-width: 98px;"  class="ceilmoney form-control"  maxlength="12"  name="125_155" type="text" value="" data-validate="sum" /> </div>
 
 
 
@@ -1772,7 +1800,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_auto" class="question q040_auto">
+				<li style="" id="125_160" class="question q125_160">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1786,7 +1814,7 @@ var currentBlockHint = false
 
 
 
-												<input class="textonly" name="040_auto" type="hidden" value=""/>
+												<div class="l 125_160 cmn_right cyclestart question125_160"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Сумма фактически уплаченных авансовых платежей, в рублях (без копеек)</div></div><div class="r 125_160 cmn_right cyclestart question125_160"><input style="max-width: 98px;"  class="ceilmoney form-control"  maxlength="12"  name="125_160" type="text" value="" data-validate="sum" /> </div>
 
 
 
@@ -1799,7 +1827,7 @@ var currentBlockHint = false
 
 
 
-				<li style="display: none;" id="040_905" class="question q040_905">
+				<li style="" id="125_162" class="question q125_162">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1813,13 +1841,94 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_905 diff_rows question040_905">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Адрес места жительства за пределами России при его наличии. Этот адрес нужно указать &#40;при его наличии&#41;, только если Вы иностранный гражданин или у Вас нет гражданства и у Вас отсутствует адрес места жительства &#40;то есть постоянный адрес&#41; в России.</div>
-    </div>
-    <div class="r 040_905 diff_rows question040_905">
-        <input class="form-control mixed" maxlength="60"  style="max-width: 482px;"  name="040_905" type="text" value=""  />
-    </div>
+												<div class="l 125_162 cmn_right cyclestart question125_162"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Если Вы платили за 2016 год налог по патентной системе налогообложения, внесите сумму уплаченного налога, подлежащего зачету при расчете налога, в рублях (без копеек). Если Вы не платили такого налога, просто оставьте поле для ответа пустым.</div></div><div class="r 125_162 cmn_right cyclestart question125_162"><input style="max-width: 98px;"  class="ceilmoney form-control"  maxlength="12"  name="125_162" type="text" value="" data-validate="sum" /> </div>
 
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="125_163" class="question q125_163">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 125_163 cmn_right cyclestart question125_163"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Если Вы платили за 2016 год торговый сбор, внесите сумму уплаченного торгового сбора, подлежащего зачету при расчете налога, в рублях (без копеек). Если Вы не платили такого налога, просто оставьте поле для ответа пустым.</div></div><div class="r 125_163 cmn_right cyclestart question125_163"><input style="max-width: 98px;"  class="ceilmoney form-control"  maxlength="12"  name="125_163" type="text" value="" data-validate="sum" /> </div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="125_165" class="question q125_165">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 125_165 cmn_right cyclestart question125_165"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Год регистрации крестьянского (фермерского) хозяйства (этот вопрос только для главы крестьянского (фермерского) хозяйства, если у Вас нет такого статуса, оставьте поле пустым)</div></div><div class="r 125_165 cmn_right cyclestart question125_165"><input style="max-width: 34px;" class="numonly form-control"  name="125_165"  maxlength="4"  type="text" value="" data-validate="numbers"  /></div>
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="" id="125_170" class="question q125_170">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+<br />
+Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+												<div class="l 125_170 cmn_right cyclestart question125_170"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма дохода, не подлежащая налогообложению в соответствии с пунктом 14 статьи 217 Налогового кодекса, руб., коп. (этот вопрос только для главы крестьянского (фермерского) хозяйства, если у Вас нет такого статуса, оставьте поле пустым)</div></div>
+				<div class="r 125_170 cmn_right cyclestart question125_170 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 162px;"  name="125_170_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="20" class="cel form-control" style="max-width: 162px;"  name="125_170_cel" type="text" value="" data-validate="sum" />.
+					<input name="125_170_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1834,6 +1943,11 @@ var currentBlockHint = false
 
 
 
+
+		<div class="mult_buttons">
+            <div class="add-multiple"><button class="btn-submit small" onclick="return addMultiple(event)">Добавить доход</button><button class="btn-submit small" onclick="return deleteMultiple(event)">Удалить доход</button><button class="btn-submit small" onclick="return addMultiple(event, true)" type="button">Копировать доход</button></div>		</div>
+
+		</div>
 
 
 
@@ -1858,13 +1972,13 @@ var currentBlockHint = false
 
 
 
-		            <button class="btn-submit small" onclick="javascript: changeBlock('4', '-1');">Назад</button>
+		            <button class="btn-submit small" onclick="javascript: changeBlock('5', '-1');">Назад</button>
 
 
 
 
 
-		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('6', '1');">Далее</button>
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('7', '1');">Далее</button>
 
 
 
@@ -1892,7 +2006,6 @@ var currentBlockHint = false
 
 
 
-<script src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/fias_040.js"></script>
 
 	<script>
         SpecialLogic(true);
@@ -1914,7 +2027,7 @@ var currentBlockHint = false
 
 <script type="text/javascript">
 
-	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=040');
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=125');
 
 </script>
 
@@ -1922,6 +2035,32 @@ var currentBlockHint = false
 
 
 
+	<script type="text/javascript">
+
+		// Яндекс.Метрика
+        $(window).load(function() {
+            yaCounter7259122.reachGoal('BLOCK_NOT_FREE');
+        });
+
+		// Google Analytics
+		// window.onload = function() {
+		//	_gaq.push(['_trackEvent', 'Declaration', 'Filling', 'BLOCK_NOT_FREE']);
+		// }
+
+        $(window).load(function() {
+			ga('send', 'event', 'Declaration', 'Filling', 'BLOCK_NOT_FREE');
+		});
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        setCookie("BLOCK_NOT_FREE_reached", "yes", 90);
+
+	</script>
 
 
 

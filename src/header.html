@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Декларация 2016</title>
+    <base href="https://www.nalogia.ru/" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="/bitrix/templates/design_form_sber/css/bootstrap.css" rel="stylesheet">
+    <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
+    <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
+    <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
+    <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
+
+    <link href="https://dpmango.github.io/nalogia/src/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/bitrix/templates/design_form_sber/js/sberbank.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/design_home_sberbank/js/recepient/libs.js"></script>
+
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        jQuery(function($) {
+            jQuery('[data-toggle=popover]').popover();
+            jQuery('[data-toggle=tooltip]').tooltip();
+
+
+            $(document).on("mouseup mouseover","ul.navbar-nav > li.dropdown", function(){
+                $(this).addClass("open");
+            }).on("mouseout","ul.navbar-nav > li.dropdown", function(){
+                $(this).removeClass("open");
+            });
+
+        });
+        /*]]>*/
+    </script>
+
+
+</head>
+<body>
+<!-- TEMP--><script async src='https://dpmango.github.io/nalogia/src/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+
+<div class="container-fluid header header-shadowed">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-2 logo">
+                <div>Налогия</div>
+            </div>
+
+            <div class="col-xs-8 col-sm-5 col-md-4 logged-in mainey">
+                <div class="personal">
+                            <span class="username">dpmango</span>
+
+        <span class="someinfo">Актуально на 10 января 2017</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 call-at-times hidden-sm hidden-xs">
+                Пн-Пт, с 09 до 21 по<br>
+                московскому времени
+            </div>
+            <div class="hidden-xs col-sm-4 col-md-3 phone-section">
+                <div class="phone">
+                    <span>(495) 646 8905</span>
+                    <span>8 800 505 8905</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="hidden-sm hidden-xs hidden-md hidden-lg header-mobile container-fluid">
+    <div class="row logo-section">
+        <div class="left">
+            <a href="#" class="open-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+        </div>
+        <div class="right">
+            <a href="#" class="dropdown-toggle" id="mobile-loginWindowDropdown"><span class="glyphicon glyphicon-lock enter"></span></a><a href="#" id="mobile-buttonSearch"><span class="glyphicon glyphicon-search search"></span></a>
+        </div>
+        <a href="/" class="logo">Возврат налогов</a>
+    </div>
+    <div class="row mobile-site-menu">
+        <ul class="menu col-md-12">
+            <li><a href="/">Главная страница</a></li>
+            <li><a href="/useful/documents.php">Документы для вычета</a></li>
+            <li><a href="/useful/inspektsii/">Инспекции</a></li>
+        </ul>
+    </div>
+
+    <div class="row auth">
+                    <div class="dropdown-menu quick-login authorized" id="quick-personal-mobile">
+                <div class="col-xs-12">
+                    <p>Вы авторизованы на сайте как dpmango.</p>
+                    <a href="/safe/personal">Личный кабинет</a>
+                    <a href="/?logout=yes">Выход</a>
+                </div>
+            </div>
+            </div>
+
+    <div class="row search">
+        <div class="dropdown-menu quick-search" id="quick-search-mobile">
+            <form action="/search/index.php" id="formGoSearch" name="formGoSearch">
+                <div class="borealis">
+                    <span class="glyphicon glyphicon-search submit" id="buttonGoSearch"></span>
+                    <input name="q" placeholder="Что вы ищете?" class="form-control" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+    </body>
+</html>

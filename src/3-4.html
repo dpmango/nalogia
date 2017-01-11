@@ -17,9 +17,7 @@
     <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
     <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
     <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
-
     <link href="https://dpmango.github.io/nalogia/src/css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -156,9 +154,6 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 <div class="container page-contents">
     <div class="row">
-        <div class="col-sm-12">
-          <h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
-        </div>
         <div class="col-md-9 form-container">
 
 
@@ -167,17 +162,17 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 
 <script>
-var arParent 		= eval([]);	//паренты из текущего блока
+var arParent 		= eval({"315_310":[{"PARENT":"315_115","VALUE":"Y"}],"315_315":[{"PARENT":"315_115","VALUE":"Y"}],"315_320":[{"PARENT":"315_125","VALUE":"Y"}],"315_325":[{"PARENT":"315_125","VALUE":"Y"}],"315_330":[{"PARENT":"315_130","VALUE":"Y"}],"315_335":[{"PARENT":"315_130","VALUE":"Y"}]});	//паренты из текущего блока
 var arOuterParent 	= eval(null);//паренты из прочих блоков
-var visibilityOptions = {"040_905":[{"elements":[{"field":"010_105","condition":"equal","value":"207078"}]}]};
-var curOuterAnswers	= eval([]);	//ответы прочих блоков
+var visibilityOptions = {"315_205":[{"elements":[{"field":"102_125","condition":"equal","value":"Y"}]}],"315_310":[{"elements":[{"field":"315_115","condition":"equal","value":"Y"}]}],"315_315":[{"elements":[{"field":"315_115","condition":"equal","value":"Y"}]}],"315_320":[{"elements":[{"field":"315_125","condition":"equal","value":"Y"}]}],"315_325":[{"elements":[{"field":"315_125","condition":"equal","value":"Y"}]}],"315_330":[{"elements":[{"field":"315_130","condition":"equal","value":"Y"}]}],"315_335":[{"elements":[{"field":"315_130","condition":"equal","value":"Y"}]}]};
+var curOuterAnswers	= eval({"102_125":"Y"});	//ответы прочих блоков
 var curAnswers		= new Array();							//ответы текущего блока
-var arLimitations	= eval({"040_030":"82","040_033":"8","040_035":"82","040_005":"2","040_020":20,"040_040":"82","040_045":"8","040_050":"8","040_055":"8","040_010":"6","040_300":"8","040_805":"4","040_030_fias":"82","040_045_fias":20,"040_040_fias":"82","040_auto":20,"040_905":"60"}); //Ограничение числа знакомест
+var arLimitations	= eval({"315_105":20,"315_115":20,"315_125":20,"315_130":20,"315_205":20,"315_210":20,"315_310":"6","315_315":"6","315_320":"6","315_325":"6","315_330":"6","315_335":"6"}); //Ограничение числа знакомест
 var multCount		= 0;
 var Indexes			= new Array();							//Индексы для обработки множественных ответов
 var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
 var arHidden;
-var curStage		= 0; //текущий этап
+var curStage		= 2; //текущий этап
 var currentBlockHint = false
 </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
 
@@ -299,10 +294,10 @@ var currentBlockHint = false
 	}
 
     var promoCodes = [];
-	var completedLevel = {"total":10,"current":5};
+	var completedLevel = {"total":15,"current":12};
 	// Инициализация переменной, содержащей текущий этап
-	var CurrentStage = 0;
-	var answer010_110 = false;
+	var CurrentStage = 2;
+	var answer010_110 = "207078";
 
 
     var newValidation = true;
@@ -1253,6 +1248,7 @@ var currentBlockHint = false
 
 
 
+	<h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
 
 
 
@@ -1261,7 +1257,7 @@ var currentBlockHint = false
 
 
 
-<div class="main-form form-2016 block040">
+<div class="main-form form-2016 block315">
 	<div class="percents" id="divCompletedLevel">
 		<span></span>
 		<div class="bar"><div class="completed"></div></div>
@@ -1274,14 +1270,14 @@ var currentBlockHint = false
 		</div>
 	</div>
 	<ul class="steps clear">
-		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
+		<li><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li class="active"><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
 
-	<ul class="sub-steps"><li><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="active last"><a href="?block=207037">Адрес</a></li></ul>
-
-
+	<ul class="sub-steps"><li><a href="?block=207000">Вступление</a></li><li><a href="?block=207022">Выбор вычетов</a></li><li class="active last"><a href="?block=207021">Стандартные вычеты</a></li></ul>
 
 
-	<div id="block_info">Внесите Ваш адрес, и программа сама по Вашему адресу определит Ваш индекс, код по ОКТМО &#40;этот код будет нужен, только если Ваша декларация не для возврата налога&#41; и инспекцию, в которую нужно подавать декларацию. Чтобы программа могла определить это, обязательно выберите Ваш город &#40;или другой населенный пункт&#41;, улицу и дом в меню. И только если что-то не находится в меню, вносите самостоятельно.&nbsp;&nbsp;</div>
+
+
+	<div id="block_info"><b>Блок &quot;Стандартные вычеты&quot;</b>. Стандартные налоговые вычеты на детей (при доходе ниже определенного уровня) и других ситуациях. Обязательно укажите эти вычеты, если они уже были Вам предоставлены (например, работодателем) в случае, если Вы указали доход, по которому предоставлены эти вычеты. <u>Коды в справке 2-НДФЛ</u> (раздел 4, пункт 4.1): 104, 105, 126 - 149.</div>
 
 
 
@@ -1290,9 +1286,9 @@ var currentBlockHint = false
 
 	<input type="hidden" class="system" value="true" name="form_submit">
 	<input type="hidden" class="system" value="1779" name="order_id">
-	<input type="hidden" class="system" value="0" name="stage">
+	<input type="hidden" class="system" value="2" name="stage">
 	<input type="hidden" class="system" id="indexes" value="" name="indexes">
-    <input type="hidden" name="block_real_id" value="207037" />
+    <input type="hidden" name="block_real_id" value="207021" />
 
 
 
@@ -1313,13 +1309,13 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_030" class="question q040_030">
+				<li style="" id="315_105" class="question q315_105">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					В справке 2-НДФЛ в разделе 4, пункте 4.1, код вычета указан в столбце &quot;Код вычета&quot;, размер вычета указан в столбце &quot;Сумма вычета&quot;.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Из вычетов с кодами в справке 2-НДФЛ 104 и 105 в каждом месяце года можно указать только один вычет. Полный список лиц, которые могут претендовать на вычеты с кодами в форме 104 и 105, указан в статье 218 Налогового кодекса.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1327,13 +1323,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_030 diff_rows question040_030">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Ваш город, поселок или другой населенный пункт в меню. Начните набирать первые символы названия, и Вы увидите меню ниже.</div>
-    </div>
-    <div class="r 040_030 diff_rows question040_030">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_030" type="text" value=""  />
-    </div>
-
+												<div class="a comment 315_105 cmn_cnt question315_105"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Отметьте, пожалуйста, ниже все стандартные вычеты, которые Вы хотите указать.</div></div>
 
 
 
@@ -1346,7 +1336,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_033" class="question q040_033">
+				<li style="" id="315_115" class="question q315_115">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1360,13 +1350,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_033 cmn_cnt question040_033">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Это город или другой населенный пункт (поселок, деревня и так далее)?</div>
-    </div>
-    <div class="r 040_033 cmn_cnt question040_033">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_033" type="text" value="city"  />
-    </div>
-
+												<div class="l 315_115 for_checkbox question315_115"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Коды в справке 2-НДФЛ (раздел 4, пункт 4.1): <u>104</u>, <u>105</u>. Вычет в 500 или 3 000 рублей в месяц, если у вас был особый статус, например, инвалида, героя СССР и так далее.</div></div><div class="r 315_115 for_checkbox question315_115"><label class="checkbox"><input  name="315_115" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1379,7 +1363,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_035" class="question q040_035">
+				<li style="" id="315_125" class="question q315_125">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1393,13 +1377,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_035 diff_rows question040_035">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Название города, в составе которого находится населенный пункт</div>
-    </div>
-    <div class="r 040_035 diff_rows question040_035">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_035" type="text" value=""  />
-    </div>
-
+												<div class="l 315_125 for_checkbox question315_125"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Коды в справке 2-НДФЛ (раздел 4, пункт 4.1): <u>126</u>, <u>127</u>, <u>128</u>, <u>130</u>, <u>131</u>, <u>132</u>, <u>134</u> - <u>139</u> и <u>142</u> - <u>147</u>. Вычет на ребенка (детей) родителю, опекуну, попечителю и так далее.</div></div><div class="r 315_125 for_checkbox question315_125"><label class="checkbox"><input  name="315_125" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1412,7 +1390,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_005" class="question q040_005">
+				<li style="" id="315_130" class="question q315_130">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1426,13 +1404,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_005 cmn_cnt question040_005">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Регион</div>
-    </div>
-    <div class="r 040_005 cmn_cnt question040_005">
-        <input class="form-control mixed" maxlength="2"  style="max-width: 18px;"  name="040_005" type="text" value=""  />
-    </div>
-
+												<div class="l 315_130 for_checkbox question315_130"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Коды в справке 2-НДФЛ (раздел 4, пункт 4.1): <u>129</u>, <u>133</u>, <u>140</u>, <u>141</u>, <u>148</u> и <u>149</u>. Вычет на ребенка (детей) -<u>инвалида</u> родителю, опекуну, попечителю и так далее.</div></div><div class="r 315_130 for_checkbox question315_130"><label class="checkbox"><input  name="315_130" type="checkbox"  /><span></span></label></div>
 
 
 
@@ -1445,7 +1417,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_020" class="question q040_020">
+				<li style="" id="315_205" class="question q315_205">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1459,13 +1431,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_020 cmn_cnt question040_020">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Район</div>
-    </div>
-    <div class="r 040_020 cmn_cnt question040_020">
-        <input class="form-control mixed" maxlength="20"  style="max-width: 162px;"  name="040_020" type="text" value=""  />
-    </div>
-
+												<div style="" class="l 315_205 cmn_right question315_205"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Вы можете получить стандартный вычет по доходам от предпринимательской деятельности, доходам от частной практики нотариуса, доходам адвоката, учредившего адвокатский кабинет, доходам от прочей частной практики. Выберите, пожалуйста, хотите ли Вы указать здесь такие доходы за вычетом соответствующих расходов:</div></div><div style="" class="r 315_205 cmn_right question315_205 radio"><label class="radio"><input name="315_205"  type="radio" value="207077" ><span></span> да</label><label class="radio"><input name="315_205"  type="radio" value="207078" ><span></span> нет</label></div>
 
 
 
@@ -1478,7 +1444,138 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_040" class="question q040_040">
+				<li style="" id="315_210" class="question q315_210">
+
+
+										<div class="q_hint q_hint_visible" style="display: none;">
+					Занести доход по месяцам года нужно, даже если Вы уже получили стандартные вычеты &#40;например, вычеты вам предоставил Ваш работодатель&#41;, а не претендуете на них сейчас.<br />
+<br />
+Если Вам не хватает четырех столбцов, занесите в один из них сумму. Для декларации важна только сумма всех четырех значений строки.<br />
+<br />
+Если у Вас в справке 2-НДФЛ есть доходы, в одной строке с которыми есть вычеты c кодами 501, 503, 504, 508 и 607, такие доходы нужно занести за минусом этих вычетов. Например, у Вас есть доход с кодом 2720 в размере 5 200 рублей и в той же строке - вычет с кодом 501 в размере 4 000 рублей. Вам надо занести только 1 200 рублей. Если в результате вычитания получится ноль, доход заносить не нужно.<br /><br /><br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br /><br /><br /><br />					</div>
+
+
+
+
+
+
+
+						<div class="l diff_rows"><div class="hint" title="" href="javascript: void(0);"><p style="text-align:left">Занесите, пожалуйста, доход по источнику(ам), по которому Вы хотите указать стандартные налоговые вычеты, по месяцам года. По этим данным в декларации будет заполнено поле с количеством месяцев, по итогам которых общая сумма дохода, полученного с начала года, не превысила 350 000 рублей. Как правило, указывается доход только по одному источнику дохода, но в Ваших документах по одному источнику дохода (например, справке 2-НДФЛ) доход по одному месяцу может быть отражен несколькими суммами (например, отдельно отпускные и зарплата). Поэтому, для каждого месяца ниже есть четыре ячейки.<p/>
+
+<p style="text-align:left">Заносить нужно только облагаемые налогом доходы. Поэтому, если у Вас в справке 2-НДФЛ есть доходы, в одной строке с которыми есть вычеты c кодами 501, 503, 504, 508 и 607, такие доходы нужно занести за минусом этих вычетов. Например, у Вас есть доход с кодом 2720 в размере 5 200 рублей и в той же строке - вычет с кодом 501 в размере 4 000 рублей. Вам надо занести только 1 200 рублей. Рубли от копеек нужно отделить <b>точкой</b>.<p/></div></div>
+
+						<table width="100%">
+						<tr>
+						<td width="100%" align="center" style="padding-right: 20px";>
+						<script>
+				var matrix	= new Object();
+				matrix	= [
+						["315_221","315_222","315_223","315_224","315_225"],
+						["315_226","315_227","315_228","315_229","315_230"],
+						["315_231","315_232","315_233","315_234","315_235"],
+						["315_236","315_237","315_238","315_239","315_240"],
+						["315_241","315_242","315_243","315_244","315_245"],
+						["315_246","315_247","315_248","315_249","315_250"],
+						["315_251","315_252","315_253","315_254","315_255"],
+						["315_256","315_257","315_258","315_259","315_260"],
+						["315_261","315_262","315_263","315_264","315_265"],
+						["315_266","315_267","315_268","315_269","315_270"],
+						["315_271","315_272","315_273","315_274","315_275"],
+						["315_276","315_277","315_278","315_279","315_280"]];
+				// Сергей (19 января 2015): изменили функцию getSumByRow, чтобы слагаемые участвовали в расчете суммы округленными
+				// Но остается ошибка подсчета суммы. Пример: 5.99 + 5.88 = 11.86.
+
+				function getSumByRow(row){
+
+				// Сергей (27 января 2015): функция убрана, так как убран последний столбец (начало)
+
+				/*var sum  = 0;
+					var arRow = matrix[row];
+					var term01; var term02; var term03; var term04; var term05;
+					for (i=0;i<arRow.length - 1;i++){
+							term01 = Math.round ($("input[name=" + arRow[i]+"]").val()); // целая часть
+							term02 = $("input[name=" + arRow[i]+"]").val() - term01; // дробная часть
+							term03 = term02 * 100;
+							term04 = Math.round (term03); // первые два знака дробной части
+							term05 = term01 + (term04 / 100);
+							sum += eval( term05 );
+					//sum += eval(!$("input[name=" + arRow[i]+"]").val()?0:$("input[name=" + arRow[i]+"]").val());
+					}
+					//console.log($("input[name=" + arRow[arRow.length - 1]+"]"));
+					$("input[name=" + arRow[arRow.length - 1]+"]").val(sum);
+				// Сергей (27 января 2015): функция убрана, так как убран последний столбец (конец)
+				*/
+				}
+
+				// Сергей (19 января 2015): добавляем вывод суммы при загрузке страницы
+				$(document).ready(function() {
+					$("input[name=315_225]").ready(function(){
+						getSumByRow(0);
+					});
+					$("input[name=315_230]").ready(function(){
+					getSumByRow(1);
+					});
+					$("input[name=315_235]").ready(function(){
+					getSumByRow(2);
+					});
+					$("input[name=315_240]").ready(function(){
+					getSumByRow(3);
+					});
+					$("input[name=315_245]").ready(function(){
+					getSumByRow(4);
+					});
+					$("input[name=315_250]").ready(function(){
+					getSumByRow(5);
+					});
+					$("input[name=315_255]").ready(function(){
+					getSumByRow(6);
+					});
+					$("input[name=315_260]").ready(function(){
+					getSumByRow(7);
+					});
+					$("input[name=315_265]").ready(function(){
+					getSumByRow(8);
+					});
+					$("input[name=315_270]").ready(function(){
+					getSumByRow(9);
+					});
+					$("input[name=315_275]").ready(function(){
+					getSumByRow(10);
+					});
+					$("input[name=315_280]").ready(function(){
+					getSumByRow(11);
+					});
+					$("input[name=315_285]").ready(function(){
+					getSumByRow(12);
+					});
+				});
+
+				/*function getSumByRow(row){
+					var sum		= 0;
+					var arRow	= matrix[row];
+					for (i=0;i<arRow.length - 1;i++){
+						sum += eval(!$("input[name=" + arRow[i]+"]").val()?0:$("input[name=" + arRow[i]+"]").val());
+					}
+					//console.log($("input[name=" + arRow[arRow.length - 1]+"]"));
+					$("input[name=" + arRow[arRow.length - 1]+"]").val(sum);
+				}*/
+			</script><table style='text-align: center; border: 1px solid #dadada; font-size: 14px; color: #72728B; margin-top: 10px; margin-bottom: 10px;'><thead style='font-weight: bold;'><th style=' padding: 2px; text-align: center; border: 1px solid #dadada; width: 112px;'>Месяц</th><th style=' padding: 2px; text-align: center; border: 1px solid #dadada; width: 112px;'>Доход 1</th><th style=' padding: 2px; text-align: center; border: 1px solid #dadada; width: 112px;'>Доход 2</th><th style=' padding: 2px; text-align: center; border: 1px solid #dadada; width: 112px;'>Доход 3</th><th style=' padding: 2px; text-align: center; border: 1px solid #dadada; width: 112px;'>Доход 4</th><th style='display: none; padding: 2px; text-align: center; border: 1px solid #dadada; width: 112px;'>Всего за месяц</th></thead><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Январь</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_221"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(0);" class="float_table" name="315_221" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_222"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(0);" class="float_table" name="315_222" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_223"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(0);" class="float_table" name="315_223" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_224"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(0);" class="float_table" name="315_224" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_225"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_225" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Февраль</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_226"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(1);" class="float_table" name="315_226" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_227"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(1);" class="float_table" name="315_227" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_228"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(1);" class="float_table" name="315_228" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_229"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(1);" class="float_table" name="315_229" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_230"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_230" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Март</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_231"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(2);" class="float_table" name="315_231" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_232"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(2);" class="float_table" name="315_232" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_233"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(2);" class="float_table" name="315_233" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_234"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(2);" class="float_table" name="315_234" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_235"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_235" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Апрель</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_236"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(3);" class="float_table" name="315_236" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_237"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(3);" class="float_table" name="315_237" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_238"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(3);" class="float_table" name="315_238" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_239"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(3);" class="float_table" name="315_239" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_240"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_240" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Май</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_241"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(4);" class="float_table" name="315_241" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_242"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(4);" class="float_table" name="315_242" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_243"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(4);" class="float_table" name="315_243" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_244"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(4);" class="float_table" name="315_244" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_245"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_245" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Июнь</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_246"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(5);" class="float_table" name="315_246" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_247"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(5);" class="float_table" name="315_247" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_248"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(5);" class="float_table" name="315_248" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_249"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(5);" class="float_table" name="315_249" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_250"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_250" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Июль</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_251"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(6);" class="float_table" name="315_251" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_252"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(6);" class="float_table" name="315_252" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_253"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(6);" class="float_table" name="315_253" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_254"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(6);" class="float_table" name="315_254" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_255"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_255" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Август</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_256"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(7);" class="float_table" name="315_256" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_257"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(7);" class="float_table" name="315_257" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_258"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(7);" class="float_table" name="315_258" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_259"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(7);" class="float_table" name="315_259" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_260"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_260" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Сентябрь</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_261"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(8);" class="float_table" name="315_261" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_262"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(8);" class="float_table" name="315_262" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_263"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(8);" class="float_table" name="315_263" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_264"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(8);" class="float_table" name="315_264" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_265"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_265" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Октябрь</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_266"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(9);" class="float_table" name="315_266" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_267"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(9);" class="float_table" name="315_267" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_268"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(9);" class="float_table" name="315_268" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_269"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(9);" class="float_table" name="315_269" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_270"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_270" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Ноябрь</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_271"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(10);" class="float_table" name="315_271" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_272"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(10);" class="float_table" name="315_272" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_273"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(10);" class="float_table" name="315_273" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_274"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(10);" class="float_table" name="315_274" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_275"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_275" type="text" value=""/> </div></td></tr><tr><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'>Декабрь</td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_276"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(11);" class="float_table" name="315_276" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_277"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(11);" class="float_table" name="315_277" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_278"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(11);" class="float_table" name="315_278" type="text" value=""/> </div></td><td style=' padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_279"><input style="width: 100%; border: none 0 white;" onBlur="getSumByRow(11);" class="float_table" name="315_279" type="text" value=""/> </div></td><td style='display: none; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 4px; border: 1px solid #dadada;'><div class="t 315_280"><input style="width: 100%; border: none 0 white;" disabled="disabled" class="float_table" name="315_280" type="text" value=""/> </div></td></tr></table>
+						</td>
+						</tr>
+						</table>
+
+
+
+
+
+				</li>
+
+
+
+
+
+				<li style="display: none;" id="315_310" class="question q315_310">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1492,13 +1589,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_040 diff_rows question040_040">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Вашу улицу &#40;проспект, переулок и тому подобное&#41;. Начните набирать первые символы названия и Вы увидите появившееся меню &#40;список&#41; ниже.</div>
-    </div>
-    <div class="r 040_040 diff_rows question040_040">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_040" type="text" value=""  />
-    </div>
-
+												<div class="l 315_310 cmn_right question315_310"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма стандартного налогового вычета по пп. 2 п. 1 ст. 218 Кодекса (500 руб. х кол-во мес.)</div></div>
+				<div class="r 315_310 cmn_right question315_310 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 50px;"  name="315_310_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="6" class="cel form-control" style="max-width: 50px;"  name="315_310_cel" type="text" value="" data-validate="sum" />.
+					<input name="315_310_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1511,7 +1608,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_045" class="question q040_045">
+				<li style="display: none;" id="315_315" class="question q315_315">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1525,13 +1622,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_045 cmn_right question040_045">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер дома &#40;владения&#41;. Выберите Ваш номер дом &#40;владения&#41; вместе с корпусом &#40;или строением&#41; в меню ниже. Если в меню ниже много номеров, начните набирать первую &#40;или первые&#41; цифры номера дома и в меню ниже останутся только нужные Вам номера домов. Только если Вашего номера дома в меню ниже нет, внесите номер справа &#40;а корпус или строение ниже в отдельном вопросе&#41;.</div>
-    </div>
-    <div class="r 040_045 cmn_right question040_045">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_045" type="text" value=""  />
-    </div>
-
+												<div class="l 315_315 cmn_right question315_315"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Сумма стандартного налогового вычета по пп. 1 п. 1 ст. 218 Кодекса (3000 руб. х кол-во мес.)</div></div>
+				<div class="r 315_315 cmn_right question315_315 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 50px;"  name="315_315_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="6" class="cel form-control" style="max-width: 50px;"  name="315_315_cel" type="text" value="" data-validate="sum" />.
+					<input name="315_315_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1544,13 +1641,19 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_050" class="question q040_050">
+				<li style="display: none;" id="315_320" class="question q315_320">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Если Вы рассчитываете вычет сами, а не переносите из формы 2-НДФЛ, умножьте сумму вычета за месяц на количество месяцев, в которых Ваш доход не превысил нарастающим итогом с начала года 350 000 рублей.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Нарастающим итогом с начала года означает - суммируя доходы за данный месяц и все предыдущие месяцы этого года. Например, если в январе у Вас был доход 8 000 рублей, а в феврале 10 000 рублей, то доход в феврале нарастающим итогом был 18 000 рублей.<br />
+<br />
+Если в каком-либо месяце доход был ровно 350 000 рублей, за этот месяц тоже полагается вычет.<br />
+<br />
+В каждом таком месяце вычет для каждого из родителей, как правило, составляет 1 400 рублей за первого ребенка, 1 400 за второго ребенка, 3 000 рублей за третьего и каждого последующего. Какой ребенок по счету - нужно считать, учитывая всех детей, независимо от возраста. Например, у Вас - три сына, старшему из которых - 30 лет, двум другим - по 16 лет. Вычет за месяц будет составлять 1 400 рублей плюс 3 000 рублей.<br />
+<br />
+Подробнее об этом вычете можно почитать в Налоговом кодексе, части 2, главе 23, статье 218, пункте 1, подпункте 4.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1558,13 +1661,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_050 cmn_right question040_050">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер корпуса (строения)</div>
-    </div>
-    <div class="r 040_050 cmn_right question040_050">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_050" type="text" value=""  />
-    </div>
-
+												<div class="l 315_320 cmn_right question315_320"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Cтандартный налоговый вычет за год на ребенка родителю (супругу родителя), опекуну, попечителю, приемному родителю (супругу приемного родителя) с кодом в справке 2-НДФЛ <u>126</u>, <u>127</u>, <u>128</u>, <u>130</u>, <u>131</u> и <u>132</u>. Если Вы переносите этот вычет из справки (справок) 2-НДФЛ, сумма вычета в разделе 4, пункте 4.1. Если в справке (справках) более одного вычета с таким кодом, Вам надо будет сложить все вычеты с данным кодом и сумму перенести сюда, руб. (без копеек)</div></div>
+				<div class="r 315_320 cmn_right question315_320 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 50px;"  name="315_320_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="6" class="cel form-control" style="max-width: 50px;"  name="315_320_cel" type="text" value="" data-validate="sum" />.
+					<input name="315_320_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1577,13 +1680,17 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_055" class="question q040_055">
+				<li style="display: none;" id="315_325" class="question q315_325">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
+					Если Вы рассчитываете вычет сами, а не переносите из формы 2-НДФЛ, умножьте сумму вычета на количество месяцев, в которых Ваш доход не превысил нарастающим итогом с начала года 350 000 рублей.<br />
 <br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
+Нарастающим итогом с начала года означает - суммируя доходы за данный месяц и все предыдущие месяцы этого года. Например, если в январе у Вас был доход 8 000 рублей, а в феврале 10 000 рублей, то доход в феврале нарастающим итогом был 18 000 рублей.<br />
+<br />
+Если в каком-либо месяце доход был ровно 350 000 рублей, за этот месяц тоже полагается вычет.<br />
+<br />
+Подробнее об этом вычете можно почитать в Налоговом кодексе, части 2, главе 23, статье 218, пункте 1, подпункте 4.<br /><br /><br /><br /><br /><br /><br /><br />
 					<br /><br /><br /><br /><br /><br /><br />					</div>
 
 
@@ -1591,13 +1698,13 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_055 cmn_right question040_055">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер квартиры</div>
-    </div>
-    <div class="r 040_055 cmn_right question040_055">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_055" type="text" value=""  />
-    </div>
-
+												<div class="l 315_325 cmn_right question315_325"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Стандартный налоговый вычет за год на ребенка <u>единственному</u> родителю (приемному родителю), опекуну, попечителю, одному из родителей (приемных родителей) <u>при отказе</u> другого родителя от получения налогового вычета с кодами в форме 2-НДФЛ <u>134</u> - <u>139</u>, <u>142</u> - <u>147</u>. Если Вы переносите этот вычет из справки (справок) 2-НДФЛ, сумма вычета в разделе 4, пункте 4.1. Если в справке (справках) более одного вычета с таким кодом, Вам надо будет сложить все вычеты с данным кодом и сумму перенести сюда, руб. (без копеек)</div></div>
+				<div class="r 315_325 cmn_right question315_325 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 50px;"  name="315_325_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="6" class="cel form-control" style="max-width: 50px;"  name="315_325_cel" type="text" value="" data-validate="sum" />.
+					<input name="315_325_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1610,7 +1717,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_010" class="question q040_010">
+				<li style="display: none;" id="315_330" class="question q315_330">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1624,7 +1731,14 @@ var currentBlockHint = false
 
 
 
-												<div class="l 040_010 cmn_cnt question040_010"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Почтовый индекс</div></div><div class="r 040_010 cmn_cnt question040_010"><input style="max-width: 50px;" class="numonly form-control"  name="040_010"  maxlength="6"  type="text" value="" data-validate="numbers"  /></div>
+												<div class="l 315_330 cmn_right question315_330"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Стандартный налоговый вычет родителю (супругу родителя), опекуну, попечителю, приемному родителю (супругу
+приемного родителя) на детей-инвалидов в возрасте до 18 лет, на учащихся очной формы обучения, аспирантов, ординаторов, студентов в возрасте до 24 лет, являющихся инвалидами I или II группы с кодом в форме 2-НДФЛ <u>129</u> и <u>133</u>, руб. (без копеек)</div></div>
+				<div class="r 315_330 cmn_right question315_330 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 50px;"  name="315_330_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="6" class="cel form-control" style="max-width: 50px;"  name="315_330_cel" type="text" value="" data-validate="sum" />.
+					<input name="315_330_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1637,7 +1751,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_300" class="question q040_300">
+				<li style="display: none;" id="315_335" class="question q315_335">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1651,175 +1765,13 @@ var currentBlockHint = false
 
 
 
-												<div class="l 040_300 cmn_cnt question040_300"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Код по ОКТМО Вашего муниципального образования</div></div><div class="r 040_300 cmn_cnt question040_300"><input style="max-width: 66px;" class="numonly form-control"  name="040_300"  maxlength="8"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_805" class="question q040_805">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_805 cmn_cnt question040_805"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Налоговая инспекция, в которую Вы подаете декларацию</div></div><div class="r 040_805 cmn_cnt question040_805"><input style="max-width: 34px;" class="numonly form-control"  name="040_805"  maxlength="4"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_030_fias" class="question q040_030_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_030_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_045_fias" class="question q040_045_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_045_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_040_fias" class="question q040_040_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_040_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_auto" class="question q040_auto">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_auto" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="display: none;" id="040_905" class="question q040_905">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_905 diff_rows question040_905">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Адрес места жительства за пределами России при его наличии. Этот адрес нужно указать &#40;при его наличии&#41;, только если Вы иностранный гражданин или у Вас нет гражданства и у Вас отсутствует адрес места жительства &#40;то есть постоянный адрес&#41; в России.</div>
-    </div>
-    <div class="r 040_905 diff_rows question040_905">
-        <input class="form-control mixed" maxlength="60"  style="max-width: 482px;"  name="040_905" type="text" value=""  />
-    </div>
-
+												<div class="l 315_335 cmn_right question315_335"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" tabindex="-1">Стандартный налоговый вычет единственному родителю (приемному родителю), опекуну, попечителю, одному из родителей (приемных родителей) при отказе другого родителя от получения налогового вычета на детей-инвалидов в возрасте до 18 лет, на учащихся очной формы обучения, аспирантов, ординаторов, студентов в возрасте до 24 лет, являющихся инвалидами I или II группы с кодами в справке 2-НДФЛ <u>140</u>, <u>141</u>, <u>148</u> и <u>149</u>, руб. (без копеек)</div></div>
+				<div class="r 315_335 cmn_right question315_335 flmoney">
+					<!-- Сергей: пытаемся решить проблему с полем с копейками -->
+					<!--<input style="width: 50px;"  name="315_335_cel" class="cel form-control" type="text" value=""/>.-->
+					<input maxlength="6" class="cel form-control" style="max-width: 50px;"  name="315_335_cel" type="text" value="" data-validate="sum" />.
+					<input name="315_335_drob"  class="drob form-control" type="text" value=""  data-validate="sum" />
+				</div>
 
 
 
@@ -1858,13 +1810,13 @@ var currentBlockHint = false
 
 
 
-		            <button class="btn-submit small" onclick="javascript: changeBlock('4', '-1');">Назад</button>
+		            <button class="btn-submit small" onclick="javascript: changeBlock('1', '-1');">Назад</button>
 
 
 
 
 
-		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('6', '1');">Далее</button>
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('3', '1');">Далее</button>
 
 
 
@@ -1892,7 +1844,6 @@ var currentBlockHint = false
 
 
 
-<script src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/fias_040.js"></script>
 
 	<script>
         SpecialLogic(true);
@@ -1914,7 +1865,7 @@ var currentBlockHint = false
 
 <script type="text/javascript">
 
-	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=040');
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=315');
 
 </script>
 

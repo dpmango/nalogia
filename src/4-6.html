@@ -17,9 +17,7 @@
     <link href="/tmp/fonts/opensans.css" rel='stylesheet' type='text/css'>
     <link href="/bitrix/templates/design_form_sber/css/styles.css" rel="stylesheet">
     <link href="/bitrix/templates/design_form_sber/css/form_nalogia.css" rel="stylesheet">
-
     <link href="https://dpmango.github.io/nalogia/src/css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -156,9 +154,6 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 
 <div class="container page-contents">
     <div class="row">
-        <div class="col-sm-12">
-          <h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
-        </div>
         <div class="col-md-9 form-container">
 
 
@@ -169,15 +164,15 @@ if (!document.referrer || document.referrer.split('/')[2].indexOf(location.hostn
 <script>
 var arParent 		= eval([]);	//паренты из текущего блока
 var arOuterParent 	= eval(null);//паренты из прочих блоков
-var visibilityOptions = {"040_905":[{"elements":[{"field":"010_105","condition":"equal","value":"207078"}]}]};
-var curOuterAnswers	= eval([]);	//ответы прочих блоков
+var visibilityOptions = {"820_030":[{"elements":[{"field":"310_317","condition":"equal","value":"Y"}]}],"820_040":[{"elements":[{"field":"310_328","condition":"equal","value":"Y"}]}]};
+var curOuterAnswers	= eval({"310_317":"N","310_328":"N"});	//ответы прочих блоков
 var curAnswers		= new Array();							//ответы текущего блока
-var arLimitations	= eval({"040_030":"82","040_033":"8","040_035":"82","040_005":"2","040_020":20,"040_040":"82","040_045":"8","040_050":"8","040_055":"8","040_010":"6","040_300":"8","040_805":"4","040_030_fias":"82","040_045_fias":20,"040_040_fias":"82","040_auto":20,"040_905":"60"}); //Ограничение числа знакомест
+var arLimitations	= eval({"820_030":20,"820_040":20,"820_050":20,"820_810":20}); //Ограничение числа знакомест
 var multCount		= 0;
 var Indexes			= new Array();							//Индексы для обработки множественных ответов
 var arQtc			= eval([null]); // questions to copy, перечень номеров вопросов доступных для копирования в мультиквесте
 var arHidden;
-var curStage		= 0; //текущий этап
+var curStage		= 3; //текущий этап
 var currentBlockHint = false
 </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.standalone.min.css" /><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/common.js"></script><script type="text/javascript" src="/js/bootstrap-select.js"></script><script type="text/javascript" src="/js/jquery.mask.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/inn_input.js"></script><script type="text/javascript" src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.min.js"></script><link rel="stylesheet" type="text/css" href="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/jquery-ui-1.8.2.custom.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="/js/bootstrap-datepicker.ru.min.js"></script>
 
@@ -299,10 +294,10 @@ var currentBlockHint = false
 	}
 
     var promoCodes = [];
-	var completedLevel = {"total":10,"current":5};
+	var completedLevel = {"total":15,"current":15};
 	// Инициализация переменной, содержащей текущий этап
-	var CurrentStage = 0;
-	var answer010_110 = false;
+	var CurrentStage = 3;
+	var answer010_110 = "207078";
 
 
     var newValidation = true;
@@ -1253,6 +1248,7 @@ var currentBlockHint = false
 
 
 
+	<h2 class="declaration-title">Налоговая декларация 3-НДФЛ за 2016 год</h2>
 
 
 
@@ -1261,7 +1257,7 @@ var currentBlockHint = false
 
 
 
-<div class="main-form form-2016 block040">
+<div class="main-form form-2016 block820">
 	<div class="percents" id="divCompletedLevel">
 		<span></span>
 		<div class="bar"><div class="completed"></div></div>
@@ -1274,14 +1270,14 @@ var currentBlockHint = false
 		</div>
 	</div>
 	<ul class="steps clear">
-		<li class="active"><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
+		<li><a href="/safe/personal/forms/form2016.php?stage=0&block=0">Данные</a></li><li><a href="/safe/personal/forms/form2016.php?stage=1&block=0">Доходы</a></li><li><a href="/safe/personal/forms/form2016.php?stage=2&block=0">Вычеты</a></li><li class="active last"><a href="/safe/personal/forms/form2016.php?stage=3&block=0">Итоги</a></li>	</ul>
 
-	<ul class="sub-steps"><li><a href="?block=207013">Вступление</a></li><li><a href="?block=207027">Основное</a></li><li><a href="?block=207026">Статус</a></li><li><a href="?block=207016">Паспортные данные</a></li><li class="active last"><a href="?block=207037">Адрес</a></li></ul>
-
-
+	<ul class="sub-steps"><li><a href="?block=207028">Результаты</a></li><li><a href="?block=207034">Заявление</a></li><li><a href="?block=207035">Отзывы</a></li><li><a href="?block=207003">Скачивание</a></li><li><a href="?block=207031">Вопросы по онлайн-подаче</a></li><li class="active"><a href="?block=207032">Приложения</a></li><li class="last"><a href="?block=207033">Подача</a></li></ul>
 
 
-	<div id="block_info">Внесите Ваш адрес, и программа сама по Вашему адресу определит Ваш индекс, код по ОКТМО &#40;этот код будет нужен, только если Ваша декларация не для возврата налога&#41; и инспекцию, в которую нужно подавать декларацию. Чтобы программа могла определить это, обязательно выберите Ваш город &#40;или другой населенный пункт&#41;, улицу и дом в меню. И только если что-то не находится в меню, вносите самостоятельно.&nbsp;&nbsp;</div>
+
+
+	<div id="block_info"><p>Загрузите, пожалуйста, ниже те документы, которые Вы хотите приложить к декларации. Это именно документы, прикладываемые к декларации, а не те документы, которые нужны для организации электронной подписи. Каждый документ должен быть размером не более 3 мегабайт. А размер всех документов вместе не должен превышать 40 мегабайт. Проследите, пожалуйста, что документ виден полностью и все части документа легко читаются. Документы должны быть в формате JPG, JPEG, TIF, PNG или PDF.</p></div>
 
 
 
@@ -1290,9 +1286,9 @@ var currentBlockHint = false
 
 	<input type="hidden" class="system" value="true" name="form_submit">
 	<input type="hidden" class="system" value="1779" name="order_id">
-	<input type="hidden" class="system" value="0" name="stage">
+	<input type="hidden" class="system" value="3" name="stage">
 	<input type="hidden" class="system" id="indexes" value="" name="indexes">
-    <input type="hidden" name="block_real_id" value="207037" />
+    <input type="hidden" name="block_real_id" value="207032" />
 
 
 
@@ -1313,7 +1309,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_030" class="question q040_030">
+				<li style="display: none;" id="820_030" class="question q820_030">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1327,13 +1323,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_030 diff_rows question040_030">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Ваш город, поселок или другой населенный пункт в меню. Начните набирать первые символы названия, и Вы увидите меню ниже.</div>
-    </div>
-    <div class="r 040_030 diff_rows question040_030">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_030" type="text" value=""  />
-    </div>
-
+												<div class="a comment 820_030 diff_rows question820_030"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Если Вы получаете возврат по покупке (или строительству) жилья и/или ипотеке, Вы можете посмотреть, какие документы приложить,  <u><a id="popup405" href="#">кликнув здесь</a></u>.</div></div>
 
 
 
@@ -1346,7 +1336,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_033" class="question q040_033">
+				<li style="display: none;" id="820_040" class="question q820_040">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1360,13 +1350,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_033 cmn_cnt question040_033">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Это город или другой населенный пункт (поселок, деревня и так далее)?</div>
-    </div>
-    <div class="r 040_033 cmn_cnt question040_033">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_033" type="text" value="city"  />
-    </div>
-
+												<div class="a comment 820_040 diff_rows question820_040"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Если Вы получаете возврат по ИИСу (индивидуальному инвестиционному счету), Вы можете посмотреть, какие документы приложить,  <u><a id="popup407" href="#">кликнув здесь</a></u>.</div></div>
 
 
 
@@ -1379,7 +1363,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_035" class="question q040_035">
+				<li style="" id="820_050" class="question q820_050">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1393,13 +1377,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_035 diff_rows question040_035">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Название города, в составе которого находится населенный пункт</div>
-    </div>
-    <div class="r 040_035 diff_rows question040_035">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_035" type="text" value=""  />
-    </div>
-
+												<input class="textonly" name="820_050" type="hidden" value=""/>
 
 
 
@@ -1412,7 +1390,7 @@ var currentBlockHint = false
 
 
 
-				<li style="" id="040_005" class="question q040_005">
+				<li style="" id="820_810" class="question q820_810">
 
 
 										<div class="q_hint q_hint_visible" style="display: none;">
@@ -1426,400 +1404,7 @@ var currentBlockHint = false
 
 
 
-												    <div class="l 040_005 cmn_cnt question040_005">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Регион</div>
-    </div>
-    <div class="r 040_005 cmn_cnt question040_005">
-        <input class="form-control mixed" maxlength="2"  style="max-width: 18px;"  name="040_005" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_020" class="question q040_020">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_020 cmn_cnt question040_020">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Район</div>
-    </div>
-    <div class="r 040_020 cmn_cnt question040_020">
-        <input class="form-control mixed" maxlength="20"  style="max-width: 162px;"  name="040_020" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_040" class="question q040_040">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_040 diff_rows question040_040">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Выберите Вашу улицу &#40;проспект, переулок и тому подобное&#41;. Начните набирать первые символы названия и Вы увидите появившееся меню &#40;список&#41; ниже.</div>
-    </div>
-    <div class="r 040_040 diff_rows question040_040">
-        <input class="form-control mixed" maxlength="82"  style="max-width: 658px;"  name="040_040" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_045" class="question q040_045">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_045 cmn_right question040_045">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер дома &#40;владения&#41;. Выберите Ваш номер дом &#40;владения&#41; вместе с корпусом &#40;или строением&#41; в меню ниже. Если в меню ниже много номеров, начните набирать первую &#40;или первые&#41; цифры номера дома и в меню ниже останутся только нужные Вам номера домов. Только если Вашего номера дома в меню ниже нет, внесите номер справа &#40;а корпус или строение ниже в отдельном вопросе&#41;.</div>
-    </div>
-    <div class="r 040_045 cmn_right question040_045">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_045" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_050" class="question q040_050">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_050 cmn_right question040_050">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер корпуса (строения)</div>
-    </div>
-    <div class="r 040_050 cmn_right question040_050">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_050" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_055" class="question q040_055">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_055 cmn_right question040_055">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Номер квартиры</div>
-    </div>
-    <div class="r 040_055 cmn_right question040_055">
-        <input class="form-control mixed" maxlength="8"  style="max-width: 66px;"  name="040_055" type="text" value=""  />
-    </div>
-
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_010" class="question q040_010">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_010 cmn_cnt question040_010"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Почтовый индекс</div></div><div class="r 040_010 cmn_cnt question040_010"><input style="max-width: 50px;" class="numonly form-control"  name="040_010"  maxlength="6"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_300" class="question q040_300">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_300 cmn_cnt question040_300"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Код по ОКТМО Вашего муниципального образования</div></div><div class="r 040_300 cmn_cnt question040_300"><input style="max-width: 66px;" class="numonly form-control"  name="040_300"  maxlength="8"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_805" class="question q040_805">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<div class="l 040_805 cmn_cnt question040_805"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Налоговая инспекция, в которую Вы подаете декларацию</div></div><div class="r 040_805 cmn_cnt question040_805"><input style="max-width: 34px;" class="numonly form-control"  name="040_805"  maxlength="4"  type="text" value="" data-validate="numbers"  /></div>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_030_fias" class="question q040_030_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_030_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_045_fias" class="question q040_045_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_045_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_040_fias" class="question q040_040_fias">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_040_fias" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="" id="040_auto" class="question q040_auto">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												<input class="textonly" name="040_auto" type="hidden" value=""/>
-
-
-
-
-
-
-				</li>
-
-
-
-
-
-				<li style="display: none;" id="040_905" class="question q040_905">
-
-
-										<div class="q_hint q_hint_visible" style="display: none;">
-					Для этого вопроса нет подсказки. Если Вам что-то не понятно в этом вопросе или в любом другом, используйте, пожалуйста, инструменты помощи в правом верхнем углу экрана &#40;над подсказкой&#41;.<br />
-<br />
-Например, прочитайте ответы на часто задаваемые вопросы или посмотрите обучающий видеоролик.<br /><br /><br /><br /><br /><br /><br /><br />
-					<br /><br /><br /><br /><br /><br /><br />					</div>
-
-
-
-
-
-
-												    <div class="l 040_905 diff_rows question040_905">
-        <div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Адрес места жительства за пределами России при его наличии. Этот адрес нужно указать &#40;при его наличии&#41;, только если Вы иностранный гражданин или у Вас нет гражданства и у Вас отсутствует адрес места жительства &#40;то есть постоянный адрес&#41; в России.</div>
-    </div>
-    <div class="r 040_905 diff_rows question040_905">
-        <input class="form-control mixed" maxlength="60"  style="max-width: 482px;"  name="040_905" type="text" value=""  />
-    </div>
-
+												<div class="a comment 820_810 diff_rows question820_810"style="padding-bottom: 3px;"><div title="Если вопрос Вам непонятен, подсказку Вы можете посмотреть, кликнув на вопрос мышкой, в правой нижней части экрана." class="hint" href="javascript: void(0);" tabindex="-1">Сохранение документов происходит при нажатии кнопки "Далее" или "Назад". Не забудьте нажать одну из этих кнопок, если Вы хотите сохранить документы.</div></div>
 
 
 
@@ -1849,6 +1434,365 @@ var currentBlockHint = false
 
 
 
+<script src="/efiling/js/common.js"></script>
+<script src="/efiling/js/jform.js"></script>
+<script src="/efiling/js/jquery.ui.widget.js"></script>
+<script src="/efiling/js/jquery.fileupload.js"></script>
+<script src="/efiling/js/jquery.filebuttonize.js"></script>
+<script src="/js/baguette-box.js?ac=931535"></script>
+
+
+<div class="astral-submit-files" id="divLookupResult" style="display: block; margin-bottom: 30px;">
+    <div class="go-upload-some-files">
+        Закачайте один или более файлов, готовых к отправке в инспекцию.
+
+    </div>
+    <div class="astral-user-data"></div>
+
+    <ul class="astral-file-zone" id="listFiles">
+        <li class="uploading reference single-file-block">
+            <a href="#" class="file-name" target="blank"></a>
+            <span class="file-details"></span>
+            <span class="progress-indicator"><span></span></span>
+            <span class="controls"><a href="#" class="delete-file" data-action="delete">удалить</a></span>
+            <span class="result"></span>
+
+            <ul class="multipage-file-zone"></ul>
+
+            <div class="file-description-frame">
+                <label>Описание файла</label>
+                <textarea placeholder="Добавьте описание файла"></textarea>
+            </div>
+        </li>
+    </ul>
+
+
+
+    <div class="actions" id="divSendActions">
+        <div class="full-size" style="position: absolute; margin-left: 260px; margin-top: 2px;" id="divTotalFileSize"></div>
+        <a id="buttonAddFiles" class="btn-submit" href="#">Добавить документ</a>
+
+        <span class="processing-data"></span>
+        <span class="form-error" id="errorSubmitFiles"></span>
+    </div>
+
+    <div class="actions-result" id="divSendActionsResult">
+
+    </div>
+</div>
+
+<script>
+
+var uploadKey = "2016_uploaded";
+var userLogin = '';
+var uploadUserId = 0;
+var uploadingFiles = {};
+
+$('#buttonAddFiles').fileButtonize({
+    width: 210,
+    height: 40,
+    action: '/bitrix/components/nalogia/nalogia.web_form2016/upload.php',
+    field: 'file',
+    acceptFileTypes: /(\.|\/)(gif|jpe?g|png|doc|xls)$/i,
+    start: function(data, e) {
+        var file = data.files[0];
+
+        var gotFile = false;
+        $('#listFiles [data-file]').each(function() {
+            if ($(this).attr('data-file').replace(/.+\/(.+)/, '$1').toLowerCase() == file.name.toLowerCase()) {
+                gotFile = true;
+            }
+        });
+
+        if (gotFile) {
+            $('#listFiles').append('<li class="already">Вы уже закачивали файл с именем <b>' + file.name + '</b>. ' +
+            'Если это другой файл с совпадающим именем, то переименуйте его, пожалуйста, и попробуйте закачать снова.<br>' +
+            '<a href="#" class="btn-submit small" onclick="$(this).closest(\'li\').remove(); return false;">Хорошо</a></li>');
+
+            return false;
+        }
+
+
+
+        var $file = $('#listFiles .reference').clone().removeClass('reference');  // $('<li class="uploading"><a href="#" class="file-name"></a><span class="file-details"></span><span class="progress-indicator"><span></span></span><span class="result"></span></li>');
+        $file.find('.file-name').text(file.name.replace(/\.[0-9a-zA-Z]{1,5}$/, ''));
+        $file.find('.file-details').html(GetFileDescription(file));
+        $file.attr('data-file', file.name);
+
+        $('#listFiles').append($file);
+        uploadingFiles[file.name] = {
+            obj: $file,
+            progress: $file.find('.progress-indicator SPAN')
+        };
+
+        $('.go-upload-some-files').hide();
+    },
+    formData: function() {
+        return [
+            {name: '_action', value: 'upload-file'},
+            {name: 'user_id', value: uploadUserId},
+            {name: 'key', value: uploadKey},
+            {name: 'current', value: $('input[name=820_050]').val()}
+        ];
+    },
+    progressNew: function(data, e) {
+        var progress = parseInt(e.loaded / e.total * 100, 10);
+        var fileName = data.files[0].name;
+
+        if (typeof uploadingFiles[fileName] != 'undefined') {
+            uploadingFiles[fileName].progress.css('width', progress + '%');
+        }
+    },
+    progress: function(percents, data, e) {
+        // console.log('percents' + percents);
+        // console.log(data);
+        // console.log(e);
+    },
+    callback: function(data) {
+        var fileName = data.files[0].name;
+        if (typeof uploadingFiles[fileName] != 'undefined') {
+            var $obj = uploadingFiles[fileName].obj;
+            $obj.find('.progress-indicator').remove();
+
+            var res = data.result;
+            if (res.result == 'success') {
+
+                if (res.totalSize > 250000000) {
+                    $obj.remove();
+                    $('#listFiles').append('<li class="already">При закачке файла <b>' + fileName + '</b> произошла ошибка.<br>' +
+                    'Общий размер файлов не должен превышать 50 мегабайт. С учетом файла, который Вы пытались закачать, суммарный размер был бы ' +
+                    Math.round(res.totalSize / 100000) / 10 + ' Мб. Попробуйте уменьшить разрешение передаваемых файлов или исключите лишние.<br>' +
+                    '<a href="#" class="btn-submit small" onclick="$(this).closest(\'li\').remove(); return false;">Хорошо</a></li>');
+
+                    return;
+                }
+
+                if (res.size > 15000000) {
+                    $obj.remove();
+                    $('#listFiles').append('<li class="already">При закачке файла <b>' + fileName + '</b> произошла ошибка.<br>' +
+                    'Размер файла не должен превышать 3 мегабайта. Файл, который Вы пытались закачать, в обработанном виде занимает ' +
+                    Math.round(res.size / 100000) / 10 + ' Мб. Попробуйте уменьшить разрешение файла.<br>' +
+                    '<a href="#" class="btn-submit small" onclick="$(this).closest(\'li\').remove(); return false;">Хорошо</a></li>');
+
+                    return;
+                }
+
+                $('#divTotalFileSize').html('Общий размер добавленных<br>документов — <b>' + Math.round(res.totalSize / 100000) / 10 + '</b> Мб');
+                $obj.attr('data-file', res.file);
+                $obj.find('.file-name').attr('href', res.full);
+
+                if (res.pages && res.type == 'pdf') {
+                    var $description = $obj.find('.file-details');
+                    $obj.find('.file-name').addClass('click-my-collection');
+
+                    var descriptionText = $description.html()
+                    var pagesLink = '<a href="#" class="file-pages click-my-collection">' + helpers.numbers.verbal(res.pages, 'страница', 'страницы', 'страницы') + '</a>';
+                    $description.html(pagesLink + (descriptionText.length ? ', ' : '') + descriptionText);
+
+                    AddMultipageLinks($obj, res);
+                }
+
+                if (res.file.match(/\.jpg/) && $obj.find('.file-details').text().indexOf('TIFF') != -1) {
+                    $obj.find('.file-details').text('(переведен в формат JPG для соответствия требованиям налоговых инспекций)');
+                }
+
+                $obj.attr('data-size', res.size);
+
+                baguetteBox.destroy();
+                baguetteBox.run('#listFiles', {});
+                CheckIfCanUpload();
+
+            } else {
+                $obj.remove();
+                $('#listFiles').append('<li class="already">При закачке файла <b>' + fileName + '</b> произошла ошибка.<br>' +
+                res.reason + '<br>' +
+                '<a href="#" class="btn-submit small" onclick="$(this).closest(\'li\').remove(); return false;">Хорошо</a></li>');
+            }
+        }
+    }
+})
+
+var storedFilesData = [];
+
+function AddMultipageLinks($file, file) {
+    var $list = $file.find('.multipage-file-zone');
+
+    for (var i=1; i <= file.pages; ++i) {
+        var $link = $('<a></a>');
+        $link.prop('href', file.path + '.page0' + helpers.TwoD(i) + '.jpg');
+        $link.prop('title', file.description + ', страница ' + i + ' из ' + file.pages);
+        $link.text('Страница ' + i);
+
+        $list.append($('<li></li>').append($link));
+    }
+}
+
+
+if (storedFilesData) {
+    storedFilesData.map(function(file) {
+        var $file = $('#listFiles .reference').clone().removeClass('reference');  // $('<li class="uploading"><a href="#" class="file-name"></a><span class="file-details"></span><span class="progress-indicator"><span></span></span><span class="result"></span></li>');
+        $file.find('.file-name').text(file.name.replace(/.*?\/(.+)/, '$1').replace(/\.[0-9a-zA-Z]{1,5}$/, '')).prop('href', file.path).prop('title', file.description);
+        $file.find('.file-details').html(GetFileDescription(file));
+        $file.attr('data-file', file.name);
+        $file.find('.progress-indicator').remove();
+        $file.find('TEXTAREA').val(file.description);
+        $file.attr('data-size', file.size);
+
+        if (file.pages) {
+            $file.find('.file-name').addClass('click-my-collection');
+            AddMultipageLinks($file, file);
+        }
+
+        $('#listFiles').append($file);
+    });
+}
+
+
+function CheckIfCanUpload() {
+    var $filesToUpload = $('#listFiles [data-file]');
+    if ($filesToUpload.length) {
+        $('#buttonSubmitFiles').show();
+        $('.go-upload-some-files').hide();
+
+    } else {
+        $('#buttonSubmitFiles').hide();
+        $('.go-upload-some-files').show();
+    }
+
+    var filesData = [];
+    var totalSize = 0;
+    $filesToUpload.each(function() {
+        var $this = $(this);
+        filesData.push({
+            file: $this.attr('data-file'),
+            description: $this.find('TEXTAREA').val()
+        });
+
+        totalSize += parseInt($this.attr('data-size'));
+    });
+
+    $('#divTotalFileSize').html(totalSize > 0 ? 'Общий размер добавленных<br>документов — <b>' + Math.round(totalSize / 100000) / 10 + '</b> Мб' : '');
+    $('input[name=820_050]').val(JSON.stringify(filesData));
+}
+
+
+function GetFileDescription(data) {
+    var descriptionBits = [];
+    var fileType;
+
+    if (data.pages) {
+        descriptionBits.push('<a href="#" class="file-pages click-my-collection">' + helpers.numbers.verbal(data.pages, 'страница', 'страницы', 'страницы') + '</a>');
+    }
+
+    if (data.type) {
+        switch (data.type.toLowerCase()) {
+            case 'application/pdf':
+                fileType = 'PDF';
+                break;
+
+            case 'image/jpeg':
+                fileType = 'JPEG';
+                break;
+
+            case 'image/png':
+                fileType = 'PNG';
+                break;
+
+            case 'image/gif':
+                fileType = 'GIF';
+                break;
+
+            case 'image/tiff':
+                fileType = 'TIFF';
+                break;
+
+            case 'application/msword':
+                fileType = 'Microsoft Word';
+                break;
+
+            case 'audio/mp3':
+                fileType = 'MP3';
+                break;
+
+            default:
+                fileType = data.type;
+                break;
+        }
+
+        descriptionBits.push('тип файла ' + fileType);
+    }
+
+    if (data.size) {
+        descriptionBits.push('размер ' + helpers.numbers.verbal(data.size, 'байт', 'байта', 'байт', false, true));
+    }
+
+    return descriptionBits.join(', ');
+}
+
+$(document).on({
+    click: function() {
+        var $papa = $(this).closest('.single-file-block');
+        $papa.find('.multipage-file-zone A:eq(0)').trigger('click');
+
+        return false;
+    }
+
+}, '.click-my-collection');
+
+$(function() {
+    $('#buttons_nav button').click(function () {
+        var canSubmit = true;
+        $('#listFiles [data-file] TEXTAREA').removeClass('no-description');
+
+        $('#listFiles [data-file] TEXTAREA').each(function() {
+            if (this.value == '') {
+                $(this).addClass('no-description');
+                canSubmit = false;
+            }
+        });
+
+        if (!canSubmit) {
+            var $error = $('#divErrorSubmitFiles');
+            if ($error.length == 0) {
+                $error = $('<div id="divErrorSubmitFiles" class="files-submit-error"></div>');
+                $('#buttons_nav').after($error);
+            }
+
+            $error.text('Пожалуйста, заполните поле "Описание" для каждого закачанного файла — это поможет избежать ошибки при обработке вашей декларации налоговой инспекцией');
+
+            return false;
+        }
+
+        CheckIfCanUpload();
+    });
+});
+
+$('#listFiles').on({
+    click: function() {
+        var $this = $(this);
+        var $item = $this.closest('LI');
+
+        switch ($this.attr('data-action')) {
+            case 'delete':
+                $item.remove();
+                CheckIfCanUpload();
+                break;
+        }
+
+    }
+
+}, '.controls A');
+
+CheckIfCanUpload();
+baguetteBox.run('#listFiles', {
+    // Custom options
+});
+
+</script>
+
+Сохранение документов происходит при нажатии кнопки "Далее", "Назад" или "Выйти с сохранением". Не забудьте нажать
+одну из этих кнопок, если Вы хотите сохранить документы.
+
 
 
 		<div id="buttons_nav" >
@@ -1858,13 +1802,13 @@ var currentBlockHint = false
 
 
 
-		            <button class="btn-submit small" onclick="javascript: changeBlock('4', '-1');">Назад</button>
+		            <button class="btn-submit small" onclick="javascript: changeBlock('6', '-1');">Назад</button>
 
 
 
 
 
-		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('6', '1');">Далее</button>
+		            <button class="btn-submit small form-next" onclick="javascript: changeBlock('8', '1');">Далее</button>
 
 
 
@@ -1892,7 +1836,6 @@ var currentBlockHint = false
 
 
 
-<script src="/bitrix/components/nalogia/nalogia.web_form2016/templates/.default/js/fias_040.js"></script>
 
 	<script>
         SpecialLogic(true);
@@ -1914,7 +1857,7 @@ var currentBlockHint = false
 
 <script type="text/javascript">
 
-	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=040');
+	ga('send', 'pageview', '/safe/personal/forms/form2016.php?virtual_page_bname2016=820');
 
 </script>
 
