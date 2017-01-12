@@ -120,9 +120,12 @@ body, html {
 
 .form-container .main-form ul.sub-steps {
   margin: -10px -20px 20px -20px;
-  padding: 10px 20px 14px 20px; }
+  padding: 10px 20px 0px 20px; }
   .form-container .main-form ul.sub-steps li a {
     position: relative;
+    display: inline-block;
+    margin: 5px 0 0px 0;
+    padding-bottom: 10px;
     color: #74a3c7;
     text-transform: uppercase;
     font-size: 13px;
@@ -134,16 +137,8 @@ body, html {
     font-size: 10px;
     font-family: 'PragmaticaLight'; }
   .form-container .main-form ul.sub-steps li.active a {
+    border-bottom: 4px solid #ffdd2d;
     color: #333333; }
-    .form-container .main-form ul.sub-steps li.active a::before {
-      position: absolute;
-      bottom: -15px;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 4px;
-      background: #ffdd2d;
-      content: ' '; }
 
 .form-container .main-form ul.questions li.question {
   margin-bottom: 35px; }
@@ -336,7 +331,7 @@ div#buttons_nav {
   width: 13px;
   height: 7px;
   border: none;
-  background-image: url("https://dpmango.github.io/nalogia/src/images/bs-caret.png");
+  background-image: url("http://localhost:3002/images/bs-caret.png");
   background-position: center;
   background-repeat: no-repeat;
   font-size: 0; }
@@ -376,7 +371,7 @@ div#buttons_nav {
   width: 18px;
   height: 15px;
   border-radius: 0;
-  background: url("https://dpmango.github.io/nalogia/src/images/tick.svg") no-repeat center;
+  background: url("http://localhost:3002/images/tick.svg") no-repeat center;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
@@ -390,79 +385,79 @@ div#buttons_nav {
   background-position: center center !important; }
 
 .main-form div.l.question102_110:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_work-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/form_work-muted.svg");
   background-size: 60% !important; }
 
 .main-form div.l.question102_115:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_sale-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/form_sale-muted.svg");
   background-size: 75% !important; }
 
 .main-form div.l.question102_120:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_services-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/form_services-muted.svg");
   background-size: 60% !important; }
 
 .main-form div.l.question102_125:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_business-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/form_business-muted.svg");
   background-size: 60% !important; }
 
 .main-form div.l.question102_130:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_iis-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/form_iis-muted.svg");
   background-size: 60% !important; }
 
 .main-form div.l.question102_135:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/form_dividends-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/form_dividends-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question105_140:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/13-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/13-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question105_145:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/14-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/14-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question105_150:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/15-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/15-muted.svg");
   background-size: 65% !important; }
 
 .main-form div.l.question105_155:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/16-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/16-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question105_160:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/17-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/17-muted.svg");
   background-size: 75% !important; }
 
 .main-form div.l.question105_165:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/18-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/18-muted.svg");
   background-size: 65% !important; }
 
 .main-form div.l.question105_180:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/19-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/19-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question310_315:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/20-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/20-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question310_317:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/21-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/21-muted.svg");
   background-size: 65% !important; }
 
 .main-form div.l.question310_320:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/22-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/22-muted.svg");
   background-size: 80% !important; }
 
 .main-form div.l.question310_325:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/23-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/23-muted.svg");
   background-size: 70% !important; }
 
 .main-form div.l.question310_328:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/24-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/24-muted.svg");
   background-size: 65% !important; }
 
 .main-form div.l.question310_330:before {
-  background-image: url("https://dpmango.github.io/nalogia/src/images/icons/25-muted.svg");
+  background-image: url("http://localhost:3002/images/icons/25-muted.svg");
   background-size: 60% !important; }
 
 .form-container ul.questions li.question div.a.comment span.title {

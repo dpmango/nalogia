@@ -137,9 +137,10 @@ body, html
           margin: 0
           opacity: 1
     ul.sub-steps
+      // margin: -10px -20px 20px -20px
+      // padding: 10px 20px 14px 20px
       margin: -10px -20px 20px -20px
-      padding: 10px 20px 14px 20px
-
+      padding: 10px 20px 0px 20px
       li
         a
           color: $lighBlue
@@ -147,6 +148,11 @@ body, html
           font-family: 'PragmaticaLight'
           font-size: 13px
           position: relative
+          // fix active
+          margin: 5px 0 0px 0
+          padding-bottom: 10px
+          display: inline-block
+
         &:after
           content: "\2192"
           font-family: 'PragmaticaLight'
@@ -155,16 +161,18 @@ body, html
           font-size: 10px
         &.active
           a
+            // color: $fontColor
             color: $fontColor
-            &::before
-              position: absolute
-              bottom: -15px
-              left: 0
-              width: 100%
-              content: ' '
-              display: block
-              background: $yellow
-              height: 4px
+            border-bottom: 4px solid $yellow
+            // &::before
+            //   position: absolute
+            //   bottom: -15px
+            //   left: 0
+            //   width: 100%
+            //   content: ' '
+            //   display: block
+            //   background: $yellow
+            //   height: 4px
     ul.questions
       li.question
         margin-bottom: 35px
@@ -354,7 +362,7 @@ div#buttons_nav
 .bootstrap-select.btn-group
   .dropdown-toggle .caret
     font-size: 0
-    background-image: url('https://dpmango.github.io/nalogia/src/images/bs-caret.png')
+    background-image: url('http://localhost:3002/images/bs-caret.png')
     background-repeat: no-repeat
     background-position: center
     width: 13px
@@ -388,7 +396,7 @@ div#buttons_nav
   input[type=checkbox]:checked + span
     background: yellow
   input[type=checkbox]:checked + span:after
-    background: url('https://dpmango.github.io/nalogia/src/images/tick.svg') no-repeat center
+    background: url('http://localhost:3002/images/tick.svg') no-repeat center
     border-radius: 0
     width: 18px
     height: 15px
@@ -408,62 +416,62 @@ div#buttons_nav
       background-position: center center !important
       margin-left: -79px !important
   div.l.question102_110:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/form_work-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/form_work-muted.svg')
     background-size: 60% !important
   div.l.question102_115:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/form_sale-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/form_sale-muted.svg')
     background-size: 75% !important
   div.l.question102_120:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/form_services-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/form_services-muted.svg')
     background-size: 60% !important
   div.l.question102_125:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/form_business-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/form_business-muted.svg')
     background-size: 60% !important
   div.l.question102_130:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/form_iis-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/form_iis-muted.svg')
     background-size: 60% !important
   div.l.question102_135:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/form_dividends-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/form_dividends-muted.svg')
     background-size: 70% !important
   div.l.question105_140:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/13-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/13-muted.svg')
     background-size: 70% !important
   div.l.question105_145:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/14-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/14-muted.svg')
     background-size: 70% !important
   div.l.question105_150:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/15-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/15-muted.svg')
     background-size: 65% !important
   div.l.question105_155:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/16-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/16-muted.svg')
     background-size: 70% !important
   div.l.question105_160:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/17-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/17-muted.svg')
     background-size: 75% !important
   div.l.question105_165:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/18-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/18-muted.svg')
     background-size: 65% !important
   div.l.question105_180:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/19-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/19-muted.svg')
     background-size: 70% !important
 
   div.l.question310_315:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/20-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/20-muted.svg')
     background-size: 70% !important
   div.l.question310_317:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/21-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/21-muted.svg')
     background-size: 65% !important
   div.l.question310_320:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/22-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/22-muted.svg')
     background-size: 80% !important
   div.l.question310_325:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/23-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/23-muted.svg')
     background-size: 70% !important
   div.l.question310_328:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/24-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/24-muted.svg')
     background-size: 65% !important
   div.l.question310_330:before
-    background-image: url('https://dpmango.github.io/nalogia/src/images/icons/25-muted.svg')
+    background-image: url('http://localhost:3002/images/icons/25-muted.svg')
     background-size: 60% !important
 
 
